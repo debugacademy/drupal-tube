@@ -35,7 +35,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+	"process-timeout": 600,
+	"preferred-install": "dist",
+	"github-protocols": ["https"]
     },
     "autoload": {
         "classmap": [
