@@ -1,0 +1,14 @@
+uuid: bba239cd-85ad-43f4-b9f7-ddeadb5c9c09
+name: Drupal.tube
+mail: do-not-reply@drupal.tube
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI
