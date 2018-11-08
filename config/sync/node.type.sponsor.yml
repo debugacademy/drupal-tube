@@ -1,0 +1,17 @@
+uuid: 7a6f92a0-d842-46b9-aeac-2a5177e38954
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Sponsor
+type: sponsor
+description: 'Group, individual, or company who has sponsored content posted to our site.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false
