@@ -1,4 +1,4 @@
-uuid: ac8f4624-b859-40f3-99d4-d9f233dd773b
+uuid: 886b5aee-d9f5-4a7a-8122-13e9a1a74867
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - jack@test.org
+  - r.chimeg@gmail.com
 reply: ''
 weight: 0
 message: 'Your message has been sent.'

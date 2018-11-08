@@ -1,0 +1,19 @@
+uuid: ed408dcd-609b-47c9-89f9-c9d463927eda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact
+    - node.type.conference
+id: node.conference.field_contact
+field_name: field_contact
+entity_type: node
+bundle: conference
+label: Contact
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

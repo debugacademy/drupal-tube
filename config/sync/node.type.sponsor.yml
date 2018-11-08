@@ -1,0 +1,18 @@
+uuid: d775e22a-08b8-46cf-83c3-739290d4b8dc
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Sponsor
+type: sponsor
+description: 'Group, individual and company who sponsors the event posted to out site'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

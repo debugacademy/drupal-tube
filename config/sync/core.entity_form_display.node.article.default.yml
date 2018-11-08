@@ -1,4 +1,4 @@
-uuid: e7c724bb-bf9a-44ea-9771-e09103019bba
+uuid: 68c2b415-2768-40d2-af86-91fd5a392797
 langcode: en
 status: true
 dependencies:
@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.article.body
     - field.field.node.article.comment
     - field.field.node.article.field_image
+    - field.field.node.article.field_related_conference
     - field.field.node.article.field_tags
     - image.style.thumbnail
     - node.type.article
@@ -50,6 +51,15 @@ content:
       progress_indicator: throbber
       preview_image_style: thumbnail
     third_party_settings: {  }
+  field_related_conference:
+    weight: 121
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
   field_tags:
     type: entity_reference_autocomplete_tags
     weight: 3

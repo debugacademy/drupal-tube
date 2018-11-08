@@ -1,0 +1,23 @@
+uuid: 11ffb1b3-f11d-4601-addd-9896b990a59b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_company_website
+    - node.type.sponsor
+  module:
+    - link
+id: node.sponsor.field_company_website
+field_name: field_company_website
+entity_type: node
+bundle: sponsor
+label: website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

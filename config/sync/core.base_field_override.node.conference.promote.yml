@@ -1,0 +1,22 @@
+uuid: 26f7b60b-bfcf-47e7-82a1-ff8a27f2fea0
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.conference
+id: node.conference.promote
+field_name: promote
+entity_type: node
+bundle: conference
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

@@ -1,0 +1,23 @@
+uuid: 22cceeb4-bf8e-44ab-bc12-f1c49e9c66e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.conference
+  module:
+    - link
+id: node.conference.field_website
+field_name: field_website
+entity_type: node
+bundle: conference
+label: website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

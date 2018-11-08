@@ -1,0 +1,21 @@
+uuid: 29564083-24eb-4d4e-89a9-3bff354ae4d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_corporation
+    - node.type.sponsor
+  module:
+    - text
+id: node.sponsor.field_corporation
+field_name: field_corporation
+entity_type: node
+bundle: sponsor
+label: Corporation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

@@ -1,0 +1,20 @@
+uuid: bc202985-806f-4af8-b8aa-50e1c7e3829a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_corporation
+field_name: field_corporation
+entity_type: node
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
