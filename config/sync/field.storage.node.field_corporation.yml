@@ -1,0 +1,21 @@
+uuid: 3c3427b4-13ea-455c-b68a-fc833cce92e9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_corporation
+field_name: field_corporation
+entity_type: node
+type: list_string
+settings:
+  allowed_values: {  }
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

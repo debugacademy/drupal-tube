@@ -1,0 +1,19 @@
+uuid: 434c5d5a-654d-441d-9bdf-ec78c1b96ba1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_email
+    - node.type.sponsor
+id: node.sponsor.field_contact_email
+field_name: field_contact_email
+entity_type: node
+bundle: sponsor
+label: 'Contact Email(s)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

@@ -1,0 +1,27 @@
+uuid: 42da6d40-1777-4d29-bf63-7a9df2f59a10
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address
+    - node.type.conference
+  module:
+    - address
+id: node.conference.field_address
+field_name: field_address
+entity_type: node
+bundle: conference
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries: {  }
+  langcode_override: ''
+  field_overrides:
+    administrativeArea:
+      override: required
+  fields: {  }
+field_type: address

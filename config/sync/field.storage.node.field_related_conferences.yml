@@ -1,0 +1,19 @@
+uuid: 171aa942-ccda-44f2-8ac6-b41023c1f33e
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_related_conferences
+field_name: field_related_conferences
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
