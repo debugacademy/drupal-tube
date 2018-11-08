@@ -1,0 +1,19 @@
+uuid: 69c8d21d-4c16-4b7f-b3b5-7ae6251fa06a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_contact_email
+    - node.type.conference
+id: node.conference.field_contact_email
+field_name: field_contact_email
+entity_type: node
+bundle: conference
+label: 'Contact email'
+description: 'Conference organizer contact email information for questions about the event.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

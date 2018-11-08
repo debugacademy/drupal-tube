@@ -1,4 +1,4 @@
-uuid: ac8f4624-b859-40f3-99d4-d9f233dd773b
+uuid: f9197df1-b735-4020-9216-927cb1e780d8
 langcode: en
 status: true
 dependencies: {  }
@@ -7,7 +7,7 @@ _core:
 id: feedback
 label: 'Website feedback'
 recipients:
-  - jack@test.org
+  - do-not-reply@drupal.tube
 reply: ''
 weight: 0
 message: 'Your message has been sent.'
