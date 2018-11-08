@@ -1,0 +1,52 @@
+uuid: 9650f9db-b001-4434-a228-404d0f0adcee
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.conference.body
+    - field.field.node.conference.field_address
+    - field.field.node.conference.field_banner
+    - field.field.node.conference.field_contact_email
+    - field.field.node.conference.field_date
+    - field.field.node.conference.field_logo
+    - field.field.node.conference.field_slogan
+    - field.field.node.conference.field_website
+    - node.type.conference
+  module:
+    - datetime
+    - text
+    - user
+id: node.conference.teaser
+targetEntityType: node
+bundle: conference
+mode: teaser
+content:
+  field_date:
+    type: datetime_default
+    weight: 2
+    region: content
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+  field_slogan:
+    type: text_default
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_address: true
+  field_banner: true
+  field_contact_email: true
+  field_logo: true
+  field_website: true
