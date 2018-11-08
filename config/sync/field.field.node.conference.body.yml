@@ -1,0 +1,22 @@
+uuid: b71b351e-83e1-4f43-aae0-443b56cabf0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.conference
+  module:
+    - text
+id: node.conference.body
+field_name: body
+entity_type: node
+bundle: conference
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary
