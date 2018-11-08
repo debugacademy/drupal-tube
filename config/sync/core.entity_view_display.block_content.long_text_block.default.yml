@@ -1,0 +1,22 @@
+uuid: 58ba1a3b-2e3c-4d77-8c29-33da59af6ab1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.long_text_block
+    - field.field.block_content.long_text_block.body
+  module:
+    - text
+id: block_content.long_text_block.default
+targetEntityType: block_content
+bundle: long_text_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
