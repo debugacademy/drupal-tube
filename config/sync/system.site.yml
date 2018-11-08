@@ -1,6 +1,6 @@
 uuid: faa8b194-0829-40e2-952a-8166404310f1
-name: 'Drupal Tube'
-mail: jack@test.org
+name: 'Drush Site-Install'
+mail: admin@example.com
 slogan: ''
 page:
   403: ''
