@@ -1,0 +1,22 @@
+uuid: 963a48f7-b756-40be-9733-e96a4f8d7c28
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.sponsor
+  module:
+    - text
+id: node.sponsor.body
+field_name: body
+entity_type: node
+bundle: sponsor
+label: 'About Us'
+description: 'A brief background about the sponsor'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

@@ -1,0 +1,38 @@
+uuid: a5bcb370-b5b4-460b-9e27-35d5d3445ba4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_banner
+    - node.type.conference
+  module:
+    - image
+id: node.conference.field_banner
+field_name: field_banner
+entity_type: node
+bundle: conference
+label: 'Hero Banner'
+description: 'Upload a large image to be displayed at the top of the event''s landing page.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: false
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: image
