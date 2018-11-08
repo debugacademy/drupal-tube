@@ -1,0 +1,8 @@
+uuid: 20539c92-dac3-4cb2-85ab-3f73ae3df02e
+langcode: en
+status: true
+dependencies: {  }
+id: long_text_block
+label: 'Long text block'
+revision: 0
+description: "Use this to write paragraph(s) of text.\r\n"
