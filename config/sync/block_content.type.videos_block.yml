@@ -1,0 +1,8 @@
+uuid: a52c9752-1e16-4f62-8968-8b1159bc0fe7
+langcode: en
+status: true
+dependencies: {  }
+id: videos_block
+label: 'Videos Block'
+revision: 0
+description: 'Block that shows videos from either YouTube or Vimeo'
