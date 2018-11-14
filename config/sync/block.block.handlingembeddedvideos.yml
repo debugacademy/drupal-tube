@@ -1,0 +1,25 @@
+uuid: f659967f-83bc-475d-80ce-0a544806919c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:videos_block:59bc124a-6070-498e-8d10-ded6d8678539'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: handlingembeddedvideos
+theme: bartik
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:59bc124a-6070-498e-8d10-ded6d8678539'
+settings:
+  id: 'block_content:59bc124a-6070-498e-8d10-ded6d8678539'
+  label: 'Handling Embedded Videos'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
