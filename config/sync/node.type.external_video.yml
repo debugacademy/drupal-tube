@@ -1,0 +1,18 @@
+uuid: 56af09b1-ada2-4395-87b0-301b58e0b363
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: 'External Video'
+type: external_video
+description: 'Add a section containing an external video'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: true

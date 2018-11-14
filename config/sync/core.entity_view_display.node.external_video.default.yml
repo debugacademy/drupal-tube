@@ -1,0 +1,38 @@
+uuid: d1f8f29a-8beb-4dfe-b5d4-6bdbc6350864
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.external_video.field_video_name
+    - field.field.node.external_video.field_video_source
+    - node.type.external_video
+  module:
+    - user
+id: node.external_video.default
+targetEntityType: node
+bundle: external_video
+mode: default
+content:
+  field_video_name:
+    weight: 103
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_video_source:
+    type: entity_reference_entity_view
+    weight: 102
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

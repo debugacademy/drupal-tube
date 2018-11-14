@@ -1,0 +1,22 @@
+uuid: 2f20e450-a5c1-4030-886e-516b82186598
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.external_video.field_video_source
+    - node.type.external_video
+  module:
+    - user
+id: node.external_video.teaser
+targetEntityType: node
+bundle: external_video
+mode: teaser
+content:
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_video_source: true

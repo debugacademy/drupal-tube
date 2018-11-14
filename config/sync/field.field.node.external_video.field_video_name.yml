@@ -1,0 +1,19 @@
+uuid: 061d3fac-4f92-4c5e-85bc-de882f8349ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_video_name
+    - node.type.external_video
+id: node.external_video.field_video_name
+field_name: field_video_name
+entity_type: node
+bundle: external_video
+label: 'Video Name'
+description: 'Name of the video'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
