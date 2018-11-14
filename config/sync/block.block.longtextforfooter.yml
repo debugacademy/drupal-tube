@@ -1,0 +1,25 @@
+uuid: feee44f7-2294-4a33-8b2c-e65f121f2c88
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:long_text_block:a3565d60-fb73-4b4f-bbfa-a8fb3b444dd5'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: longtextforfooter
+theme: bartik
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:a3565d60-fb73-4b4f-bbfa-a8fb3b444dd5'
+settings:
+  id: 'block_content:a3565d60-fb73-4b4f-bbfa-a8fb3b444dd5'
+  label: 'Long text for footer'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
