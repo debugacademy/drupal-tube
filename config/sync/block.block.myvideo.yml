@@ -1,0 +1,25 @@
+uuid: f2331317-e6dc-4ad0-a5dc-3bc86824004e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:video_block:094dab2d-d879-4b3c-9f24-017b23c3cff8'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: myvideo
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:094dab2d-d879-4b3c-9f24-017b23c3cff8'
+settings:
+  id: 'block_content:094dab2d-d879-4b3c-9f24-017b23c3cff8'
+  label: 'My Video'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
