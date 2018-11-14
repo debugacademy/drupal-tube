@@ -1,0 +1,8 @@
+uuid: 40efa46d-37de-42a0-87c1-fb993c787500
+langcode: en
+status: true
+dependencies: {  }
+id: video_block
+label: 'Video block'
+revision: 0
+description: 'Block type used to embed remotely-hosted videos.'
