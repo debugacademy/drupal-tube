@@ -1,0 +1,10 @@
+uuid: d6b3d5f4-a64e-422d-9872-5f752251b42b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.video
+label: Video
+targetEntityType: block_content
+cache: true

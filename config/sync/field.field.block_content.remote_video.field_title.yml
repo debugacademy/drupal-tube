@@ -1,0 +1,21 @@
+uuid: d04b1d13-88f0-4e87-b98f-3d9d63268313
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.remote_video
+    - field.storage.block_content.field_title
+  module:
+    - text
+id: block_content.remote_video.field_title
+field_name: field_title
+entity_type: block_content
+bundle: remote_video
+label: Title
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

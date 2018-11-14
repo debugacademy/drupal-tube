@@ -1,0 +1,25 @@
+uuid: 0a9fa9cf-0959-46d6-8506-71b98ae1808b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:remote_video:1d2b180a-800c-415a-abf3-19858cac3ded'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: featureddrupalvideos
+theme: bartik
+region: featured_bottom_second
+weight: -7
+provider: null
+plugin: 'block_content:1d2b180a-800c-415a-abf3-19858cac3ded'
+settings:
+  id: 'block_content:1d2b180a-800c-415a-abf3-19858cac3ded'
+  label: 'Featured Drupal Videos'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: default
+visibility: {  }

@@ -1,0 +1,54 @@
+uuid: 0f459b00-5d05-4c1a-8253-ad1c3f8538c5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.remote_video
+    - field.field.block_content.remote_video.field_date
+    - field.field.block_content.remote_video.field_drupal_video
+    - field.field.block_content.remote_video.field_presenter
+    - field.field.block_content.remote_video.field_title
+  module:
+    - datetime
+    - text
+    - video_embed_field
+id: block_content.remote_video.default
+targetEntityType: block_content
+bundle: remote_video
+mode: default
+content:
+  field_date:
+    weight: 3
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'Y'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_drupal_video:
+    weight: 0
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+  field_presenter:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_title:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

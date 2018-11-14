@@ -1,0 +1,19 @@
+uuid: 4ae99af2-08ac-4095-8d2a-f938533229b0
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_custom
+field_name: field_custom
+entity_type: media
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

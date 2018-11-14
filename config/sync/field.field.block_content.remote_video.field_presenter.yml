@@ -1,0 +1,21 @@
+uuid: 50c8cb6d-2f08-4697-8ef7-498576071de7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.remote_video
+    - field.storage.block_content.field_presenter
+  module:
+    - text
+id: block_content.remote_video.field_presenter
+field_name: field_presenter
+entity_type: block_content
+bundle: remote_video
+label: Presenter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

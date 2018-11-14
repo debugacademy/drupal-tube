@@ -1,0 +1,25 @@
+uuid: e3af8d18-463e-44eb-aead-3fd73b2d0ebe
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:remote_video:1d2b180a-800c-415a-abf3-19858cac3ded'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: drupalconnashville2018
+theme: bartik
+region: sidebar_first
+weight: -7
+provider: null
+plugin: 'block_content:1d2b180a-800c-415a-abf3-19858cac3ded'
+settings:
+  id: 'block_content:1d2b180a-800c-415a-abf3-19858cac3ded'
+  label: 'Featured Drupal Videos'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

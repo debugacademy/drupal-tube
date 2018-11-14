@@ -1,0 +1,25 @@
+uuid: a79922b0-eab1-42d9-9dbf-a0adbd6ff03a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.remote_video
+    - field.storage.block_content.field_drupal_video
+  module:
+    - video_embed_field
+id: block_content.remote_video.field_drupal_video
+field_name: field_drupal_video
+entity_type: block_content
+bundle: remote_video
+label: 'Drupal video'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_providers:
+    vimeo: '0'
+    youtube: '0'
+    youtube_playlist: '0'
+field_type: video_embed_field

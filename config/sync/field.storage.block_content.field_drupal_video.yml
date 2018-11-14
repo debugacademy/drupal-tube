@@ -1,0 +1,19 @@
+uuid: 519b5f6e-2dcc-4c92-aa58-d03f8519fe4b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - video_embed_field
+id: block_content.field_drupal_video
+field_name: field_drupal_video
+entity_type: block_content
+type: video_embed_field
+settings: {  }
+module: video_embed_field
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

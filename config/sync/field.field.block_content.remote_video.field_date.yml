@@ -1,0 +1,21 @@
+uuid: d5af28ca-2b44-4ff4-9d90-46cfde528a4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.remote_video
+    - field.storage.block_content.field_date
+  module:
+    - datetime
+id: block_content.remote_video.field_date
+field_name: field_date
+entity_type: block_content
+bundle: remote_video
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

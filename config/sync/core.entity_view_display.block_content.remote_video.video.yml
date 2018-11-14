@@ -1,0 +1,31 @@
+uuid: e4491d2a-23eb-4822-b1bb-309bae8d0114
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.remote_video
+    - core.entity_view_mode.block_content.video
+    - field.field.block_content.remote_video.field_drupal_video
+    - field.field.block_content.remote_video.field_presenter
+    - field.field.block_content.remote_video.field_title
+  module:
+    - video_embed_field
+id: block_content.remote_video.video
+targetEntityType: block_content
+bundle: remote_video
+mode: video
+content:
+  field_drupal_video:
+    weight: 0
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
+    type: video_embed_field_video
+    region: content
+hidden:
+  field_presenter: true
+  field_title: true
