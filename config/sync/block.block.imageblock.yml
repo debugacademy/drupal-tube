@@ -1,0 +1,25 @@
+uuid: c96edda5-24cd-464d-acff-43f43b65750f
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_block:63d3df11-5381-4738-af8d-b1bba0397538'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: imageblock
+theme: bartik
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:63d3df11-5381-4738-af8d-b1bba0397538'
+settings:
+  id: 'block_content:63d3df11-5381-4738-af8d-b1bba0397538'
+  label: 'Image Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

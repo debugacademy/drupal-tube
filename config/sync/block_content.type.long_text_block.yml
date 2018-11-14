@@ -1,0 +1,8 @@
+uuid: e023da5b-4292-42f7-b3cd-48bc0a973b2c
+langcode: en
+status: true
+dependencies: {  }
+id: long_text_block
+label: 'Long text block'
+revision: 0
+description: ''
