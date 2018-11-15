@@ -1,0 +1,104 @@
+uuid: c9d030e4-92e9-41b5-8244-641534282203
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.external_video.field_conference
+    - field.field.media.external_video.field_description
+    - field.field.media.external_video.field_media_video_embed_field
+    - field.field.media.external_video.field_recording_date
+    - field.field.media.external_video.field_speaker
+    - field.field.media.external_video.field_sponsor
+    - media.type.external_video
+  module:
+    - datetime
+    - path
+    - video_embed_field
+id: media.external_video.default
+targetEntityType: media
+bundle: external_video
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_conference:
+    weight: 105
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_description:
+    weight: 101
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_media_video_embed_field:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: video_embed_field_textfield
+    region: content
+  field_recording_date:
+    weight: 103
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_speaker:
+    weight: 102
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_sponsor:
+    weight: 104
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  name:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 100
+    region: content
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }
