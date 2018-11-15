@@ -1,0 +1,8 @@
+uuid: 5663e5c0-db2a-4a03-9980-141d3ab6f083
+langcode: en
+status: true
+dependencies: {  }
+id: video
+label: Video
+revision: 0
+description: 'To embed videos from YouTube or Vimeo.'

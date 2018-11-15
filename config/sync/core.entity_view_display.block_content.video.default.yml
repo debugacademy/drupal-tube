@@ -1,0 +1,22 @@
+uuid: 194fffe2-5240-4fbc-9555-8f28d262c692
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+    - field.field.block_content.video.body
+  module:
+    - text
+id: block_content.video.default
+targetEntityType: block_content
+bundle: video
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

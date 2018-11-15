@@ -1,0 +1,22 @@
+uuid: 17bb14d7-a495-4726-b113-9383d2887f99
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.video
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.video.body
+field_name: body
+entity_type: block_content
+bundle: video
+label: Body
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary
