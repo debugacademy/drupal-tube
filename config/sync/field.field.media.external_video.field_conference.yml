@@ -1,0 +1,29 @@
+uuid: 63c04a30-0269-41aa-8f10-cc2cfe023d37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_conference
+    - media.type.external_video
+    - node.type.conference
+id: media.external_video.field_conference
+field_name: field_conference
+entity_type: media
+bundle: external_video
+label: Conference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      conference: conference
+    sort:
+      field: field_date
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

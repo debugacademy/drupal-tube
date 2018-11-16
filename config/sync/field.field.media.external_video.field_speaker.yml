@@ -1,0 +1,19 @@
+uuid: 74d4db96-bba2-4852-938a-08e2db71d32d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_speaker
+    - media.type.external_video
+id: media.external_video.field_speaker
+field_name: field_speaker
+entity_type: media
+bundle: external_video
+label: Speaker
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
