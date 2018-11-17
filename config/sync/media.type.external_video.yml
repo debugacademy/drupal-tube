@@ -1,0 +1,16 @@
+uuid: 1cf43599-0b0b-4884-9b7a-6876a330f18c
+langcode: en
+status: true
+dependencies:
+  module:
+    - video_embed_media
+id: external_video
+label: 'External Video'
+description: ''
+source: video_embed_field
+queue_thumbnail_downloads: false
+new_revision: false
+source_configuration:
+  source_field: field_media_video_embed_field
+field_map:
+  id: name

@@ -1,0 +1,20 @@
+uuid: 99135c82-074f-478a-ac51-bf20c9848c8a
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - media
+id: media.field_recorded_on
+field_name: field_recorded_on
+entity_type: media
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

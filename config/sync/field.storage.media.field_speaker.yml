@@ -1,0 +1,21 @@
+uuid: ebc93e7c-2f78-4708-b96f-d31c680a5c12
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_speaker
+field_name: field_speaker
+entity_type: media
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

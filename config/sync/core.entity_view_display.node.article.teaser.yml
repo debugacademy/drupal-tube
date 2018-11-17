@@ -52,4 +52,5 @@ content:
 hidden:
   comment: true
   field_image: true
+  field_related_conferences: true
   field_tags: true
