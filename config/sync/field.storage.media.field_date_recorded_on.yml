@@ -1,0 +1,20 @@
+uuid: dbfde980-cc27-4248-824c-26f899648fcd
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - media
+id: media.field_date_recorded_on
+field_name: field_date_recorded_on
+entity_type: media
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

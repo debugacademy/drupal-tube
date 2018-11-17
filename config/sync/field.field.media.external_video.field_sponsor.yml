@@ -1,0 +1,28 @@
+uuid: 5fa1dac9-6bb9-4620-b2bd-0b3739e32381
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_sponsor
+    - media.type.external_video
+    - node.type.sponsor
+id: media.external_video.field_sponsor
+field_name: field_sponsor
+entity_type: media
+bundle: external_video
+label: sponsor
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      sponsor: sponsor
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
