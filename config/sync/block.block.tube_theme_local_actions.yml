@@ -1,0 +1,20 @@
+uuid: 6dc5f987-ac55-41da-b068-563cec47b012
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tube_theme
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: tube_theme_local_actions
+theme: tube_theme
+region: content
+weight: -20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

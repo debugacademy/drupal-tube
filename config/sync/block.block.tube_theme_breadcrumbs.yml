@@ -1,0 +1,22 @@
+uuid: c3efa20b-c86f-4e72-89c4-0f9e5ee8bbab
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - tube_theme
+_core:
+  default_config_hash: oXUb3JZR2WW5VOdw4HrhRicCsq51mCgLfRyvheG68ck
+id: tube_theme_breadcrumbs
+theme: tube_theme
+region: breadcrumb
+weight: 0
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

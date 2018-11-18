@@ -1,0 +1,21 @@
+uuid: d202a820-607d-418d-a127-d97e50bd0fa2
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_handlingembeddedvideos
+theme: bootstrap_barrio
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:59bc124a-6070-498e-8d10-ded6d8678539'
+settings:
+  id: 'block_content:59bc124a-6070-498e-8d10-ded6d8678539'
+  label: 'Handling Embedded Videos'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
