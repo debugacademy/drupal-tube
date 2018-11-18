@@ -1,0 +1,5 @@
+# Schema for the configuration files of the Bootstrap SASS Subtheme.
+
+tube_theme.settings:
+  type: theme_settings
+  label: 'Drupal Tube Subtheme settings'
