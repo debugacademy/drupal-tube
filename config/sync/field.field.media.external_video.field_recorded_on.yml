@@ -1,0 +1,21 @@
+uuid: 6aac74e0-df28-476e-9ff7-bbcecb445ff3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_recorded_on
+    - media.type.external_video
+  module:
+    - datetime
+id: media.external_video.field_recorded_on
+field_name: field_recorded_on
+entity_type: media
+bundle: external_video
+label: 'Recorded on'
+description: 'The date the video was recorded.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
