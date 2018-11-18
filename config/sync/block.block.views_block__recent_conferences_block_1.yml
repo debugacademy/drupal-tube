@@ -1,0 +1,30 @@
+uuid: 7063f5bf-67b3-489c-bb3a-6e65ba787e8d
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recent_conferences
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: views_block__recent_conferences_block_1
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:recent_conferences-block_1'
+settings:
+  id: 'views_block:recent_conferences-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: '<front>'
+    negate: false
+    context_mapping: {  }
