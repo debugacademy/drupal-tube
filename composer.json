@@ -21,6 +21,7 @@
         "drupal-composer/drupal-scaffold": "^2.5",
         "drupal/address": "~1.0",
         "drupal/admin_toolbar": "^1",
+        "drupal/bootstrap_barrio": "^4.17",
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.6.0",
         "drupal/video_embed_field": "^2.0",
