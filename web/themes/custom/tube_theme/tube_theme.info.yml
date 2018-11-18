@@ -1,12 +1,12 @@
-name: SASS Bootstrap Starter Kit Subtheme
+name: Drupal.Tube Theme
 type: theme
-description: 'SASS starter kit for a Bootstrap Barrio SubTheme.'
+description: 'Theme is based on Bootstrap Barrio SASS.'
 # version: VERSION
 # core: 8.x
 base theme: bootstrap_barrio
 
 libraries:
-  - bootstrap_sass/global-styling
+  - tube_theme/global-styling
 libraries-override:
   bootstrap_barrio/global-styling: false
   bootstrap_barrio/file: false
@@ -37,5 +37,5 @@ regions:
 # Information added by Drupal.org packaging script on 2018-08-12
 version: '8.x-1.6'
 core: '8.x'
-project: 'bootstrap_sass'
+project: 'tube_theme'
 datestamp: 1534097584

@@ -26,7 +26,7 @@ gulp.task('js', function() {
 gulp.task('serve', ['sass'], function() {
 
     browserSync.init({
-        proxy: "http://yourdomain.com",
+        proxy: "http://dev-1.academyvm.test/drupal-tube/web",
     });
 
     gulp.watch(['node_modules/bootstrap/scss/bootstrap.scss', 'scss/*.scss'], ['sass']);
