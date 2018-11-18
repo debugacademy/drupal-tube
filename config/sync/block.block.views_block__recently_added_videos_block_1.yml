@@ -1,0 +1,24 @@
+uuid: cfcf6130-7d2c-40a0-9b68-6484d414072c
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.recently_added_videos
+  module:
+    - views
+  theme:
+    - bartik
+id: views_block__recently_added_videos_block_1
+theme: bartik
+region: sidebar_first
+weight: 0
+provider: null
+plugin: 'views_block:recently_added_videos-block_1'
+settings:
+  id: 'views_block:recently_added_videos-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }
