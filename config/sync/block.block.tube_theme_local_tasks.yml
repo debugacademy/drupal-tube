@@ -1,0 +1,22 @@
+uuid: a19b7f53-349e-46b4-af59-832a67c075c5
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tube_theme
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: tube_theme_local_tasks
+theme: tube_theme
+region: content
+weight: -40
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }
