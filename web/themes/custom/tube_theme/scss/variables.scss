@@ -1,7 +1,7 @@
 /* VARIABLES */
 
 // colors
-$primary-shade: #A8CF45;
+$primary-shade: #064771; // dark blue
 $primary-light: lighten($primary-shade, 37%);
 $primary-dark: darken($primary-shade, 12%);
 $accent-shade: #0079C0;
@@ -12,7 +12,7 @@ $red: #dc3545;
 $yellow: #ffc107;
 $green: #28a745;
 $cyan: #17a2b8;
-$gray-100: #f8f9fa !default;
+$gray-100: #f6f6f2 !default;
 $gray-800: #343a40 !default;
 $theme-colors: ( primary: $accent-shade, secondary: $primary-shade, success: $green, info: $cyan, warning: $yellow, danger: $red, light: $gray-100, dark: $gray-800);
 $brand-primary: $accent-shade;
