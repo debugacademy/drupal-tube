@@ -1,0 +1,21 @@
+uuid: 231bbc59-c6e5-479e-856f-0696a7a11f3f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tube_theme
+id: tube_theme_longtextblock
+theme: tube_theme
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:3e5cc8e3-46d4-42b2-8835-5b26f90e43c5'
+settings:
+  id: 'block_content:3e5cc8e3-46d4-42b2-8835-5b26f90e43c5'
+  label: 'Long Text block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
