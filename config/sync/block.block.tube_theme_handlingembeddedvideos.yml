@@ -1,0 +1,21 @@
+uuid: e73942fe-48c8-47e0-9e8f-e7ca9ab68e7f
+langcode: en
+status: true
+dependencies:
+  theme:
+    - tube_theme
+id: tube_theme_handlingembeddedvideos
+theme: tube_theme
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:59bc124a-6070-498e-8d10-ded6d8678539'
+settings:
+  id: 'block_content:59bc124a-6070-498e-8d10-ded6d8678539'
+  label: 'Handling Embedded Videos'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

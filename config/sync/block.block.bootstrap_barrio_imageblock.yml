@@ -1,0 +1,21 @@
+uuid: a1feac86-ebcd-48b4-b35a-25ca99a9fc5b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - bootstrap_barrio
+id: bootstrap_barrio_imageblock
+theme: bootstrap_barrio
+region: sidebar_second
+weight: 0
+provider: null
+plugin: 'block_content:63d3df11-5381-4738-af8d-b1bba0397538'
+settings:
+  id: 'block_content:63d3df11-5381-4738-af8d-b1bba0397538'
+  label: 'Image Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
