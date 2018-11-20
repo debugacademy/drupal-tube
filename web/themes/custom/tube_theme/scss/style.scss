@@ -10,7 +10,7 @@ Description: Bootstrap 4 with Sass
 -------------------------------------------------*/
 
 body {
-    background: $white;
+    background: $bg-color;
 }
 
 
@@ -26,7 +26,7 @@ a {
 }
 
 .site-footer {
-    background: $accent-shade !important;
+    background: $bg-footer !important;
 }
 
 .menu--main li a {
