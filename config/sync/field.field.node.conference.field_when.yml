@@ -1,0 +1,21 @@
+uuid: 2da89b94-0d5d-4c14-a999-ed5ddda6049e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_when
+    - node.type.conference
+  module:
+    - datetime_range
+id: node.conference.field_when
+field_name: field_when
+entity_type: node
+bundle: conference
+label: When
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: daterange

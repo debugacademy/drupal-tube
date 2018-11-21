@@ -11,10 +11,11 @@ dependencies:
     - field.field.node.conference.field_logo
     - field.field.node.conference.field_slogan
     - field.field.node.conference.field_website
+    - field.field.node.conference.field_when
     - node.type.conference
   module:
     - address
-    - datetime
+    - datetime_range
     - image
     - link
     - text
@@ -27,45 +28,36 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 2
     settings: {  }
     third_party_settings: {  }
     region: content
   field_address:
-    weight: 106
-    label: above
+    weight: 5
+    label: inline
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_banner:
-    weight: 103
-    label: above
+    weight: 1
+    label: hidden
     settings:
-      image_style: ''
+      image_style: large
       image_link: ''
     third_party_settings: {  }
     type: image
     region: content
   field_contact_email:
-    weight: 108
+    weight: 7
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_date:
-    weight: 107
-    label: above
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_logo:
-    weight: 102
-    label: above
+    weight: 3
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -73,15 +65,15 @@ content:
     type: image
     region: content
   field_slogan:
-    weight: 104
-    label: above
+    weight: 4
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_website:
-    weight: 105
+    weight: 8
     label: above
     settings:
       trim_length: 80
@@ -92,9 +84,20 @@ content:
     third_party_settings: {  }
     type: link
     region: content
+  field_when:
+    weight: 6
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: m/d/Y
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  field_date: true

@@ -11,11 +11,13 @@ dependencies:
     - field.field.node.conference.field_logo
     - field.field.node.conference.field_slogan
     - field.field.node.conference.field_website
+    - field.field.node.conference.field_when
     - image.style.thumbnail
     - node.type.conference
   module:
     - address
     - datetime
+    - datetime_range
     - image
     - link
     - path
@@ -92,6 +94,15 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_when:
+    weight: 129
+    settings:
+      date_order: MDY
+      time_type: none
+      increment: 15
+    third_party_settings: {  }
+    type: daterange_datelist
     region: content
   path:
     type: path
