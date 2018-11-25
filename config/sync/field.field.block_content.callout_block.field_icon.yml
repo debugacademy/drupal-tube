@@ -1,0 +1,33 @@
+uuid: d132a002-3f48-49d1-926c-ab661009b97c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.callout_block
+    - field.storage.block_content.field_icon
+  module:
+    - fontawesome
+id: block_content.callout_block.field_icon
+field_name: field_icon
+entity_type: block_content
+bundle: callout_block
+label: Icon
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    icon_name: caret-right
+    settings: 'a:2:{s:7:"masking";a:2:{s:4:"mask";s:0:"";s:5:"style";s:3:"fas";}s:16:"power_transforms";a:3:{s:5:"scale";a:2:{s:4:"type";s:0:"";s:5:"value";s:0:"";}s:10:"position_y";a:2:{s:4:"type";s:0:"";s:5:"value";s:0:"";}s:10:"position_x";a:2:{s:4:"type";s:0:"";s:5:"value";s:0:"";}}}'
+    style: fas
+  -
+    icon_name: caret-left
+    settings: 'a:2:{s:7:"masking";a:2:{s:4:"mask";s:0:"";s:5:"style";s:3:"fas";}s:16:"power_transforms";a:3:{s:5:"scale";a:2:{s:4:"type";s:0:"";s:5:"value";s:0:"";}s:10:"position_y";a:2:{s:4:"type";s:0:"";s:5:"value";s:0:"";}s:10:"position_x";a:2:{s:4:"type";s:0:"";s:5:"value";s:0:"";}}}'
+    style: fas
+  -
+    icon_name: angle-double-right
+    settings: 'a:2:{s:7:"masking";a:2:{s:4:"mask";s:0:"";s:5:"style";s:3:"fas";}s:16:"power_transforms";a:3:{s:5:"scale";a:2:{s:4:"type";s:0:"";s:5:"value";s:0:"";}s:10:"position_y";a:2:{s:4:"type";s:0:"";s:5:"value";s:0:"";}s:10:"position_x";a:2:{s:4:"type";s:0:"";s:5:"value";s:0:"";}}}'
+    style: fas
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

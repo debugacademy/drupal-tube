@@ -1,0 +1,57 @@
+.block-callout {
+  position: relative;
+  background-color: $calloutGreen;
+  color: $white;
+  border-radius: 50%;
+  height: 430px;
+  width: 430px;
+  p {
+    font-family: 'Open sans', sans-serif;
+    font-size: 24px;
+    color: $callout-textColor;
+    text-align: left;
+    padding-left: 56px;
+    padding-right: 57px;
+    font-weight: 300;
+    line-height: 33px;
+    margin-bottom: 0;
+  }
+  h2 {
+    font-size: 36px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    line-height: 41px;
+    padding-top: 81px;
+    text-align: center;
+  }
+}
+.calloutBlue {
+  background-color: $calloutBlue;
+}
+.calloutOrange {
+  background-color: $calloutOrange;
+}
+
+//Link
+
+  .field__item {
+    text-align: center;
+    a {
+      font-family: 'Open sans', sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 25px;
+      color: $callout-textColor;
+      text-decoration: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  //Font Awesome Icon
+
+.fontawesome-icon {
+  font-size: 37px;
+  color: $callout-textColor;
+}
