@@ -1,0 +1,24 @@
+uuid: 6a415674-a614-4c1d-97f7-8de2c04306dc
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.recent_conferences
+  module:
+    - views
+  theme:
+    - tube_theme
+id: views_block__recent_conferences_block_1_2
+theme: tube_theme
+region: highlighted
+weight: -8
+provider: null
+plugin: 'views_block:recent_conferences-block_1'
+settings:
+  id: 'views_block:recent_conferences-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

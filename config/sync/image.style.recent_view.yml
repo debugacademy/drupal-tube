@@ -1,0 +1,15 @@
+uuid: 60fe2320-58f9-44cb-b89f-c13b67e010a4
+langcode: en
+status: true
+dependencies: {  }
+name: recent_view
+label: Recent-view
+effects:
+  6cefe063-ae19-4d98-8549-52bef516802e:
+    uuid: 6cefe063-ae19-4d98-8549-52bef516802e
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 430
+      height: 242
+      anchor: center-center

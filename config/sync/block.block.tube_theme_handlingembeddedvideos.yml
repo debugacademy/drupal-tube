@@ -7,7 +7,7 @@ dependencies:
 id: tube_theme_handlingembeddedvideos
 theme: tube_theme
 region: content
-weight: 0
+weight: -5
 provider: null
 plugin: 'block_content:59bc124a-6070-498e-8d10-ded6d8678539'
 settings:
