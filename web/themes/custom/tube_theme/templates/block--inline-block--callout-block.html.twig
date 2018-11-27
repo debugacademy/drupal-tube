@@ -34,8 +34,14 @@
     'block',
     'block-' ~ configuration.provider|clean_class,
     'block-' ~ plugin_id|clean_class,
+    'block-callout',
+    'callout-' ~ content.field_background_color.0['#markup'],
   ]
 %}
+{#{{ dump(content.field_background_color.0['#markup']) }}#}
+{#{{ dump(content|keys) }}#}
+{#{{ dump(content.body.0["#text"]) }}#}
+
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}

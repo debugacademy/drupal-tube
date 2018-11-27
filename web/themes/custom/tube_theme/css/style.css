@@ -10,6 +10,7 @@ Description: Bootstrap 4 with Sass
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Ubuntu:400,500");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7684,6 +7685,44 @@ nav.tabs {
     .btn-outline-dark a:not(:disabled):not(.disabled):active:focus, .btn-outline-dark a:not(:disabled):not(.disabled).active:focus,
     .show > .btn-outline-dark a.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
+
+.block-callout {
+  position: relative;
+  background-color: #96BC44;
+  height: 430px;
+  width: 430px;
+  border-radius: 50%; }
+  .block-callout h2 {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 81px;
+    font-size: 36px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    line-height: 41px; }
+  .block-callout p {
+    color: #F6F6F2;
+    text-align: left;
+    padding-top: 15px;
+    padding-right: 57px;
+    padding-left: 56px;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 33px; }
+  .block-callout .clearfix::after {
+    padding-bottom: 22px; }
+  .block-callout .field__item {
+    text-align: center;
+    text-decoration: none; }
+    .block-callout .field__item a {
+      color: #F6F6F2;
+      padding-left: 98px;
+      padding-right: 99px;
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      line-height: 25px; }
 
 /* GENERAL STYLES
 -------------------------------------------------*/
