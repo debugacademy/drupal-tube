@@ -38,10 +38,6 @@
     'callout-' ~ content.field_background_color.0['#markup'],
   ]
 %}
-{#{{ dump(content.field_background_color.0['#markup']) }}#}
-{{ dump(content|keys) }}
-{#{{ dump(content.body.0["#text"]) }}#}
-{#{{ dump(content.field_link.0) }}#}
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
@@ -52,6 +48,7 @@
   {% block content %}
     <div{{ content_attributes.addClass('content') }}>
       {{ content }}
+      {#<i class="fa fa-caret-right"></i>#}
     </div>
   {% endblock %}
 </div>

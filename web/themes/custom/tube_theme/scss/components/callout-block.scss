@@ -27,10 +27,6 @@
 		line-height: 33px;
 	}
 
-    .clearfix::after {
-	    padding-bottom: 22px;
-	}
-
 	.field__item {
 		text-align: center;
 		text-decoration: none;
@@ -38,17 +34,19 @@
 			color: $text-and-icon-color;
 			padding-left: 98px;
 			padding-right: 99px;
+			padding-bottom: 0;
 			font-size: 18px;
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 700;
 			line-height: 25px;
 		}
-/*		.fontawesome-icon{
+		.fontawesome-icon{
 			color: $text-and-icon-color;
 			padding-left: 197px;
 			padding-right: 203px;
-			font-size: 40px;
-		}*/
+			padding-top: 0;
+			font-size: 48px;
+		}
 	}
 }
 

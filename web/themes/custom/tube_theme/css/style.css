@@ -10,7 +10,8 @@ Description: Bootstrap 4 with Sass
  * Copyright 2011-2018 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Ubuntu:400,500");
+@import url("https://use.fontawesome.com/releases/v5.0.6/js/all.js");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Ubuntu:400,500");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7710,30 +7711,25 @@ nav.tabs {
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 33px; }
-  .block-callout .clearfix::after {
-    padding-bottom: 22px; }
   .block-callout .field__item {
     text-align: center;
-    text-decoration: none;
-    /*		.fontawesome-icon{
-			color: $text-and-icon-color;
-			padding-left: 197px;
-			padding-right: 203px;
-			font-size: 40px;
-		}*/ }
+    text-decoration: none; }
     .block-callout .field__item a {
       color: #F6F6F2;
       padding-left: 98px;
       padding-right: 99px;
+      padding-bottom: 0;
       font-size: 18px;
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
       line-height: 25px; }
+    .block-callout .field__item .fontawesome-icon {
+      color: #F6F6F2;
+      padding-left: 197px;
+      padding-right: 203px;
+      padding-top: 0;
+      font-size: 48px; }
 
-/*
-.callout-Green .callout-Orange .callout-Blue {
-	color: transparent;
-}*/
 .callout-Green {
   background-color: #96BC44; }
 
