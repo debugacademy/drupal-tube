@@ -1,0 +1,8 @@
+uuid: 51c9380f-5cec-4ab6-8af2-2ba1f6a0b5e7
+langcode: en
+status: true
+dependencies: {  }
+id: callout_block
+label: 'Callout Block'
+revision: 0
+description: 'Styled blocks with a title, description, and link. Used for a prominent call to action. '
