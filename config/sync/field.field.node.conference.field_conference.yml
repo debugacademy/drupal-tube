@@ -1,0 +1,29 @@
+uuid: 72ff15f7-a152-4802-a53b-1f8896e87ccc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_conference
+    - node.type.conference
+    - taxonomy.vocabulary.conference
+id: node.conference.field_conference
+field_name: field_conference
+entity_type: node
+bundle: conference
+label: Conference
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      conference: conference
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

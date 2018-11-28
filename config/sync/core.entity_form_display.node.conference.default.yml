@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.conference.body
     - field.field.node.conference.field_address
     - field.field.node.conference.field_banner
+    - field.field.node.conference.field_conference
     - field.field.node.conference.field_contact_email
     - field.field.node.conference.field_date
     - field.field.node.conference.field_logo
@@ -54,6 +55,15 @@ content:
       preview_image_style: thumbnail
     third_party_settings: {  }
     type: image_image
+    region: content
+  field_conference:
+    weight: 129
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_contact_email:
     weight: 128
