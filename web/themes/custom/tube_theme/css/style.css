@@ -7685,6 +7685,13 @@ nav.tabs {
     .show > .btn-outline-dark a.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
+.block-callout {
+  background-color: green;
+  color: white;
+  border-radius: 50%;
+  width: 300px;
+  height: 300px; }
+
 /* GENERAL STYLES
 -------------------------------------------------*/
 body {
