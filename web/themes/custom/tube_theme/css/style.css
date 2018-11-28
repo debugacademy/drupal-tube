@@ -7688,10 +7688,10 @@ nav.tabs {
 
 .block-callout {
   position: relative;
-  background-color: #96BC44;
   height: 430px;
   width: 430px;
-  border-radius: 50%; }
+  border-radius: 50%;
+  color: transparent; }
   .block-callout h2 {
     color: #FFFFFF;
     text-align: center;
@@ -7714,7 +7714,13 @@ nav.tabs {
     padding-bottom: 22px; }
   .block-callout .field__item {
     text-align: center;
-    text-decoration: none; }
+    text-decoration: none;
+    /*		.fontawesome-icon{
+			color: $text-and-icon-color;
+			padding-left: 197px;
+			padding-right: 203px;
+			font-size: 40px;
+		}*/ }
     .block-callout .field__item a {
       color: #F6F6F2;
       padding-left: 98px;
@@ -7723,6 +7729,19 @@ nav.tabs {
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
       line-height: 25px; }
+
+/*
+.callout-Green .callout-Orange .callout-Blue {
+	color: transparent;
+}*/
+.callout-Green {
+  background-color: #96BC44; }
+
+.callout-Orange {
+  background-color: #FB8920; }
+
+.callout-Blue {
+  background-color: #0D7DC1; }
 
 /* GENERAL STYLES
 -------------------------------------------------*/

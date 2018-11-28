@@ -1,9 +1,9 @@
 .block-callout {
 	position: relative;
-	background-color: $green-callout;
 	height: 430px;
 	width: 430px;	
 	border-radius: 50%;
+	color: transparent;
 
     h2 {
 		color: #FFFFFF;
@@ -16,7 +16,7 @@
 	}
 
     p {
-		color: #F6F6F2;
+		color: $text-and-icon-color;
 		text-align: left;
 		padding-top: 15px;
 		padding-right: 57px;
@@ -35,7 +35,7 @@
 		text-align: center;
 		text-decoration: none;
 		a {
-			color: #F6F6F2;
+			color: $text-and-icon-color;
 			padding-left: 98px;
 			padding-right: 99px;
 			font-size: 18px;
@@ -43,5 +43,23 @@
 			font-weight: 700;
 			line-height: 25px;
 		}
+/*		.fontawesome-icon{
+			color: $text-and-icon-color;
+			padding-left: 197px;
+			padding-right: 203px;
+			font-size: 40px;
+		}*/
 	}
+}
+
+.callout-Green {
+	background-color: $green-background;
+}
+
+.callout-Orange {
+	background-color: $orange-background;
+}
+
+.callout-Blue {
+	background-color: $blue-background;
 }

@@ -39,8 +39,9 @@
   ]
 %}
 {#{{ dump(content.field_background_color.0['#markup']) }}#}
-{#{{ dump(content|keys) }}#}
+{{ dump(content|keys) }}
 {#{{ dump(content.body.0["#text"]) }}#}
+{#{{ dump(content.field_link.0) }}#}
 
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
