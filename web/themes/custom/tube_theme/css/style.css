@@ -12,6 +12,8 @@ Description: Bootstrap 4 with Sass
  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
+@import url("https://use.fontawesome.com/releases/v5.0.6/js/all.js");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Ubuntu:400,500");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -7733,6 +7735,58 @@ nav.tabs {
 
 .views-row {
   margin-right: 20px; }
+
+.block-callout {
+  position: relative;
+  height: 430px;
+  width: 430px;
+  border-radius: 50%;
+  color: transparent; }
+  .block-callout h2 {
+    color: #FFFFFF;
+    text-align: center;
+    padding-top: 81px;
+    font-size: 36px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    line-height: 41px; }
+  .block-callout p {
+    color: #F6F6F2;
+    text-align: left;
+    padding-top: 15px;
+    padding-right: 57px;
+    padding-left: 56px;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    line-height: 33px; }
+  .block-callout .field__item {
+    text-align: center;
+    text-decoration: none; }
+    .block-callout .field__item a {
+      color: #F6F6F2;
+      padding-left: 98px;
+      padding-right: 99px;
+      padding-bottom: 0;
+      font-size: 18px;
+      font-family: 'Open Sans', sans-serif;
+      font-weight: 700;
+      line-height: 25px; }
+    .block-callout .field__item .fontawesome-icon {
+      color: #F6F6F2;
+      padding-left: 197px;
+      padding-right: 203px;
+      padding-top: 0;
+      font-size: 48px; }
+
+.callout-Green {
+  background-color: #96BC44; }
+
+.callout-Orange {
+  background-color: #FB8920; }
+
+.callout-Blue {
+  background-color: #0D7DC1; }
 
 /* GENERAL STYLES
 -------------------------------------------------*/

@@ -6,6 +6,10 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700');
 //@import url("https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic");
 //@import url("https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900");
+//@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+//@import url("https://use.fontawesome.com/releases/v5.0.1/css/all.css");
+@import url("https://use.fontawesome.com/releases/v5.0.6/js/all.js");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Ubuntu:400,500");
 // font families
 $font-lato: 'Lato',
 Arial,
@@ -36,7 +40,16 @@ Consolas,
 "Liberation Mono",
 "Courier New",
 monospace;
-$font-family-base: $font-family-sans-serif;
+
+$font-ubuntu: 'Ubuntu',
+sans-serif;
+$font-opensans: 'Open Sans',
+sans-serif;
+
+$font-family-header: $font-ubuntu;
+$font-family-base: $font-opensans;
+
+//$font-family-base: $font-family-sans-serif;
 $font-size-base: 1rem; // Assumes the browser default, typically `16px`
 $font-size-lg: 1.25rem;
 $font-size-sm: .875rem;
@@ -46,7 +59,7 @@ $font-weight-bold: bold;
 $font-weight-base: $font-weight-normal;
 $line-height-base: 1.5;
 $font-size-h1: 2.5rem;
-$font-size-h2: 2rem;
+$font-size-h2: 2.25rem;
 $font-size-h3: 1.75rem;
 $font-size-h4: 1.5rem;
 $font-size-h5: 1.25rem;
