@@ -9,7 +9,7 @@ dependencies:
     - field.field.media.external_video.field_recording_date
     - field.field.media.external_video.field_speaker
     - field.field.media.external_video.field_sponsor
-    - image.style.thumbnail
+    - image.style.recent_view
     - media.type.external_video
   module:
     - datetime
@@ -87,7 +87,7 @@ content:
     weight: 5
     label: hidden
     settings:
-      image_style: thumbnail
+      image_style: recent_view
       image_link: ''
     region: content
     third_party_settings: {  }

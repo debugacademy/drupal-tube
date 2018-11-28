@@ -1,5 +1,18 @@
 /* MIXINS */
 
+@mixin font-size($size, $line-height) {
+    font-size: $size;
+    line-height: $line-height;
+}
+@mixin heading-font($weight) {
+    font-weight: $weight;
+    font-family: 'Ubuntu', sans-serif;
+}
+@mixin open-sans-font($weight) {
+    font-weight: $weight;
+    font-family: 'Open sans', sans-serif;
+}
+
 //
 // Alternate buttons
 //

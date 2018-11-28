@@ -8,6 +8,8 @@ $accent-shade: #1684c4;
 $accent-light: lighten($accent-shade, 37%);
 $accent-dark: darken($accent-shade, 12%);
 // Reassign color vars to semantic color scheme
+$black: #222222;
+$light-gray: #666666;
 $red: #dc3545;
 $yellow: #ffc107;
 $green: #28a745;
@@ -38,3 +40,5 @@ $link-hover-decoration: underline;
 // Comments
 $comment-spacer-x: 1.25em;
 $comment-spacer-y: 1.25em;
+//Recent
+$bg-color: #F6F6F2;
