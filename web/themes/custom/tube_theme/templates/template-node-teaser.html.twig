@@ -77,7 +77,7 @@
   <header>
     {{ title_prefix }}
     {% if not page %}
-      <h2{{ title_attributes.addClass('node__title') }}>
+      <h2{{ title_attributes.addClass('node__title', 'featured-title') }}>
         <a href="{{ url }}" rel="bookmark">{{ label }}</a>
       </h2>
     {% endif %}
@@ -91,9 +91,9 @@
         {% if display_submitted %}
         <div class="node__meta">
           {% block submitted %}
-            <em{{ author_attributes }}>
+            <span{{ author_attributes.addClass('featured-author') }}>
               {% trans %}by {{ author_name }}{% endtrans %}
-            </em>
+            </span>
           {% endblock %}
           {{ metadata }}
         </div>

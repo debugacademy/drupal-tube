@@ -1,3 +1,16 @@
 .node-featured-teaser {
-	background-color: #E0E0E0;
+	background-color: $featured-background;
+	p {
+		color: #000000;
+		font-size: 1.25em;
+	}
+	.featured-author {
+		color: $black;
+		font-size: 1.125em;
+	}
+}
+
+h2.featured-title {
+	font-size: 2.25em;
+	color: $black;
 }
