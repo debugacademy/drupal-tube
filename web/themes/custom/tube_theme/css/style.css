@@ -7695,17 +7695,44 @@ nav.tabs {
   width: 430px;
   border-radius: 50%;
   color: transparent;
-  margin-left: 40px; }
+  margin-left: 40px;
+  text-align: center; }
   .block-callout.callout-Green {
     background-color: #96BC44; }
   .block-callout.callout-Orange {
     background-color: #FB8920; }
   .block-callout.callout-Blue {
     background-color: #0D7DC1; }
-  .block-callout h2 {
+  .block-callout h2, .block-callout .content {
     font-family: "Ubuntu", sans-serif;
+    color: #fff; }
+  .block-callout h2 {
+    font-size: 36px;
+    padding-top: 82px;
+    width: 100%; }
+  .block-callout .content p {
+    padding: 15px 55px 0 55px;
+    max-height: 160px;
+    overflow: hidden;
+    text-align: left; }
+  .block-callout .content a {
+    text-decoration: underline;
+    font-weight: 700;
     color: #fff;
-    font-size: 3rem; }
+    font-size: 16px;
+    position: absolute;
+    width: 100%;
+    bottom: 70px;
+    left: 50%;
+    margin-left: -215px; }
+    .block-callout .content a:hover {
+      color: #343a40; }
+  .block-callout .content .field--name-field-background-color {
+    display: none; }
+  .block-callout .content .fontawesome-icon {
+    position: absolute;
+    width: 100%;
+    bottom: 45px; }
 
 /* GENERAL STYLES
 -------------------------------------------------*/
