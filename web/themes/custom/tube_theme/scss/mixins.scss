@@ -29,3 +29,8 @@ $value in $theme-colors {
         @include button-outline-variant($value);
     }
 }
+
+@mixin body-font {
+    font-family: $font-ubuntu;
+    color: $white;
+}

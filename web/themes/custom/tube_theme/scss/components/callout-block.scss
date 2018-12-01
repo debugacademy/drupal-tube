@@ -4,60 +4,22 @@
 	width: 430px;	
 	border-radius: 50%;
 	color: transparent;
+	margin-left: $m-40;
 
-    h2 {
-		color: #FFFFFF;
-		text-align: center;
-		padding-top: 81px;
-		font-size: 36px;
-		font-family: 'Ubuntu', sans-serif;
-		font-weight: 500;
-		line-height: 41px;
+	&.callout-Green {
+		background-color: $green;
 	}
 
-    p {
-		color: $text-and-icon-color;
-		text-align: left;
-		padding-top: 15px;
-		padding-right: 57px;
-		padding-left: 56px;
-		font-size: 24px;
-		font-family: 'Open Sans', sans-serif;
-		font-weight: 400;
-		line-height: 33px;
+	&.callout-Orange {
+		background-color: $orange;
 	}
 
-	.field__item {
-		text-align: center;
-		text-decoration: none;
-		a {
-			color: $text-and-icon-color;
-			padding-left: 98px;
-			padding-right: 99px;
-			padding-bottom: 0;
-			font-size: 18px;
-			font-family: 'Open Sans', sans-serif;
-			font-weight: 700;
-			line-height: 25px;
-		}
-		.fontawesome-icon{
-			color: $text-and-icon-color;
-			padding-left: 197px;
-			padding-right: 203px;
-			padding-top: 0;
-			font-size: 48px;
-		}
+	&.callout-Blue {
+		background-color: $blue;
 	}
-}
 
-.callout-Green {
-	background-color: $green-background;
-}
-
-.callout-Orange {
-	background-color: $orange-background;
-}
-
-.callout-Blue {
-	background-color: $blue-background;
+	h2 {
+		@include body-font;
+		font-size: $font-size-h2;
+	}
 }
