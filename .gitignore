@@ -22,3 +22,9 @@
 
 # Ignore .env files as they are personal
 /.env
+/web/themes/custom/tube_theme/node_modules/
+.DS_Store
+/web/.DS_Store
+/web/themes/.DS_Store
+/web/themes/custom/.DS_Store
+node_modules
