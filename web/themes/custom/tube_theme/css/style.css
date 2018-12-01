@@ -7703,6 +7703,8 @@ nav.tabs {
     background-color: #FB8920; }
   .block-callout.callout-Blue {
     background-color: #0D7DC1; }
+  .block-callout.callout-shape-square {
+    border-radius: 0; }
   .block-callout h2, .block-callout .content {
     font-family: "Ubuntu", sans-serif;
     color: #fff; }
@@ -7715,23 +7717,22 @@ nav.tabs {
     max-height: 160px;
     overflow: hidden;
     text-align: left; }
+  .block-callout .content a, .block-callout .content .fontawesome-icon {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    margin-left: -215px; }
   .block-callout .content a {
     text-decoration: underline;
     font-weight: 700;
     color: #fff;
     font-size: 16px;
-    position: absolute;
-    width: 100%;
-    bottom: 70px;
-    left: 50%;
-    margin-left: -215px; }
+    bottom: 70px; }
     .block-callout .content a:hover {
       color: #343a40; }
-  .block-callout .content .field--name-field-background-color {
+  .block-callout .content .field--name-field-background-color, .block-callout .content .field--name-field-background-shape {
     display: none; }
   .block-callout .content .fontawesome-icon {
-    position: absolute;
-    width: 100%;
     bottom: 45px; }
 
 /* GENERAL STYLES

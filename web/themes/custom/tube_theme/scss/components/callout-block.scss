@@ -19,6 +19,10 @@
 		background-color: $blue;
 	}
 
+	&.callout-shape-square {
+		border-radius: 0;
+	}
+
 	h2, .content {
 		@include body-font;
 	}
@@ -35,23 +39,23 @@
 			overflow: hidden;
 			text-align: left;
 		}
-		a {
-			@include link-text;
+
+		a, .fontawesome-icon {
 			position: absolute;
 			width: 100%;
-			bottom: 70px;
 			left: 50%;
 			margin-left: -215px;
 		}
-		.field--name-field-background-color {
+		a {
+			@include link-text;
+			bottom: 70px;
+		}
+		.field--name-field-background-color, .field--name-field-background-shape {
 			display: none;
 		}
 		.fontawesome-icon {
-			position: absolute;
-			width: 100%;
 			bottom: $m-45;
 		}
-
 	}
 
 }
