@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.callout_block
     - field.field.block_content.callout_block.body
     - field.field.block_content.callout_block.field_background_color
+    - field.field.block_content.callout_block.field_background_shape
     - field.field.block_content.callout_block.field_font_awesome_icons
     - field.field.block_content.callout_block.field_link
   module:
@@ -28,6 +29,12 @@ content:
     region: content
   field_background_color:
     weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_background_shape:
+    weight: 30
     settings: {  }
     third_party_settings: {  }
     type: options_select

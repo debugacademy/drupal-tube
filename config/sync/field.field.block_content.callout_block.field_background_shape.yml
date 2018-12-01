@@ -1,0 +1,21 @@
+uuid: 0af88353-28f1-45c1-a301-66f8922697e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.callout_block
+    - field.storage.block_content.field_background_shape
+  module:
+    - options
+id: block_content.callout_block.field_background_shape
+field_name: field_background_shape
+entity_type: block_content
+bundle: callout_block
+label: 'Background Shape'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
