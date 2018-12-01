@@ -4,6 +4,24 @@
 	width: 430px;	
 	border-radius: 50%;
 	color: transparent;
+        margin-left: 40;
+        text-align: center;
+
+	&.callout-Green {
+		background-color: $green;
+	}
+
+	&.callout-Orange {
+		background-color: $orange;
+	}
+
+	&.callout-Blue {
+		background-color: $blue;
+	}
+
+	&.callout-shape-square {
+		border-radius: 0;
+	}
 
     h2 {
 		color: #FFFFFF;
@@ -18,11 +36,8 @@
     p {
 		color: $text-and-icon-color;
 		text-align: left;
-		padding-top: 15px;
-		padding-right: 57px;
-		padding-left: 56px;
+		padding: 15px 55px 0 55px;
 		font-size: 24px;
-		font-family: 'Open Sans', sans-serif;
 		font-weight: 400;
 		line-height: 33px;
 	}
@@ -40,6 +55,9 @@
 			font-weight: 700;
 			line-height: 25px;
 		}
+		.field--name-field-background-color, .field--name-field-background-shape {
+			display: none;
+		}
 		.fontawesome-icon{
 			color: $text-and-icon-color;
 			padding-left: 197px;
@@ -48,16 +66,4 @@
 			font-size: 48px;
 		}
 	}
-}
-
-.callout-Green {
-	background-color: $green-background;
-}
-
-.callout-Orange {
-	background-color: $orange-background;
-}
-
-.callout-Blue {
-	background-color: $blue-background;
 }

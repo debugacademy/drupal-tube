@@ -7829,7 +7829,17 @@ h3, h4, h5, h6 {
   height: 430px;
   width: 430px;
   border-radius: 50%;
-  color: transparent; }
+  color: transparent;
+  margin-left: 40;
+  text-align: center; }
+  .block-callout.callout-Green {
+    background-color: #28a745; }
+  .block-callout.callout-Orange {
+    background-color: #fd7e14; }
+  .block-callout.callout-Blue {
+    background-color: #007bff; }
+  .block-callout.callout-shape-square {
+    border-radius: 0; }
   .block-callout h2 {
     color: #FFFFFF;
     text-align: center;
@@ -7841,11 +7851,8 @@ h3, h4, h5, h6 {
   .block-callout p {
     color: #F6F6F2;
     text-align: left;
-    padding-top: 15px;
-    padding-right: 57px;
-    padding-left: 56px;
+    padding: 15px 55px 0 55px;
     font-size: 24px;
-    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 33px; }
   .block-callout .field__item {
@@ -7860,6 +7867,8 @@ h3, h4, h5, h6 {
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
       line-height: 25px; }
+    .block-callout .field__item .field--name-field-background-color, .block-callout .field__item .field--name-field-background-shape {
+      display: none; }
     .block-callout .field__item .fontawesome-icon {
       color: #F6F6F2;
       padding-left: 197px;
@@ -7867,65 +7876,24 @@ h3, h4, h5, h6 {
       padding-top: 0;
       font-size: 48px; }
 
-.callout-Green {
-  background-color: #96BC44; }
-
-.callout-Orange {
-  background-color: #FB8920; }
-
-.callout-Blue {
-  background-color: #0D7DC1; }
-
 .node-featured-teaser {
   background-color: #E0E0E0; }
-<<<<<<< HEAD
   .node-featured-teaser p {
     color: #000000;
     font-size: 1.25em; }
   .node-featured-teaser .featured-author {
     color: #222222;
     font-size: 1.125em; }
-=======
->>>>>>> khalid/featuredarticle-1468-kt
   .node-featured-teaser .field__item {
     float: none; }
     .node-featured-teaser .field__item img {
       display: block;
       margin-left: auto;
-<<<<<<< HEAD
       margin-right: auto; }
 
 h2.featured-title {
   font-size: 2.25em;
   color: #222222; }
-=======
-      margin-right: auto;
-      width: 415px;
-      height: 311px; }
-  .node-featured-teaser p {
-    color: #000000;
-    font-size: 20px;
-    font-family: Ubuntu;
-    line-height: normal;
-    font-style: normal;
-    font-weight: 400; }
-
-.node--view-mode-teaser h2 {
-  color: #222222;
-  font-family: Ubuntu;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  font-size: 36px; }
-
-.node__meta {
-  color: #222222;
-  font-family: Open Sans;
-  font-style: normal;
-  font-weight: bold;
-  line-height: normal;
-  font-size: 18px; }
->>>>>>> khalid/featuredarticle-1468-kt
 
 /* GENERAL STYLES
 -------------------------------------------------*/
