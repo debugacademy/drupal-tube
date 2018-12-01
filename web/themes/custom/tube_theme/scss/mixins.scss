@@ -34,3 +34,14 @@ $value in $theme-colors {
     font-family: $font-ubuntu;
     color: $white;
 }
+
+@mixin link-text {
+    text-decoration: underline;
+    font-weight: 700;
+    color: $white;
+    font-size: 16px;
+    &:hover {
+        color: $gray-800;
+    }
+
+}

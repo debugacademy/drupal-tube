@@ -5,6 +5,7 @@
 	border-radius: 50%;
 	color: transparent;
 	margin-left: $m-40;
+	text-align: center;
 
 	&.callout-Green {
 		background-color: $green;
@@ -18,8 +19,39 @@
 		background-color: $blue;
 	}
 
-	h2 {
+	h2, .content {
 		@include body-font;
-		font-size: $font-size-h2;
 	}
+	h2 {
+		font-size: 36px;
+		padding-top: 82px;
+		width: 100%;
+	}
+
+	.content {
+		p {
+			padding: $m-15 $m-55 0 $m-55;
+			max-height: 160px;
+			overflow: hidden;
+			text-align: left;
+		}
+		a {
+			@include link-text;
+			position: absolute;
+			width: 100%;
+			bottom: 70px;
+			left: 50%;
+			margin-left: -215px;
+		}
+		.field--name-field-background-color {
+			display: none;
+		}
+		.fontawesome-icon {
+			position: absolute;
+			width: 100%;
+			bottom: $m-45;
+		}
+
+	}
+
 }
