@@ -6,6 +6,7 @@ dependencies:
     - block_content.type.callout_block
     - field.field.block_content.callout_block.body
     - field.field.block_content.callout_block.field_background_color
+    - field.field.block_content.callout_block.field_background_shape
     - field.field.block_content.callout_block.field_font_awesome_icons
     - field.field.block_content.callout_block.field_link
   module:
@@ -32,6 +33,13 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  field_background_shape:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
   field_font_awesome_icons:
     weight: 3
     label: hidden
