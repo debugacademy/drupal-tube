@@ -1,0 +1,24 @@
+.node-featured-teaser {
+	background-color: $featured-background;
+	p {
+		color: #000000;
+		font-size: 1.25em;
+	}
+	.featured-author {
+		color: $black;
+		font-size: 1.125em;
+	}
+	.field__item {
+		float: none;
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;	
+		}
+	}
+}
+
+h2.featured-title {
+	font-size: 2.25em;
+	color: $black;
+}

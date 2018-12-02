@@ -7817,6 +7817,25 @@ h3, h4, h5, h6 {
 .callout-Blue {
   background-color: #0D7DC1; }
 
+.node-featured-teaser {
+  background-color: #E0E0E0; }
+  .node-featured-teaser p {
+    color: #000000;
+    font-size: 1.25em; }
+  .node-featured-teaser .featured-author {
+    color: #222222;
+    font-size: 1.125em; }
+  .node-featured-teaser .field__item {
+    float: none; }
+    .node-featured-teaser .field__item img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; }
+
+h2.featured-title {
+  font-size: 2.25em;
+  color: #222222; }
+
 /* GENERAL STYLES
 -------------------------------------------------*/
 body {
