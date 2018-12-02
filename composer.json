@@ -64,6 +64,11 @@
         ]
     },
     "extra": {
+        "patches": {
+            "drupal/bootstrap_barrio": {
+                "Layout Builder Sections Issue": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
+            }
+        },        
         "patchLevel": {
             "drupal/core": "-p2"
         },
