@@ -9,7 +9,7 @@ _core:
 id: tube_theme_page_title
 theme: tube_theme
 region: content
-weight: -9
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

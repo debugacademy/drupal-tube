@@ -10,8 +10,8 @@ _core:
   default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
 id: tube_theme_help
 theme: tube_theme
-region: content
-weight: -7
+region: highlighted
+weight: -4
 provider: null
 plugin: help_block
 settings:
