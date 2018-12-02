@@ -12,8 +12,8 @@ _core:
   default_config_hash: kkISXE1LT2FJEoYnqCrCpeFB-2pmGmMxMklVk7rQcfg
 id: tube_theme_footer
 theme: tube_theme
-region: footer_fifth
-weight: 0
+region: footer_fourth
+weight: -5
 provider: null
 plugin: 'system_menu_block:footer'
 settings:
