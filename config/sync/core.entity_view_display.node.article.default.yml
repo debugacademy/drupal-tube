@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_display.comment.comment.default
     - field.field.node.article.body
     - field.field.node.article.comment
+    - field.field.node.article.field_featured
     - field.field.node.article.field_image
     - field.field.node.article.field_related_conferences
     - field.field.node.article.field_tags
@@ -39,6 +40,16 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
+  field_featured:
+    weight: 112
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_image:
     type: image
     weight: -1

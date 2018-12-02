@@ -1,0 +1,51 @@
+{{ attach_library('bootstrap_barrio/node') }}
+
+{%
+ set classes = [
+   'node',
+   'node--type-' ~ node.bundle|clean_class,
+   node.isPromoted() ? 'node--promoted',
+   node.isSticky() ? 'node--sticky',
+   not node.isPublished() ? 'node--unpublished',
+   view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+   'clearfix',
+   'node-featured-teaser',
+ ]
+%}
+
+{#{{dump(content.field_image.0)}}#}
+
+<article{{ attributes.addClass(classes) }}>
+ <header>
+   {{ title_prefix }}
+   {% if not page %}
+     <h2{{ title_attributes.addClass('node__title') }}>
+       <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+     </h2>
+   {% endif %}
+   {{ title_suffix }}
+ </header>
+
+ <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+   {{ content }}
+
+   {% block subtext %}
+     <div class="subtext">
+       {% if display_submitted %}
+       <div class="node__meta">
+         {% block submitted %}
+           <em{{ author_attributes }}>
+             {% trans %}By {{ author_name }}{% endtrans %}
+           </em>
+         {% endblock %}
+         {{ metadata }}
+       </div>
+       {% endif %}
+       <span><strong>{% block subtextheading %}{% endblock %}</strong></span>
+       <span>{% block subtextlvl2 %}{% endblock %}</span>
+       <span>{% block subtextlvl3 %}{% endblock %}</span>
+     </div>
+   {% endblock %}
+
+ </div>
+</article>
