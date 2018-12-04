@@ -1,0 +1,14 @@
+uuid: 5a520cb9-cfba-4521-8abc-5787763b2a2e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.conference_organizer
+  module:
+    - user
+id: user_add_role_action.conference_organizer
+label: 'Add the Conference Organizer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: conference_organizer

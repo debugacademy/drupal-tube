@@ -1,0 +1,14 @@
+uuid: 3e83e4b2-a159-40ad-aa9e-929448b543d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_submitter
+  module:
+    - user
+id: user_remove_role_action.content_submitter
+label: 'Remove the Content Submitter role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: content_submitter

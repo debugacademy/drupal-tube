@@ -1,0 +1,14 @@
+uuid: e2c1d5d0-8e26-44be-a618-a8e7ae76d0c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.conference_organizer
+  module:
+    - user
+id: user_remove_role_action.conference_organizer
+label: 'Remove the Conference Organizer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: conference_organizer

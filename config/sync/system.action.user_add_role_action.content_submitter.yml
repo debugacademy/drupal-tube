@@ -1,0 +1,14 @@
+uuid: 85107bdb-19d6-49fe-b0a8-2f0464374517
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_submitter
+  module:
+    - user
+id: user_add_role_action.content_submitter
+label: 'Add the Content Submitter role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_submitter

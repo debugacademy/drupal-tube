@@ -1,0 +1,9 @@
+uuid: ade124bc-06dc-49d5-beaa-cab050fd3545
+langcode: en
+status: true
+dependencies: {  }
+id: content_submitter
+label: 'Content Submitter'
+weight: -10
+is_admin: null
+permissions: {  }
