@@ -24,6 +24,7 @@
         "drupal/bootstrap_barrio": "^4.17",
         "drupal/bootstrap_sass": "^1.6",
         "drupal/console": "^1.0.2",
+        "drupal/contact_storage": "^1.0@beta",
         "drupal/core": "^8.6.0",
         "drupal/fontawesome": "^2.9",
         "drupal/video_embed_field": "^2.0",
