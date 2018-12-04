@@ -78,3 +78,64 @@ h6 {
 h3, h4, h5, h6 {
 	font-family: $font-opensans;
 }
+
+// Featured Video Section
+
+.node-featured-teaser {
+   position: relative;
+   background-color: $featured-background;
+   height: 670px;
+}
+.featured-title {
+    position: absolute;
+    top: 0;
+    left: 301px;
+  a {
+    font-family: $font-opensans;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: $light-gray;
+    font-weight: 600;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.featured-video-title {
+   margin-left: 53px;
+  a {
+    font-family: $font-family-header;
+    font-weight: 400;
+    @include font-size(36px, 41px);
+    color: $black;
+  }
+}
+.video-desc {
+  margin-left: 55px;
+  font-family: $font-ubuntu;
+  @include font-size(20px, 23px);
+}
+.video-thumbnail {
+  margin-left: 55px;
+  margin-top: 16px;
+}
+.speaker {
+  margin-top: 22px;
+  margin-left: 55px;
+  @include open-sans-font(700);
+  @include font-size(18px, 25px);
+  color: $black;
+  text-align: left;
+  text-transform: none;
+}
+.conference {
+  a {
+    margin-left: 55px;
+    margin-top: 29px;
+    @include open-sans-font(600);
+    @include font-size(14px, 19px);
+    text-align: left;
+    text-transform: uppercase;
+    color: $light-gray;
+  }
+}
