@@ -1,6 +1,6 @@
 uuid: e9b39ed3-d2cc-4c54-a206-3653b2134b47
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - system
@@ -11,7 +11,7 @@ _core:
 id: tube_theme_powered
 theme: tube_theme
 region: footer_fifth
-weight: 10
+weight: -6
 provider: null
 plugin: system_powered_by_block
 settings:
