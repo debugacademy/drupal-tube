@@ -5,8 +5,8 @@ dependencies:
   module:
     - media
     - taxonomy
-id: media.field_event_
-field_name: field_event_
+id: media.field_event
+field_name: field_event
 entity_type: media
 type: entity_reference
 settings:
