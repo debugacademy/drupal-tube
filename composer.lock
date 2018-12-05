@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "745db05bc387ac8a6c6e77cf33432b3c",
+    "content-hash": "07bf6e6f100d0658b4733ab055f9d211",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -1939,6 +1939,9 @@
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
                     }
+                },
+                "patches_applied": {
+                    "Layout Builder Sections Issue": "https://www.drupal.org/files/issues/2018-06-01/2976934-3.patch"
                 }
             },
             "notification-url": "https://packages.drupal.org/8/downloads",
