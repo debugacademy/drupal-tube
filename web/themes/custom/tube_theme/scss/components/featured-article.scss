@@ -1,0 +1,42 @@
+.node-featured-teaser {
+	background-color: #E0E0E0;
+
+	.field__item {
+		float: none;
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 415px;
+			height: 311px;
+		}
+	}
+		p {
+			color: #000000;
+			font-size: 20px;
+			font-family: Ubuntu;
+			line-height: normal;
+			font-style: normal;
+			font-weight: 400;
+		}
+}
+
+.node--view-mode-teaser {
+	h2 {
+		color: #222222;		
+		font-family: Ubuntu;
+		font-style: normal;
+		font-weight: 500;
+		line-height: normal;
+		font-size: 36px;
+	}
+}
+
+.node__meta {
+	color: #222222;
+	font-family: Open Sans;
+	font-style: normal;
+	font-weight: bold;
+	line-height: normal;
+	font-size: 18px
+}

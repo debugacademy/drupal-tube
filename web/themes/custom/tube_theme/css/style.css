@@ -7878,22 +7878,54 @@ h3, h4, h5, h6 {
 
 .node-featured-teaser {
   background-color: #E0E0E0; }
+<<<<<<< HEAD
   .node-featured-teaser p {
     color: #000000;
     font-size: 1.25em; }
   .node-featured-teaser .featured-author {
     color: #222222;
     font-size: 1.125em; }
+=======
+>>>>>>> khalid/featuredarticle-1468-kt
   .node-featured-teaser .field__item {
     float: none; }
     .node-featured-teaser .field__item img {
       display: block;
       margin-left: auto;
+<<<<<<< HEAD
       margin-right: auto; }
 
 h2.featured-title {
   font-size: 2.25em;
   color: #222222; }
+=======
+      margin-right: auto;
+      width: 415px;
+      height: 311px; }
+  .node-featured-teaser p {
+    color: #000000;
+    font-size: 20px;
+    font-family: Ubuntu;
+    line-height: normal;
+    font-style: normal;
+    font-weight: 400; }
+
+.node--view-mode-teaser h2 {
+  color: #222222;
+  font-family: Ubuntu;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  font-size: 36px; }
+
+.node__meta {
+  color: #222222;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  font-size: 18px; }
+>>>>>>> khalid/featuredarticle-1468-kt
 
 /* GENERAL STYLES
 -------------------------------------------------*/

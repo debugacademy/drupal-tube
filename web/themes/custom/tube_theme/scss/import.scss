@@ -17,4 +17,8 @@
 //Additional scss by Drupal.Tube team
 @import "misc";
 @import "./components/callout-block";
+
+// The next two lines (node-featured-teaser and featured-article) reference files which apply the same styling.
+// Will need to compare the CSS implementations & pick one to retain.
 @import "./components/node-featured-teaser"
+// @import "./components/featured-article.scss";
