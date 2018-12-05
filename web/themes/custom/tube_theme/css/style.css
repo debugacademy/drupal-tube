@@ -7689,6 +7689,16 @@ nav.tabs {
     .show > .btn-outline-dark a.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
+.region-footer-main {
+  justify-content: flex-end; }
+  .region-footer-main .menu--footer .navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end; }
+    .region-footer-main .menu--footer .navbar-nav .nav-item {
+      margin: 10px;
+      text-transform: uppercase;
+      color: #fff; }
+
 .recent {
   background-color: #F6F6F2; }
 
