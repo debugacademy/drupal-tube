@@ -170,12 +170,8 @@
     <footer class="site-footer">
       {% block footer %}
         <div class="{{ container }}">
-          {% if page.footer_left or page.footer_center or page.footer_right %}
-            <div class="site-footer__top clearfix">
-              {{ page.footer_left }}
-              {{ page.footer_center }}
-              {{ page.footer_right }}
-            </div>
+          {% if page.footer_main %}
+              {{ page.footer_main }}
           {% endif %}
         </div>
       {% endblock %}
