@@ -7765,6 +7765,65 @@ h6 {
 h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif; }
 
+.node-featured-teaser {
+  position: relative;
+  background-color: #E0E0E0;
+  height: 670px; }
+
+.featured-title {
+  position: absolute;
+  top: 0;
+  left: 301px; }
+  .featured-title a {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #666666;
+    font-weight: 600; }
+    .featured-title a:hover {
+      text-decoration: none; }
+
+.featured-video-title {
+  margin-left: 53px; }
+  .featured-video-title a {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 41px;
+    color: #222222; }
+
+.video-desc {
+  margin-left: 55px;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 20px;
+  line-height: 23px; }
+
+.video-thumbnail {
+  margin-left: 55px;
+  margin-top: 16px; }
+
+.speaker {
+  margin-top: 22px;
+  margin-left: 55px;
+  font-weight: 700;
+  font-family: 'Open sans', sans-serif;
+  font-size: 18px;
+  line-height: 25px;
+  color: #222222;
+  text-align: left;
+  text-transform: none; }
+
+.conference a {
+  margin-left: 55px;
+  margin-top: 29px;
+  font-weight: 600;
+  font-family: 'Open sans', sans-serif;
+  font-size: 14px;
+  line-height: 19px;
+  text-align: left;
+  text-transform: uppercase;
+  color: #666666; }
+
 .block-callout {
   position: relative;
   height: 430px;

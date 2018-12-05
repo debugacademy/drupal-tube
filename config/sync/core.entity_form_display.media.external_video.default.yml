@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.external_video.field_conference
     - field.field.media.external_video.field_description
     - field.field.media.external_video.field_event
+    - field.field.media.external_video.field_featured_video
     - field.field.media.external_video.field_media_video_embed_field
     - field.field.media.external_video.field_recording_date
     - field.field.media.external_video.field_speaker
@@ -48,6 +49,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: options_select
+    region: content
+  field_featured_video:
+    weight: 106
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_media_video_embed_field:
     weight: 0

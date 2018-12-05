@@ -1,0 +1,15 @@
+uuid: db30ab3a-6f4f-42cd-bd59-9e163bdea571
+langcode: en
+status: true
+dependencies: {  }
+name: featured_video
+label: 'Featured video'
+effects:
+  c93c3ff6-8716-4965-bab1-4df2b27d0464:
+    uuid: c93c3ff6-8716-4965-bab1-4df2b27d0464
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 547
+      height: 308
+      anchor: center-center

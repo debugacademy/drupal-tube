@@ -6,6 +6,7 @@ dependencies:
     - field.field.media.external_video.field_conference
     - field.field.media.external_video.field_description
     - field.field.media.external_video.field_event
+    - field.field.media.external_video.field_featured_video
     - field.field.media.external_video.field_media_video_embed_field
     - field.field.media.external_video.field_recording_date
     - field.field.media.external_video.field_speaker
@@ -25,7 +26,7 @@ content:
   created:
     label: hidden
     type: timestamp
-    weight: 0
+    weight: 1
     region: content
     settings:
       date_format: medium
@@ -33,16 +34,16 @@ content:
       timezone: ''
     third_party_settings: {  }
   field_conference:
-    weight: 11
-    label: above
+    weight: 8
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
   field_description:
-    weight: 7
-    label: above
+    weight: 4
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
@@ -55,9 +56,19 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_featured_video:
+    weight: 9
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_media_video_embed_field:
-    weight: 6
-    label: above
+    weight: 3
+    label: hidden
     settings:
       responsive: true
       width: 854
@@ -67,8 +78,8 @@ content:
     type: video_embed_field_video
     region: content
   field_recording_date:
-    weight: 9
-    label: above
+    weight: 6
+    label: hidden
     settings:
       format_type: medium
       timezone_override: ''
@@ -76,16 +87,16 @@ content:
     type: datetime_default
     region: content
   field_speaker:
-    weight: 8
-    label: above
+    weight: 5
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
   field_sponsor:
-    weight: 10
-    label: above
+    weight: 7
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -93,7 +104,7 @@ content:
     region: content
   thumbnail:
     type: image
-    weight: 5
+    weight: 2
     label: hidden
     settings:
       image_style: recent_view
