@@ -1,0 +1,22 @@
+//Styling for page.html.twig class page.footer_main 
+
+.site-footer {
+  .container {
+    display: flex;
+    justify-content: space-around;
+    .region-footer-right { 
+      justify-content: flex-end; 
+      .menu--footer {
+        .navbar-nav {
+          flex-direction: row;
+          justify-content: flex-end;
+          .nav-item {
+            margin: 10px;
+            text-transform: uppercase;
+            color: #fff;
+          }
+        }
+      }
+    } 
+  }  
+}  

@@ -7895,6 +7895,19 @@ h2.featured-title {
   font-size: 2.25em;
   color: #222222; }
 
+.site-footer .container {
+  display: flex;
+  justify-content: space-around; }
+  .site-footer .container .region-footer-right {
+    justify-content: flex-end; }
+    .site-footer .container .region-footer-right .menu--footer .navbar-nav {
+      flex-direction: row;
+      justify-content: flex-end; }
+      .site-footer .container .region-footer-right .menu--footer .navbar-nav .nav-item {
+        margin: 10px;
+        text-transform: uppercase;
+        color: #fff; }
+
 /* GENERAL STYLES
 -------------------------------------------------*/
 body {
