@@ -1,0 +1,25 @@
+uuid: 58a44c49-7274-4142-b368-26b2f151e11d
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:subheading_menu:886f08e2-8830-4389-89ef-9fbea0a73368'
+  module:
+    - block_content
+  theme:
+    - tube_theme
+id: leftsidesubheadinglink
+theme: tube_theme
+region: subheading
+weight: 0
+provider: null
+plugin: 'block_content:886f08e2-8830-4389-89ef-9fbea0a73368'
+settings:
+  id: 'block_content:886f08e2-8830-4389-89ef-9fbea0a73368'
+  label: 'Left Side Subheading Link'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,19 @@
+uuid: 71f600cd-cadd-4cab-8047-ca7a951ab121
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.subheading_menu
+    - field.storage.block_content.field_subheading_title
+id: block_content.subheading_menu.field_subheading_title
+field_name: field_subheading_title
+entity_type: block_content
+bundle: subheading_menu
+label: 'Subheading Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

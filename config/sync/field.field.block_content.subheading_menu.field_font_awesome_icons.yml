@@ -1,0 +1,21 @@
+uuid: 7f53c46f-a777-4a51-a9e7-d3e734e1deb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.subheading_menu
+    - field.storage.block_content.field_font_awesome_icons
+  module:
+    - fontawesome
+id: block_content.subheading_menu.field_font_awesome_icons
+field_name: field_font_awesome_icons
+entity_type: block_content
+bundle: subheading_menu
+label: 'Font Awesome Icons'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: fontawesome_icon

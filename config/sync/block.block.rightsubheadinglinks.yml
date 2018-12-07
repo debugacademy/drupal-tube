@@ -1,0 +1,25 @@
+uuid: b073e59f-5a9c-4ba6-a526-d78a0f783e9e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:subheading_menu:296f2883-930c-446f-92de-ab3fed80eef6'
+  module:
+    - block_content
+  theme:
+    - tube_theme
+id: rightsubheadinglinks
+theme: tube_theme
+region: subheading
+weight: 0
+provider: null
+plugin: 'block_content:296f2883-930c-446f-92de-ab3fed80eef6'
+settings:
+  id: 'block_content:296f2883-930c-446f-92de-ab3fed80eef6'
+  label: 'Right Subheading Links'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
