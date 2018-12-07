@@ -17,7 +17,7 @@ id: contact
 title: 'Get in touch with us'
 description: 'Basic email contact webform.'
 category: ''
-elements: "processed_text:\n  '#type': processed_text\n  '#text': \"<p>We would love to hear &nbsp;your thoughts, concerns and suggestions. We'll get back to you shortly!</p>\\r\\n\"\n  '#format': basic_html\nflexbox:\n  '#type': webform_flexbox\n  name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last name'\n    '#required': true\nflexbox_01:\n  '#type': webform_flexbox\n  phone_number:\n    '#type': tel\n    '#title': 'Phone number'\n    '#international_initial_country': US\n  email:\n    '#type': email\n    '#title': ' Email address'\n    '#required': true\nplease_select_category:\n  '#type': webform_select_other\n  '#title': 'Please select category'\n  '#multiple': true\n  '#options':\n    'General inquiries': 'General inquiries'\n    'Technical issues': 'Technical issues'\n    Suggestions: Suggestions\n    Contribution: Contribution\n    'Request to become moderator': 'Request to become moderator'\n    Other: Other\n  '#select2': true\nmessage:\n  '#type': textarea\n  '#title': Message\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\n  '#captcha_admin_mode': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
+elements: "processed_text:\n  '#type': processed_text\n  '#text': \"<p>We would love to hear &nbsp;your thoughts, concerns and suggestions. We'll get back to you shortly!</p>\\r\\n\"\n  '#format': basic_html\nflexbox:\n  '#type': webform_flexbox\n  name:\n    '#type': textfield\n    '#title': 'First Name'\n    '#title_display': invisible\n    '#placeholder': 'First name'\n    '#required': true\n  last_name:\n    '#type': textfield\n    '#title': 'Last name'\n    '#title_display': invisible\n    '#placeholder': 'Last name'\n    '#required': true\nflexbox_01:\n  '#type': webform_flexbox\n  phone_number:\n    '#type': tel\n    '#title': 'Phone number'\n    '#title_display': invisible\n    '#placeholder': 'Phone number'\n    '#international_initial_country': US\n  email:\n    '#type': email\n    '#title': ' Email address'\n    '#title_display': invisible\n    '#placeholder': Email\n    '#required': true\nplease_select_category:\n  '#type': webform_select_other\n  '#title': 'Please select category'\n  '#multiple': true\n  '#title_display': invisible\n  '#placeholder': 'Please select category...'\n  '#options':\n    'General inquiries': 'General inquiries'\n    'Technical issues': 'Technical issues'\n    Suggestions: Suggestions\n    Contribution: Contribution\n    'Request to become moderator': 'Request to become moderator'\n    Other: Other\n  '#select2': true\n  '#other__placeholder': 'Please select category…'\nmessage:\n  '#type': textarea\n  '#title': Message\n  '#title_display': invisible\n  '#placeholder': Message\ncaptcha:\n  '#type': captcha\n  '#captcha_type': recaptcha/reCAPTCHA\n  '#captcha_admin_mode': true\nactions:\n  '#type': webform_actions\n  '#title': 'Submit button(s)'\n  '#submit__label': 'Send message'"
 css: ''
 javascript: ''
 settings:
@@ -85,7 +85,7 @@ settings:
   wizard_confirmation_label: ''
   wizard_track: ''
   preview: 1
-  preview_label: Preview
+  preview_label: ''
   preview_title: ''
   preview_message: ''
   preview_attributes: {  }
@@ -97,7 +97,7 @@ settings:
   draft_auto_save: false
   draft_saved_message: ''
   draft_loaded_message: ''
-  confirmation_type: url_message
+  confirmation_type: modal
   confirmation_title: ''
   confirmation_message: 'Your message has been sent.'
   confirmation_url: '<front>'
