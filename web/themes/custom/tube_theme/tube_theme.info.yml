@@ -11,13 +11,18 @@ libraries-override:
   bootstrap_barrio/global-styling: false
   bootstrap_barrio/file: false
 regions:
-  # top_header: 'Top Header'
+  # secondary_menu: 'Secondary menu' //replaced by top_header_primary
   top_header_primary: 'Top Header Primary'
-  top_header_form: "Top Header Form"
+  # top_header: 'Top Header' //replaced by top_header_secondary
+  top_header_secondary: 'Top Header Secondary'
+  #top_header_form: "Top Header Form Search" //replaced by top_header_search
+  top_header_search: "Top Header Search"
   header: Header
-  header_form: "Header Form"
-  primary_menu: 'Primary menu'
-  secondary_menu: 'Secondary menu'
+  # header_form: "Header Form" //removed
+  # primary_menu: 'Primary menu' //replaced by nav_bar
+  site_navigation: 'Site Nav'
+  # new region subheading
+  subheading: 'Subheading'
   page_top: 'Page top'
   page_bottom: 'Page bottom'
   highlighted: Highlighted
