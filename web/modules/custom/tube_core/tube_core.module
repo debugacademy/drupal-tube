@@ -13,3 +13,33 @@ function tube_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form
 	}
 }
 
+function tube_core_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  if($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'curated_playlist') {
+  	$entity->set('title', 'The overridden title');
+  	$playlist_id = $entity->get('field_youtube_playlist_id')->value;
+  	drupal_set_message("Field value:" . $playlist_id);
+
+	$api_key = 'XXXX';
+	$api_url = 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=25&playlistId='. $playlist_id . '&key=' . $api_key;
+	      
+	drupal_set_message("API URL: $api_url");
+	$playlist = json_decode(file_get_contents($api_url));
+	$new_media_entities = [];
+	foreach ($playlist->items as $videoItem) {
+		drupal_set_message("Video ID: " . $videoItem->snippet->resourceId->videoId);
+		// Next step: create a media entity with that ^ video ID set in the video field
+		// $new_media_entities[] = // code for new item
+	}
+//	$entity->field_media = $new_media_entities;
+  }
+}
+
+
+
+
+
+
+
+
+
+
