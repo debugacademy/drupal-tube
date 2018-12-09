@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.conference.field_banner
     - field.field.node.conference.field_contact_email
     - field.field.node.conference.field_date
+    - field.field.node.conference.field_featured
     - field.field.node.conference.field_logo
     - field.field.node.conference.field_slogan
     - field.field.node.conference.field_website
@@ -27,19 +28,19 @@ content:
   body:
     label: hidden
     type: text_default
-    weight: 101
+    weight: 1
     settings: {  }
     third_party_settings: {  }
     region: content
   field_address:
-    weight: 106
+    weight: 6
     label: above
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_banner:
-    weight: 103
+    weight: 3
     label: above
     settings:
       image_style: ''
@@ -48,14 +49,14 @@ content:
     type: image
     region: content
   field_contact_email:
-    weight: 108
+    weight: 8
     label: above
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_date:
-    weight: 107
+    weight: 7
     label: above
     settings:
       format_type: medium
@@ -64,7 +65,7 @@ content:
     type: datetime_default
     region: content
   field_logo:
-    weight: 102
+    weight: 2
     label: above
     settings:
       image_style: ''
@@ -73,7 +74,7 @@ content:
     type: image
     region: content
   field_slogan:
-    weight: 104
+    weight: 4
     label: above
     settings:
       link_to_entity: false
@@ -81,7 +82,7 @@ content:
     type: string
     region: content
   field_website:
-    weight: 105
+    weight: 5
     label: above
     settings:
       trim_length: 80
@@ -93,8 +94,9 @@ content:
     type: link
     region: content
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-hidden: {  }
+hidden:
+  field_featured: true

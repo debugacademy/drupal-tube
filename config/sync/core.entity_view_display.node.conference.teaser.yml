@@ -5,8 +5,19 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.conference.body
+    - field.field.node.conference.field_address
+    - field.field.node.conference.field_banner
+    - field.field.node.conference.field_contact_email
+    - field.field.node.conference.field_date
+    - field.field.node.conference.field_featured
+    - field.field.node.conference.field_logo
+    - field.field.node.conference.field_slogan
+    - field.field.node.conference.field_website
+    - image.style.featured_teaser
     - node.type.conference
   module:
+    - datetime
+    - image
     - text
     - user
 id: node.conference.teaser
@@ -17,21 +28,38 @@ content:
   body:
     label: hidden
     type: text_summary_or_trimmed
-    weight: 101
+    weight: 2
     settings:
       trim_length: 600
     third_party_settings: {  }
     region: content
+  field_date:
+    type: datetime_default
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      format_type: html_date
+    third_party_settings: {  }
+  field_logo:
+    type: image
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      image_style: featured_teaser
+      image_link: ''
+    third_party_settings: {  }
   links:
-    weight: 100
+    weight: 0
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_address: true
   field_banner: true
   field_contact_email: true
-  field_date: true
-  field_logo: true
+  field_featured: true
   field_slogan: true
   field_website: true

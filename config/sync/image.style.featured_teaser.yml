@@ -1,0 +1,15 @@
+uuid: d361687f-6955-4da1-ab5f-fd0c4888b38e
+langcode: en
+status: true
+dependencies: {  }
+name: featured_teaser
+label: 'Featured teaser'
+effects:
+  b6048198-353e-4ca5-a6a1-e4bac72370d2:
+    uuid: b6048198-353e-4ca5-a6a1-e4bac72370d2
+    id: image_scale
+    weight: 1
+    data:
+      width: 360
+      height: null
+      upscale: false
