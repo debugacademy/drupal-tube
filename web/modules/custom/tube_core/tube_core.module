@@ -1,2 +1,15 @@
 <?php
 
+function tube_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	if (!empty($form['field_featured'])) {
+
+		$user = \Drupal::currentUser();
+		$user_can_access_featured_field = $user->hasPermission('mark content featured');
+
+		if (!$user_can_access_featured_field) {
+			$form['field_featured']['#access'] = FALSE;
+		}
+
+	}
+}
+
