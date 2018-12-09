@@ -16,6 +16,21 @@
 			margin-right: auto;	
 		}
 	}
+	.field--type-datetime {
+		font-weight: bold;
+	}
+	.featured-title {
+		position: unset;
+		text-align: center;
+	}
+	.views-row {
+		margin-right: 0;
+	}
+	.node {
+		.field--type-image {
+			margin: 0;
+		}
+	}
 }
 
 h2.featured-title {

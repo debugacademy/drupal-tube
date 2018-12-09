@@ -8,6 +8,7 @@ dependencies:
     - field.field.node.conference.field_banner
     - field.field.node.conference.field_contact_email
     - field.field.node.conference.field_date
+    - field.field.node.conference.field_featured
     - field.field.node.conference.field_logo
     - field.field.node.conference.field_slogan
     - field.field.node.conference.field_website
@@ -68,6 +69,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_featured:
+    weight: 129
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
     region: content
   field_logo:
     weight: 122
