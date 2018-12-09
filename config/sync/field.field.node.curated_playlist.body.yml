@@ -1,0 +1,22 @@
+uuid: ce80ee7f-12aa-4668-856c-978c79caccff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.curated_playlist
+  module:
+    - text
+id: node.curated_playlist.body
+field_name: body
+entity_type: node
+bundle: curated_playlist
+label: Introduction
+description: 'Describes curated video playlist'
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

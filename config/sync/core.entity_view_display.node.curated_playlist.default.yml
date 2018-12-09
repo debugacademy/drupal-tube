@@ -1,0 +1,44 @@
+uuid: db5120f3-1b50-48b5-a6f9-e7acbf9ca962
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.curated_playlist.body
+    - field.field.node.curated_playlist.field_curated_by
+    - field.field.node.curated_playlist.field_curated_videos
+    - image.style.medium
+    - node.type.curated_playlist
+  module:
+    - media
+    - text
+    - user
+id: node.curated_playlist.default
+targetEntityType: node
+bundle: curated_playlist
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_curated_by:
+    weight: 0
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_curated_videos:
+    type: media_thumbnail
+    weight: 2
+    label: above
+    settings:
+      image_style: medium
+      image_link: content
+    third_party_settings: {  }
+    region: content
+hidden:
+  links: true

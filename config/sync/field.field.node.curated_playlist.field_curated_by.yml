@@ -1,0 +1,19 @@
+uuid: cf4ee193-7353-434a-b7ae-3d21eeb3834f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_curated_by
+    - node.type.curated_playlist
+id: node.curated_playlist.field_curated_by
+field_name: field_curated_by
+entity_type: node
+bundle: curated_playlist
+label: 'Curated By'
+description: 'The author that curates this video playlist.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

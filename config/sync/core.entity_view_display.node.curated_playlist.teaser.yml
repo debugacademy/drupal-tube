@@ -1,0 +1,30 @@
+uuid: c42b8666-6af6-40b8-b81d-aadb718ed0d8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.curated_playlist.body
+    - node.type.curated_playlist
+  module:
+    - text
+    - user
+id: node.curated_playlist.teaser
+targetEntityType: node
+bundle: curated_playlist
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }

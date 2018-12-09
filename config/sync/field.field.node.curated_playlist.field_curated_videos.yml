@@ -1,0 +1,29 @@
+uuid: 9ae6053e-ad7e-4b25-a1ec-385d2101a97e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_curated_videos
+    - media.type.external_video
+    - node.type.curated_playlist
+id: node.curated_playlist.field_curated_videos
+field_name: field_curated_videos
+entity_type: node
+bundle: curated_playlist
+label: 'Curated Videos'
+description: 'This is list of videos to use in playlist.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      external_video: external_video
+    sort:
+      field: field_recording_date
+      direction: DESC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
