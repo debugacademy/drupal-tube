@@ -139,3 +139,127 @@ h3, h4, h5, h6 {
     color: $light-gray;
   }
 }
+
+// Contact Form
+
+.section {
+  background-color: white;
+  position: relative;
+}
+.title {
+  font-family: $font-ubuntu;
+  font-weight: 400;
+  @include font-size(36px, 41px);
+  color: $black;
+  margin-left: 21%;
+}
+hr.webform-horizontal-rule--solid {
+  width: 16%;
+  height: 1px;
+  margin: 10px auto;
+}
+.contact-form {
+  margin-left: 12%;
+  p {
+    margin-bottom: 0;
+    text-align: center;
+    font-family: $font-opensans;
+    font-size: 15px;
+    color: #696a6b;
+  }
+    input[type = "text"],
+    input[type = "email"],
+    input[type = "tel"],
+    input[type = "search"]{
+      border-bottom: 2px solid #CED4DA;
+      }
+  }
+span.select2-selection.select2-selection--multiple {
+  border: 1px solid #CED4DA;
+  border-bottom: 2px solid #CED4DA;
+}
+
+.select2-containers {
+  border: 0;
+  border-bottom: 2px solid #CED4DA;
+  color: #6e7071 !important;
+}
+#edit-message {
+  border-bottom: 2px solid #CED4DA;
+}
+#edit-actions-preview-next{
+  margin-left: 3%;
+  margin-right: 5%;
+  margin-top: 30px;
+  &.btn-primary {
+    color: $white;
+    width: 30%;
+    background-color: rgba(83, 176, 235, 0.9);
+    font-family: $font-opensans;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+  }
+  &.btn {
+    font-size: 20px;
+    border: 1px solid rgba(83, 176, 235, 0.7);
+    line-height: 1.7;
+    border-radius: 0.45rem;
+    transition: all 500ms ease;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 12px;
+      background: rgba(255, 255, 255, 0.3);
+      transition: all 2s ease;
+    }
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+    }
+
+
+#edit-actions-submit {
+  margin-top: 30px;
+  &.btn-primary {
+    color: $white;
+    width:60%;
+    background-color: rgba(83, 176, 235, 0.9);
+    font-family: $font-opensans;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    &:hover {
+      background-color: #FB8920;
+      border: 1px solid #FB8920;
+    }
+  }
+  &.btn {
+    font-size: 20px;
+    border: 1px solid rgba(83, 176, 235, 0.7);
+    line-height: 1.7;
+    border-radius: 0.45rem;
+  }
+}
+.g-recaptcha {
+  margin-top: 6%;
+  display: flex;
+  justify-content: center;
+}
+.rc-anchor {
+    border: 1px solid red;
+  }
+input::-webkit-input-placeholder {
+  font-family: $font-opensans;
+  color: #909192 !important;
+  font-size: 14px;
+}
+textarea::-webkit-input-placeholder {
+  font-family: $font-opensans;
+  color: #909192 !important;
+  font-size: 14px;
+}
