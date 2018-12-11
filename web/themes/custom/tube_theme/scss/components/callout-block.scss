@@ -1,11 +1,22 @@
 .block-callout {
 	position: relative;
+	width: 430px;
 	height: 430px;
-	width: 430px;	
+
+	// max-height: 430px;
+	// max-width: 430px;	
 	border-radius: 50%;
+
+	margin-right: auto;
+	margin-left: auto;
+
 	color: transparent;
-        margin-left: 40;
-        text-align: center;
+    text-align: center;
+
+    @media screen and (max-width: 414px) {
+	    width: 50%;
+	    height: 50%;
+	}
 
 	&.callout-Green {
 		background-color: $green;
