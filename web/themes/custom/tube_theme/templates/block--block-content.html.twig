@@ -39,12 +39,15 @@
 <div{{ attributes.addClass(classes) }}>
   {{ title_prefix }}
   {% if label %}
-    <h2{{ title_attributes }}>{{ label }}</h2>
+    <h2{{ title_attributes.addClass }}>{{ label }}</h2>
   {% endif %}
   {{ title_suffix }}
   {% block content %}
     <div{{ content_attributes.addClass('content') }}>
       {{ content }}
+      <div{{ title_attributes.addClass('contact-social-title') }}>Found on web{{ label }}</div>
+      <a href="https://www.linkedin.com/company/debug-academy/"><i class = "fab fa-linkedin"></i></a>
+      <a href="https://twitter.com/DebugAcademy"><i class = "fab fa-twitter-square"></i></a>
     </div>
   {% endblock %}
 </div>
