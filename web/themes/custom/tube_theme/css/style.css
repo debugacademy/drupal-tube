@@ -7828,13 +7828,16 @@ h3, h4, h5, h6 {
   background-color: white;
   position: relative; }
 
-.title {
+span.field--name-title {
   font-family: "Ubuntu", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 41px;
-  color: #222222;
+  color: #0D7DC1;
   margin-left: 21%; }
+  @media (min-width: 633px) {
+    span.field--name-title .title {
+      margin-left: 30%; } }
 
 hr.webform-horizontal-rule--solid {
   width: 16%;
@@ -7843,6 +7846,9 @@ hr.webform-horizontal-rule--solid {
 
 .contact-form {
   margin-left: 12%; }
+  @media (min-width: 905px) {
+    .contact-form .contact-form {
+      margin-left: 5%; } }
   .contact-form p {
     margin-bottom: 0;
     text-align: center;
@@ -7859,11 +7865,6 @@ span.select2-selection.select2-selection--multiple {
   border: 1px solid #CED4DA;
   border-bottom: 2px solid #CED4DA; }
 
-.select2-containers {
-  border: 0;
-  border-bottom: 2px solid #CED4DA;
-  color: #6e7071 !important; }
-
 #edit-message {
   border-bottom: 2px solid #CED4DA; }
 
@@ -7874,34 +7875,25 @@ span.select2-selection.select2-selection--multiple {
   #edit-actions-preview-next.btn-primary {
     color: #fff;
     width: 30%;
-    background-color: rgba(83, 176, 235, 0.9);
+    background-color: #0D7DC1;
     font-family: "Open Sans", sans-serif;
     letter-spacing: 0.7px;
     text-transform: uppercase; }
+    #edit-actions-preview-next.btn-primary:hover {
+      background-color: #FB8920;
+      border: 1px solid #FB8920; }
   #edit-actions-preview-next.btn {
     font-size: 20px;
-    border: 1px solid rgba(83, 176, 235, 0.7);
+    border: 1px solid #0D7DC1;
     line-height: 1.7;
-    border-radius: 0.45rem;
-    transition: all 500ms ease; }
-    #edit-actions-preview-next.btn:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 12px;
-      background: rgba(255, 255, 255, 0.3);
-      transition: all 2s ease; }
-    #edit-actions-preview-next.btn:hover:before {
-      width: 100%; }
+    border-radius: 0.45rem; }
 
 #edit-actions-submit {
   margin-top: 30px; }
   #edit-actions-submit.btn-primary {
     color: #fff;
     width: 60%;
-    background-color: rgba(83, 176, 235, 0.9);
+    background-color: #0D7DC1;
     font-family: "Open Sans", sans-serif;
     letter-spacing: 0.7px;
     text-transform: uppercase; }
@@ -7910,7 +7902,7 @@ span.select2-selection.select2-selection--multiple {
       border: 1px solid #FB8920; }
   #edit-actions-submit.btn {
     font-size: 20px;
-    border: 1px solid rgba(83, 176, 235, 0.7);
+    border: 1px solid #0D7DC1;
     line-height: 1.7;
     border-radius: 0.45rem; }
 
@@ -7919,18 +7911,63 @@ span.select2-selection.select2-selection--multiple {
   display: flex;
   justify-content: center; }
 
-.rc-anchor {
-  border: 1px solid red; }
-
 input::-webkit-input-placeholder {
   font-family: "Open Sans", sans-serif;
-  color: #909192 !important;
+  color: #696a6b !important;
   font-size: 14px; }
 
 textarea::-webkit-input-placeholder {
   font-family: "Open Sans", sans-serif;
-  color: #909192 !important;
+  color: #696a6b !important;
   font-size: 14px; }
+
+.layout-content-second {
+  margin-top: 200px;
+  text-align: center; }
+  @media (min-width: 633px) {
+    .layout-content-second .layout-content-second {
+      margin-top: 50px; } }
+  .layout-content-second a {
+    font-size: 23px;
+    line-height: 21px;
+    font-weight: 300;
+    font-family: 'Ubuntu', sans-serif;
+    color: #064771;
+    font-family: "Ubuntu", sans-serif;
+    letter-spacing: 0.6px; }
+    @media (min-width: 1288px) {
+      .layout-content-second a a {
+        font-size: 15px;
+        line-height: 21px; } }
+    @media (min-width: 1057px) {
+      .layout-content-second a a {
+        font-size: 12px;
+        line-height: 21px; } }
+    @media (min-width: 750px) {
+      .layout-content-second a a {
+        font-size: 11px;
+        line-height: 21px; } }
+    .layout-content-second a:hover {
+      text-decoration: none; }
+
+.contact-social-title {
+  margin-top: 100px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 21px;
+  color: #064771; }
+  .contact-social-title.svg-inline--fa {
+    height: 2em;
+    margin-right: 8px;
+    font-size: 25px; }
+    .contact-social-title.svg-inline--fa a {
+      color: #0D7DC1; }
+      .contact-social-title.svg-inline--fa a:hover {
+        background: #FB8920; }
 
 .block-callout {
   position: relative;

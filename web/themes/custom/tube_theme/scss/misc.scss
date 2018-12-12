@@ -146,13 +146,19 @@ h3, h4, h5, h6 {
   background-color: white;
   position: relative;
 }
-.title {
-  font-family: $font-ubuntu;
-  font-weight: 400;
-  @include font-size(36px, 41px);
-  color: $black;
-  margin-left: 21%;
-}
+span.field--name-title {
+    font-family: $font-ubuntu;
+    font-weight: 400;
+    @include font-size(36px, 41px);
+    color: $blue-background;
+    margin-left: 21%;
+    @media(min-width: 633px) {
+      .title {
+        margin-left: 30%;
+      }
+    }
+  }
+
 hr.webform-horizontal-rule--solid {
   width: 16%;
   height: 1px;
@@ -160,32 +166,31 @@ hr.webform-horizontal-rule--solid {
 }
 .contact-form {
   margin-left: 12%;
+  @media(min-width: 905px) {
+    .contact-form {
+      margin-left: 5%;
+    }
+  }
   p {
     margin-bottom: 0;
     text-align: center;
     font-family: $font-opensans;
     font-size: 15px;
-    color: #696a6b;
+    color: $lighter-gray;
   }
     input[type = "text"],
     input[type = "email"],
     input[type = "tel"],
-    input[type = "search"]{
-      border-bottom: 2px solid #CED4DA;
+    input[type = "search"] {
+      border-bottom: 2px solid $light-grayish;
       }
   }
 span.select2-selection.select2-selection--multiple {
-  border: 1px solid #CED4DA;
-  border-bottom: 2px solid #CED4DA;
-}
-
-.select2-containers {
-  border: 0;
-  border-bottom: 2px solid #CED4DA;
-  color: #6e7071 !important;
+  border: 1px solid $light-grayish;
+  border-bottom: 2px solid $light-grayish;
 }
 #edit-message {
-  border-bottom: 2px solid #CED4DA;
+  border-bottom: 2px solid $light-grayish;
 }
 #edit-actions-preview-next{
   margin-left: 3%;
@@ -194,53 +199,39 @@ span.select2-selection.select2-selection--multiple {
   &.btn-primary {
     color: $white;
     width: 30%;
-    background-color: rgba(83, 176, 235, 0.9);
+    background-color: $blue-background;
     font-family: $font-opensans;
     letter-spacing: 0.7px;
     text-transform: uppercase;
+    &:hover {
+      background-color: $yellowish;
+      border: 1px solid $yellowish;
+    }
   }
   &.btn {
     font-size: 20px;
-    border: 1px solid rgba(83, 176, 235, 0.7);
+    border: 1px solid $blue-background;
     line-height: 1.7;
     border-radius: 0.45rem;
-    transition: all 500ms ease;
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 0;
-      height: 12px;
-      background: rgba(255, 255, 255, 0.3);
-      transition: all 2s ease;
-    }
-    &:hover {
-      &:before {
-        width: 100%;
-      }
     }
   }
-    }
-
-
 #edit-actions-submit {
   margin-top: 30px;
   &.btn-primary {
     color: $white;
     width:60%;
-    background-color: rgba(83, 176, 235, 0.9);
+    background-color: $blue-background;
     font-family: $font-opensans;
     letter-spacing: 0.7px;
     text-transform: uppercase;
     &:hover {
-      background-color: #FB8920;
-      border: 1px solid #FB8920;
+      background-color: $yellowish;
+      border: 1px solid $yellowish;
     }
   }
   &.btn {
     font-size: 20px;
-    border: 1px solid rgba(83, 176, 235, 0.7);
+    border: 1px solid $blue-background;
     line-height: 1.7;
     border-radius: 0.45rem;
   }
@@ -250,16 +241,73 @@ span.select2-selection.select2-selection--multiple {
   display: flex;
   justify-content: center;
 }
-.rc-anchor {
-    border: 1px solid red;
-  }
+
 input::-webkit-input-placeholder {
   font-family: $font-opensans;
-  color: #909192 !important;
+  color: $lighter-gray !important;
   font-size: 14px;
 }
 textarea::-webkit-input-placeholder {
   font-family: $font-opensans;
-  color: #909192 !important;
+  color: $lighter-gray !important;
   font-size: 14px;
 }
+.layout-content-second {
+    margin-top: 200px;
+    text-align: center;
+  @media(min-width: 633px) {
+    .layout-content-second {
+      margin-top: 50px;
+    }
+  }
+    a {
+      @include font-size(23px, 21px);
+      @include heading-font(300);
+      color: $dark-blue;
+      font-family: $font-ubuntu;
+      letter-spacing: 0.6px;
+      @media(min-width: 1288px) {
+        a {
+          @include font-size(15px, 21px)
+        }
+      }
+        @media(min-width: 1057px) {
+          a {
+            @include font-size(12px, 21px)
+          }
+      }
+      @media(min-width: 750px) {
+        a {
+          @include font-size(11px, 21px)
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+// Contact social icon
+
+.contact-social-title {
+  margin-top: 100px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-family: $font-ubuntu;
+  font-weight: 400;
+  text-transform: uppercase;
+  @include font-size(16px, 21px);
+  color: $dark-blue;
+  &.svg-inline--fa {
+    height: 2em;
+    margin-right: 8px;
+    font-size: 25px;
+    a {
+      color: #0D7DC1;
+      &:hover {
+        background: $yellowish;
+      }
+    }
+  }
+}
+
