@@ -1,0 +1,56 @@
+uuid: ac9c151e-b903-4db7-8547-8bed99bcd1e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.subheading_menu
+    - field.field.block_content.subheading_menu.body
+    - field.field.block_content.subheading_menu.field_background_color
+    - field.field.block_content.subheading_menu.field_font_awesome_icons
+    - field.field.block_content.subheading_menu.field_subheading_title
+  module:
+    - fontawesome
+    - text
+id: block_content.subheading_menu.default
+targetEntityType: block_content
+bundle: subheading_menu
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 2
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_background_color:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_font_awesome_icons:
+    weight: 27
+    settings: {  }
+    third_party_settings: {  }
+    type: fontawesome_icon_widget
+    region: content
+  field_subheading_title:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

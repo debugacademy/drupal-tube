@@ -20,6 +20,12 @@ settings:
     -
       value: Blue
       label: Blue
+    -
+      value: Dark_Blue
+      label: dark_blue
+    -
+      value: Light_Blue
+      label: light_blue
   allowed_values_function: ''
 module: options
 locked: false

@@ -1,0 +1,12 @@
+uuid: e8115554-dbd6-4909-8252-6f13bb38e3dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.event_search
+id: block_content.event_search.default
+targetEntityType: block_content
+bundle: event_search
+mode: default
+content: {  }
+hidden: {  }

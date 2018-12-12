@@ -1,0 +1,8 @@
+uuid: c665d0ae-6786-4663-aa28-600b929de864
+langcode: en
+status: true
+dependencies: {  }
+id: event_search
+label: 'Event Search'
+revision: 0
+description: 'Search drupal events '
