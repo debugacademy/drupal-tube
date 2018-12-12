@@ -12,6 +12,9 @@ dependencies:
     - field.field.media.external_video.field_speaker
     - field.field.media.external_video.field_sponsor
     - image.style.recent_view
+    - field.field.media.external_video.field_version
+    - field.field.media.external_video.field_video_category
+    - image.style.thumbnail
     - media.type.external_video
   module:
     - datetime
@@ -34,7 +37,7 @@ content:
       timezone: ''
     third_party_settings: {  }
   field_conference:
-    weight: 8
+    weight: 11
     label: hidden
     settings:
       link: true
@@ -42,7 +45,7 @@ content:
     type: entity_reference_label
     region: content
   field_description:
-    weight: 4
+    weight: 7
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -51,6 +54,14 @@ content:
   field_event:
     weight: 12
     label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_media_video_embed_field:
+    weight: 6
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -78,7 +89,7 @@ content:
     type: video_embed_field_video
     region: content
   field_recording_date:
-    weight: 6
+    weight: 9
     label: hidden
     settings:
       format_type: medium
@@ -87,7 +98,7 @@ content:
     type: datetime_default
     region: content
   field_speaker:
-    weight: 5
+    weight: 8
     label: hidden
     settings:
       link_to_entity: false
@@ -95,7 +106,23 @@ content:
     type: string
     region: content
   field_sponsor:
-    weight: 7
+    weight: 10
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_version:
+    weight: 12
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_video_category:
+    weight: 13
     label: hidden
     settings:
       link: true
