@@ -92,7 +92,7 @@ class DynamicCopyrightBlock extends BlockBase {
     $suffix = $this->configuration['copyright_text_suffix'];
     $color = $this->configuration['copyright_color'];
 
-    $build['dc_block']['#markup'] = "<p>{$prefix}{$year}{$suffix}</p>";
+    $build['dc_block']['#markup'] = "<p>{$prefix} {$year} {$suffix}</p>";
 
     return $build;
   }
