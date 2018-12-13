@@ -1,0 +1,5 @@
+name: 'Dynamic Copyright Block'
+type: module
+description: 'Allows you to generate dynamic copyright blocks'
+core: 8.x
+package: 'Custom'
