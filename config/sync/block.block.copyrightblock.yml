@@ -1,0 +1,24 @@
+uuid: 2e8211bb-009d-4c8b-8bdb-c2eb66ed20ae
+langcode: en
+status: true
+dependencies:
+  module:
+    - dynamic_copyright_block
+  theme:
+    - tube_theme
+id: copyrightblock
+theme: tube_theme
+region: footer_center
+weight: -6
+provider: null
+plugin: copyrightblock
+settings:
+  id: copyrightblock
+  label: Copyrightblock
+  provider: dynamic_copyright_block
+  label_display: '0'
+  copyright_text_prefix: 'Copyright ©'
+  copyright_year: ''
+  copyright_text_suffix: 'Debug Academy'
+  copyright_color: '#00ff00'
+visibility: {  }
