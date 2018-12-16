@@ -6,12 +6,72 @@ dependencies:
     - field.field.node.curated_playlist.body
     - field.field.node.curated_playlist.field_curated_by
     - field.field.node.curated_playlist.field_curated_videos
-    - image.style.medium
     - node.type.curated_playlist
   module:
-    - media
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol
+        layout_settings: {  }
+        components:
+          83b51e18-7384-4ef2-a23c-1273880678b7:
+            uuid: 83b51e18-7384-4ef2-a23c-1273880678b7
+            region: top
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:curated_playlist:field_curated_by'
+              formatter:
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+                type: basic_string
+            additional: {  }
+            weight: 0
+          54329313-8001-455a-af60-9538c22726be:
+            uuid: 54329313-8001-455a-af60-9538c22726be
+            region: first
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:curated_playlist:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          584c4f54-940f-46c1-9252-024847199e66:
+            uuid: 584c4f54-940f-46c1-9252-024847199e66
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:curated_playlist:field_curated_videos'
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: list
+                  link: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components: {  }
 id: node.curated_playlist.default
 targetEntityType: node
 bundle: curated_playlist
@@ -32,12 +92,12 @@ content:
     type: basic_string
     region: content
   field_curated_videos:
-    type: media_thumbnail
+    type: entity_reference_entity_view
     weight: 2
     label: above
     settings:
-      image_style: medium
-      image_link: content
+      view_mode: list
+      link: false
     third_party_settings: {  }
     region: content
 hidden:
