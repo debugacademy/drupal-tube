@@ -184,7 +184,9 @@ hr.webform-horizontal-rule--solid {
     input[type = "search"] {
       border-bottom: 2px solid $light-grayish;
       }
-  }
+}
+.contact-form {
+
 span.select2-selection.select2-selection--multiple {
   border: 1px solid $light-grayish;
   border-bottom: 2px solid $light-grayish;
@@ -310,4 +312,4 @@ textarea::-webkit-input-placeholder {
     }
   }
 }
-
+}
