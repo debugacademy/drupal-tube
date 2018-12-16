@@ -3,19 +3,23 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.teaser
     - field.storage.media.field_conference
     - field.storage.media.field_description
     - field.storage.media.field_speaker
     - image.style.featured_video
     - image.style.recent_view
     - media.type.external_video
+    - taxonomy.vocabulary.category
   module:
     - datetime
     - image
     - media
+    - node
+    - taxonomy
     - user
 id: recently_added_videos
-label: 'Recently Added Videos'
+label: Videos
 module: views
 description: ''
 tag: ''
@@ -62,7 +66,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:media'
+        options:
+          relationship: none
+          view_mode: teaser
       fields:
         thumbnail__target_id:
           id: thumbnail__target_id
@@ -279,6 +286,7 @@ display:
           entity_type: media
           entity_field: bundle
           plugin_id: bundle
+          group: 1
       sorts:
         field_recording_date_value:
           id: field_recording_date_value
@@ -301,6 +309,15 @@ display:
       arguments: {  }
       display_extenders: {  }
       css_class: recent-video-view
+      use_more: true
+      use_more_always: true
+      use_more_text: more
+      link_url: ''
+      link_display: page_1
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
     cache_metadata:
       max-age: -1
       contexts:
@@ -312,7 +329,7 @@ display:
   block_1:
     display_plugin: block
     id: block_1
-    display_title: Block
+    display_title: 'Recently Added Videos Block'
     position: 1
     display_options:
       display_extenders: {  }
@@ -513,6 +530,7 @@ display:
           plugin_id: field
       defaults:
         fields: false
+      display_description: ''
     cache_metadata:
       max-age: -1
       contexts:
@@ -948,4 +966,377 @@ display:
       tags:
         - 'config:field.storage.media.field_conference'
         - 'config:field.storage.media.field_description'
+        - 'config:field.storage.media.field_speaker'
+  page_1:
+    display_plugin: page
+    id: page_1
+    display_title: Page
+    position: 3
+    display_options:
+      display_extenders: {  }
+      path: videos
+      pager:
+        type: mini
+        options:
+          items_per_page: 48
+          offset: 0
+          id: 0
+          total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+          expose:
+            items_per_page: false
+            items_per_page_label: 'Items per page'
+            items_per_page_options: '5, 10, 25, 50'
+            items_per_page_options_all: false
+            items_per_page_options_all_label: '- All -'
+            offset: false
+            offset_label: Offset
+      defaults:
+        pager: false
+        use_more: false
+        use_more_always: false
+        use_more_text: false
+        title: false
+        filters: false
+        filter_groups: false
+        relationships: false
+        sorts: false
+      use_more: false
+      use_more_always: true
+      use_more_text: more
+      title: 'All Videos'
+      filters:
+        status:
+          value: '1'
+          table: media_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: media
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          value:
+            external_video: external_video
+          entity_type: media
+          entity_field: bundle
+          plugin_id: bundle
+          group: 1
+        name:
+          id: name
+          table: media_field_data
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: name_op
+            label: 'Video Name'
+            description: 'Name of the presentation'
+            use_operator: false
+            operator: name_op
+            identifier: name
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: media
+          entity_field: name
+          plugin_id: string
+        field_description_value:
+          id: field_description_value
+          table: media__field_description
+          field: field_description_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_description_value_op
+            label: Description
+            description: ''
+            use_operator: false
+            operator: field_description_value_op
+            identifier: field_description_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        field_speaker_value:
+          id: field_speaker_value
+          table: media__field_speaker
+          field: field_speaker_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: word
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_speaker_value_op
+            label: Speaker(s)
+            description: ''
+            use_operator: false
+            operator: field_speaker_value_op
+            identifier: field_speaker_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: string
+        title:
+          id: title
+          table: node_field_data
+          field: title
+          relationship: field_conference
+          group_type: group
+          admin_label: ''
+          operator: contains
+          value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: title_op
+            label: Conference
+            description: 'The name of the conference, when applicable'
+            use_operator: false
+            operator: title_op
+            identifier: title
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: node
+          entity_field: title
+          plugin_id: string
+        field_video_category_target_id:
+          id: field_video_category_target_id
+          table: media__field_video_category
+          field: field_video_category_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: or
+          value: {  }
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_video_category_target_id_op
+            label: Topic(s)
+            description: 'Filter videos which include any of these topics'
+            use_operator: false
+            operator: field_video_category_target_id_op
+            identifier: field_video_category_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: false
+          type: select
+          limit: true
+          vid: category
+          hierarchy: true
+          error_message: true
+          plugin_id: taxonomy_index_tid
+        field_appx_attendee_count_value:
+          id: field_appx_attendee_count_value
+          table: taxonomy_term__field_appx_attendee_count
+          field: field_appx_attendee_count_value
+          relationship: field_event_type
+          group_type: group
+          admin_label: ''
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_appx_attendee_count_value_op
+            label: 'Avg # of attendees greater than'
+            description: 'Enter 10, 100, 500, or 1000'
+            use_operator: false
+            operator: field_appx_attendee_count_value_op
+            identifier: field_appx_attendee_count_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: numeric
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      relationships:
+        field_conference:
+          id: field_conference
+          table: media__field_conference
+          field: field_conference
+          relationship: none
+          group_type: group
+          admin_label: 'field_conference: Content'
+          required: false
+          plugin_id: standard
+        field_event_type:
+          id: field_event_type
+          table: node__field_event_type
+          field: field_event_type
+          relationship: field_conference
+          group_type: group
+          admin_label: 'field_event_type: Taxonomy term'
+          required: false
+          plugin_id: standard
+      sorts:
+        field_recording_date_value:
+          id: field_recording_date_value
+          table: media__field_recording_date
+          field: field_recording_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: DESC
+          exposed: false
+          expose:
+            label: ''
+          granularity: second
+          plugin_id: datetime
+        field_appx_attendee_count_value:
+          id: field_appx_attendee_count_value
+          table: taxonomy_term__field_appx_attendee_count
+          field: field_appx_attendee_count_value
+          relationship: field_event_type
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: 'Typical Conference Size'
+          plugin_id: standard
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
+        - user
+        - user.permissions
+      tags:
         - 'config:field.storage.media.field_speaker'

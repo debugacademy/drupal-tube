@@ -3,45 +3,45 @@
 .recent {
   background-color: $bg-color;
 }
-.recent-video-view {
+.recent-video-view.view-display-id-block_2 {
   display: flex;
   width: 100%;
   justify-content: space-around;
   height: 394px;
   margin-top: 25px;
-}
-.block__title {
-    @include font-size(36px, 41px);
-    @include heading-font(500);
-    color: $black;
-    text-align: left;
-    margin-left: 48px;
+  .block__title {
+      @include font-size(36px, 41px);
+      @include heading-font(500);
+      color: $black;
+      text-align: left;
+      margin-left: 48px;
+    }
+  .view-name {
+    a {
+      @include open-sans-font(700);
+      @include font-size(18px, 25px);
+      color: $black;
+      text-align: left;
+      text-transform: none;
+    }
   }
-.view-name {
-  a {
-    @include open-sans-font(700);
-    @include font-size(18px, 25px);
-    color: $black;
+  .speaker {
+    @include open-sans-font(600);
+    @include font-size(14px, 19px);
     text-align: left;
-    text-transform: none;
+    text-transform: uppercase;
+    color: $light-gray;
   }
-}
-.speaker {
-  @include open-sans-font(600);
-  @include font-size(14px, 19px);
-  text-align: left;
-  text-transform: uppercase;
-  color: $light-gray;
-}
-.row {
-  flex-wrap: nowrap;
-}
-.container-fluid {
-  padding-right: 0;
-  padding-left: 0;
-}
-.views-row {
-  margin-right: 20px;
+  .row {
+    flex-wrap: nowrap;
+  }
+  .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .views-row {
+    margin-right: 20px;
+  }
 }
 
 h1 {
