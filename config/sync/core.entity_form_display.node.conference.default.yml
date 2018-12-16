@@ -8,6 +8,8 @@ dependencies:
     - field.field.node.conference.field_banner
     - field.field.node.conference.field_contact_email
     - field.field.node.conference.field_date
+    - field.field.node.conference.field_event_name
+    - field.field.node.conference.field_event_type
     - field.field.node.conference.field_featured
     - field.field.node.conference.field_logo
     - field.field.node.conference.field_slogan
@@ -69,6 +71,24 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: datetime_default
+    region: content
+  field_event_name:
+    weight: 131
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_event_type:
+    weight: 130
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_featured:
     weight: 129
