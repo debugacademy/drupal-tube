@@ -11,7 +11,7 @@ dependencies:
     - tube_theme
 id: webform
 theme: tube_theme
-region: top_header
+region: top_header_primary
 weight: 0
 provider: null
 plugin: 'field_block:node:webform:webform'
