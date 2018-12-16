@@ -1,7 +1,8 @@
 {#
 /**
  * @file
- * Default theme implementation to display a two-column layout.
+ * Default theme implementation to display a two-column layout,
+ * adapted for Contact Form, layout-content-second
  *
  * Available variables:
  * - content: The content for this layout.
@@ -31,7 +32,7 @@
     {% endif %}
 
     {% if content.second %}
-      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', 'layout-content-second') }}>
+      <div {{ region_attributes.second.addClass('layout__region', 'layout__region--second', 'layout-content-second-contact') }}>
         {{ content.second }}
       </div>
     {% endif %}
