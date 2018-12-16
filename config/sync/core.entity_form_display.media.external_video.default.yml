@@ -5,7 +5,6 @@ dependencies:
   config:
     - field.field.media.external_video.field_conference
     - field.field.media.external_video.field_description
-    - field.field.media.external_video.field_event
     - field.field.media.external_video.field_featured_video
     - field.field.media.external_video.field_media_video_embed_field
     - field.field.media.external_video.field_recording_date
@@ -45,12 +44,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
-    region: content
-  field_event:
-    weight: 106
-    settings: {  }
-    third_party_settings: {  }
-    type: options_select
     region: content
   field_featured_video:
     weight: 106

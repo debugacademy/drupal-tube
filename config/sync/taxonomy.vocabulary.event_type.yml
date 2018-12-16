@@ -1,0 +1,9 @@
+uuid: 0df134d3-0062-4942-b6ed-2cdef03f75df
+langcode: en
+status: true
+dependencies: {  }
+name: 'Event Type'
+vid: event_type
+description: 'List of the various Drupal conferences types'
+hierarchy: 0
+weight: 0

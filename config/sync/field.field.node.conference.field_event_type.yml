@@ -1,0 +1,29 @@
+uuid: d0ae82a1-f4c9-4662-9355-651eb72a356b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_event_type
+    - node.type.conference
+    - taxonomy.vocabulary.event_type
+id: node.conference.field_event_type
+field_name: field_event_type
+entity_type: node
+bundle: conference
+label: 'Event Type'
+description: 'The type of Drupal event (DrupalCon, Large DrupalCamp, Small DrupalCamp, or Meetup).'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      event_type: event_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

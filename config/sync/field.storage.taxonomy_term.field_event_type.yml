@@ -1,13 +1,12 @@
-uuid: da89698b-6b2f-4a61-8997-dc55c34c1ce6
+uuid: 8bd16234-2fd7-4c80-bdf7-6f69a68e6305
 langcode: en
 status: true
 dependencies:
   module:
-    - media
     - taxonomy
-id: media.field_event
-field_name: field_event
-entity_type: media
+id: taxonomy_term.field_event_type
+field_name: field_event_type
+entity_type: taxonomy_term
 type: entity_reference
 settings:
   target_type: taxonomy_term

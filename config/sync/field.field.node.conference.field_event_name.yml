@@ -1,17 +1,17 @@
-uuid: 1cc89eeb-a375-49a0-8c3b-0e1e98ebbf07
+uuid: 8c919f03-aa98-4bc0-aaff-9387a319a134
 langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.media.field_event
-    - media.type.external_video
+    - field.storage.node.field_event_name
+    - node.type.conference
     - taxonomy.vocabulary.event_name
-id: media.external_video.field_event
-field_name: field_event
-entity_type: media
-bundle: external_video
-label: 'Event '
-description: ''
+id: node.conference.field_event_name
+field_name: field_event_name
+entity_type: node
+bundle: conference
+label: 'Event Name'
+description: 'Name of the specific Drupal event.'
 required: false
 translatable: false
 default_value: {  }
