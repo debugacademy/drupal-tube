@@ -185,31 +185,34 @@ hr.webform-horizontal-rule--solid {
       border-bottom: 2px solid $light-grayish;
       }
 }
+
+// Contact form stying
+
 .contact-form {
 
-span.select2-selection.select2-selection--multiple {
-  border: 1px solid $light-grayish;
-  border-bottom: 2px solid $light-grayish;
-}
-#edit-message {
-  border-bottom: 2px solid $light-grayish;
-}
-#edit-actions-preview-next{
-  margin-left: 3%;
-  margin-right: 5%;
-  margin-top: 30px;
-  &.btn-primary {
-    color: $white;
-    width: 30%;
-    background-color: $blue-background;
-    font-family: $font-opensans;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    &:hover {
-      background-color: $yellowish;
-      border: 1px solid $yellowish;
-    }
+  span.select2-selection.select2-selection--multiple {
+    border: 1px solid $light-grayish;
+    border-bottom: 2px solid $light-grayish;
   }
+  #edit-message {
+    border-bottom: 2px solid $light-grayish;
+  }
+  #edit-actions-preview-next{
+    margin-left: 3%;
+    margin-right: 5%;
+    margin-top: 30px;
+    &.btn-primary {
+      color: $white;
+      width: 30%;
+      background-color: $blue-background;
+      font-family: $font-opensans;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $yellowish;
+        border: 1px solid $yellowish;
+      }
+    }
   &.btn {
     font-size: 20px;
     border: 1px solid $blue-background;
@@ -217,51 +220,52 @@ span.select2-selection.select2-selection--multiple {
     border-radius: 0.45rem;
     }
   }
-#edit-actions-submit {
-  margin-top: 30px;
-  &.btn-primary {
-    color: $white;
-    width:60%;
-    background-color: $blue-background;
-    font-family: $font-opensans;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
-    &:hover {
-      background-color: $yellowish;
-      border: 1px solid $yellowish;
+  #edit-actions-submit {
+    margin-top: 30px;
+    &.btn-primary {
+      color: $white;
+      width:60%;
+      background-color: $blue-background;
+      font-family: $font-opensans;
+      letter-spacing: 0.7px;
+      text-transform: uppercase;
+      &:hover {
+        background-color: $yellowish;
+        border: 1px solid $yellowish;
+      }
+    }
+    &.btn {
+      font-size: 20px;
+      border: 1px solid $blue-background;
+      line-height: 1.7;
+      border-radius: 0.45rem;
     }
   }
-  &.btn {
-    font-size: 20px;
-    border: 1px solid $blue-background;
-    line-height: 1.7;
-    border-radius: 0.45rem;
+  .g-recaptcha {
+    margin-top: 6%;
+    display: flex;
+    justify-content: center;
   }
-}
-.g-recaptcha {
-  margin-top: 6%;
-  display: flex;
-  justify-content: center;
-}
 
-input::-webkit-input-placeholder {
-  font-family: $font-opensans;
-  color: $lighter-gray !important;
-  font-size: 14px;
-}
-textarea::-webkit-input-placeholder {
-  font-family: $font-opensans;
-  color: $lighter-gray !important;
-  font-size: 14px;
-}
-.layout-content-second {
+  input::-webkit-input-placeholder {
+    font-family: $font-opensans;
+    color: $lighter-gray !important;
+    font-size: 14px;
+  }
+  textarea::-webkit-input-placeholder {
+    font-family: $font-opensans;
+    color: $lighter-gray !important;
+    font-size: 14px;
+  }
+
+  .layout-content-second-contact {
     margin-top: 200px;
     text-align: center;
-  @media(min-width: 633px) {
-    .layout-content-second {
-      margin-top: 50px;
+    @media(min-width: 633px) {
+      .layout-content-second-contact {
+        margin-top: 50px;
+      }
     }
-  }
     a {
       @include font-size(23px, 21px);
       @include heading-font(300);
@@ -273,10 +277,10 @@ textarea::-webkit-input-placeholder {
           @include font-size(15px, 21px)
         }
       }
-        @media(min-width: 1057px) {
-          a {
-            @include font-size(12px, 21px)
-          }
+      @media(min-width: 1057px) {
+        a {
+          @include font-size(12px, 21px)
+        }
       }
       @media(min-width: 750px) {
         a {
@@ -288,6 +292,7 @@ textarea::-webkit-input-placeholder {
       }
     }
   }
+} 
 
 // Contact social icon
 
