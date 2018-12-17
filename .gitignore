@@ -28,8 +28,3 @@
 /web/themes/.DS_Store
 /web/themes/custom/.DS_Store
 node_modules
-/.buildpath
-/.project
-/.settings
-/web/sites/default/services.yml
-/web/themes/custom/gulpfile.js
