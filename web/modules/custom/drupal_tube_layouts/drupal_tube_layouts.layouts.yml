@@ -1,9 +1,17 @@
-two_column_bgcolor:
-  label: "50/50 with Background Color Picker"
-  category: "Drupal.tube Layouts"
-  template: templates/two-column-bgcolor
-  
 one_column_bgcolor:
   label: "100% with Background Color Picker"
   category: "Drupal.tube Layouts"
   template: templates/one-column-bgcolor
+  default_region: content
+  
+two_column_bgcolor:
+  label: "50/50 with Background Color Picker"
+  category: "Drupal.tube Layouts"
+  template: templates/two-column-bgcolor
+  default_region: first
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+  
