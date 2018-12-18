@@ -1,0 +1,73 @@
+<?php
+
+use Drupal\media\Entity\Media;
+
+
+function tube_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+	if (!empty($form['field_featured'])) {
+
+		$user = \Drupal::currentUser();
+		$user_can_access_featured_field = $user->hasPermission('mark content featured');
+
+		if (!$user_can_access_featured_field) {
+			$form['field_featured']['#access'] = FALSE;
+		}
+
+	}
+}
+
+function tube_core_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  if($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'curated_playlist') {
+  	if (!$entity->get('field_youtube_playlist_id')->isEmpty())
+  	{
+	  	$playlist_url = $entity->get('field_youtube_playlist_id')->getString();
+		parse_str(parse_url($playlist_url)['query'], $params);
+	  	$playlist_id = $params['list'];
+
+	  	$api_key = 'AIzaSyBUWlz050QmSGH1hPT05RFED5VqV_5-U1c';
+	    $client = new Google_Client();
+		$client->setDeveloperKey($api_key);
+		$youtube = new Google_Service_YouTube($client);
+
+		$new_media_entities[] = null;
+		//$nextPageToken = '';
+		//do
+		//{
+		    $playlistItemsResponse = $youtube->playlistItems->listPlaylistItems('snippet', array(
+		    'playlistId' => $playlist_id,
+		    'maxResults' => 50));
+		    foreach ($playlistItemsResponse['items'] as $playlistItem) 
+		    {
+		 		$media = Media::create([
+			       'bundle'      => 'external_video',
+			       'uid'         => \Drupal::currentUser()->id(),
+			       'langcode'    => \Drupal::languageManager()->getDefaultLanguage()->getId(),
+			       'status'      => 1,
+			       'name'        => $playlistItem['snippet']['title'],
+			       'field_description' => $playlistItem['snippet']['description'],
+			       'field_recording_date' => $playlistItem['recordingDetails']['recordingDate'],
+			       'field_media_video_embed_field' => ['value' => 'http://www.youtube.com/watch?v='.$playlistItem['snippet']['resourceId']['videoId']],
+			    ]);
+			    $media->save();
+		        $new_media_entities[] = $media;
+		    }
+	  //$nextPageToken = $playlistItemsResponse['nextPageToken'];
+	//} while ($nextPageToken <> '');
+
+	//merges existing curated list with a playlist, then clears playlist id so videos don't get reimported
+	$entity->field_curated_videos = array_merge($entity->field_curated_videos->getValue(),$new_media_entities);
+	$entity->field_youtube_playlist_id->setValue('');
+	}
+  }
+
+}
+
+
+
+
+
+
+
+
+
+

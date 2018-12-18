@@ -13,6 +13,9 @@ dependencies:
     - field.field.media.external_video.field_version
     - field.field.media.external_video.field_video_category
     - image.style.recent_view
+    - field.field.media.external_video.field_version
+    - field.field.media.external_video.field_video_category
+    - image.style.thumbnail
     - media.type.external_video
   module:
     - datetime

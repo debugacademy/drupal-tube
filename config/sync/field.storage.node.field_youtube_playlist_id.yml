@@ -1,0 +1,19 @@
+uuid: fde9b51d-c7c0-45e7-828c-776cd43906f9
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_youtube_playlist_id
+field_name: field_youtube_playlist_id
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

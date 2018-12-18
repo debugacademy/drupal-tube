@@ -9,7 +9,7 @@ libraries:
   - tube_theme/global-styling
 libraries-override:
   bootstrap_barrio/global-styling: false
-  bootstrap_barrio/file: false
+#  bootstrap_barrio/file: false
 regions:
   top_header_primary: 'Top Header Primary'
   top_header_secondary: 'Top Header Secondary'

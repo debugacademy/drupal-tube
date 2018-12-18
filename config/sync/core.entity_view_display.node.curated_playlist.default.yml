@@ -10,6 +10,12 @@ dependencies:
   module:
     - layout_builder
     - layout_discovery
+    - field.field.node.curated_playlist.field_youtube_playlist_id
+    - image.style.medium
+    - node.type.curated_playlist
+  module:
+    - link
+    - media
     - text
     - user
 third_party_settings:
@@ -99,6 +105,18 @@ content:
       view_mode: list
       link: false
     third_party_settings: {  }
+    region: content
+  field_youtube_playlist_id:
+    weight: 3
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
     region: content
 hidden:
   links: true
