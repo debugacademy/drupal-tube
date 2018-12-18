@@ -43,7 +43,6 @@
     'field--name-' ~ field_name|clean_class,
     'field--type-' ~ field_type|clean_class,
     'field--label-' ~ label_display,
-    'fullvideo'
   ]
 %}
 {%
@@ -61,7 +60,11 @@
     </div>
   {% else %}
     {% for item in items %}
-      <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+       {% if field_name == "uid"  %}
+        <div class="author-byline"><span class="author-intro">By </span><span{{ attributes.addClass(classes, 'field__item', 'author-names') }}>{{ item.content }}</span></div>
+          {% else %}
+            <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+          {% endif %}
     {% endfor %}
   {% endif %}
 {% else %}
