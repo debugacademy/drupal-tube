@@ -1,0 +1,5 @@
+name: 'Drupal Tube Layouts'
+type: module
+description: 'Provides custom layouts for the drupaltube theme'
+core: 8.x
+package: 'Custom'
