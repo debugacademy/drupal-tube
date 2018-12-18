@@ -1,0 +1,58 @@
+/**
+ * @file
+ * Styles for Bootstrap Barrio page.
+ */
+
+.video-landing {
+	background-color: $featured-background;
+	font-family: $font-ubuntu;
+	margin-bottom: 30px;
+	
+	.content {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	.field--name-name {
+		padding-top: 20px;
+		font-size: $font-size-h2;
+	}
+
+	.field--name-field-description {
+		font-size: $font-size-base;
+		line-height: 1.4rem;
+	}
+
+	.block-field-blockmediaexternal-videoname, 
+	.block-field-blockmediaexternal-videofield-description,
+	.block-field-blockmediaexternal-videouid {
+		background-color: $gray-100;
+	}
+
+	.author-byline, .author-byline a {
+		font-weight: bold;
+		color: $dark-blue;
+	}
+
+	.author-byline {
+		padding: 10px 0 20px 0;
+		a {
+			text-decoration: none;
+		}
+	}
+
+	@media (max-width: 899px) {
+		.field--name-name {
+			font-size: $font-size-h3;
+		}
+		.author-byline {
+			padding: 5px 0 10px 0;
+		}
+	}
+
+	@media (max-width: 690px) {
+		.field--name-name {
+			font-size: $font-size-h5;
+		}
+	}
+}

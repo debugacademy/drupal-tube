@@ -1,4 +1,4 @@
-uuid: 30a7152a-a107-438b-8dcb-65f48d38134f
+uuid: 4dddd2d4-23a3-43d7-9e7c-b5c080071314
 langcode: en
 status: true
 dependencies:
@@ -13,6 +13,7 @@ dependencies:
     - field.field.media.external_video.field_sponsor
     - field.field.media.external_video.field_version
     - field.field.media.external_video.field_video_category
+    - image.style.recent_view
     - media.type.external_video
   module:
     - image
@@ -27,8 +28,8 @@ third_party_settings:
         layout_id: layout_twocol
         layout_settings: {  }
         components:
-          d5a1dfac-3786-401c-9e02-35ed97012076:
-            uuid: d5a1dfac-3786-401c-9e02-35ed97012076
+          4af862b0-49dd-41af-b217-897658b19916:
+            uuid: 4af862b0-49dd-41af-b217-897658b19916
             region: first
             configuration:
               id: 'field_block:media:external_video:thumbnail'
@@ -46,8 +47,8 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 0
-          18ca5119-dca6-4eed-afd0-4fdfccd7b0f0:
-            uuid: 18ca5119-dca6-4eed-afd0-4fdfccd7b0f0
+          10b0c86b-722b-4435-abec-c462df7e5c74:
+            uuid: 10b0c86b-722b-4435-abec-c462df7e5c74
             region: second
             configuration:
               label_display: '0'
@@ -62,8 +63,8 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 0
-          6bf9ae56-5a1b-4a2d-ac09-4e742322c4db:
-            uuid: 6bf9ae56-5a1b-4a2d-ac09-4e742322c4db
+          73b7b2fc-7053-40ce-9f3a-5e73f289fc58:
+            uuid: 73b7b2fc-7053-40ce-9f3a-5e73f289fc58
             region: second
             configuration:
               label_display: '0'
@@ -71,11 +72,11 @@ third_party_settings:
                 entity: layout_builder.entity
               id: 'field_block:media:external_video:field_conference'
               formatter:
-                label: hidden
+                type: entity_reference_label
+                label: above
                 settings:
                   link: true
                 third_party_settings: {  }
-                type: entity_reference_label
             additional: {  }
             weight: 1
       -
@@ -88,13 +89,13 @@ bundle: external_video
 mode: list
 content:
   field_conference:
+    type: entity_reference_label
     weight: 2
-    label: hidden
+    region: content
+    label: above
     settings:
       link: true
     third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   name:
     type: string
     weight: 1
@@ -106,11 +107,11 @@ content:
   thumbnail:
     type: image
     weight: 0
-    region: content
     label: hidden
     settings:
-      image_style: ''
+      image_style: recent_view
       image_link: ''
+    region: content
     third_party_settings: {  }
 hidden:
   created: true
