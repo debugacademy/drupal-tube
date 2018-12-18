@@ -61,10 +61,12 @@
   {% else %}
     {% for item in items %}
        {% if field_name == "uid"  %}
-        <div class="author-byline"><span class="author-intro">By </span><span{{ attributes.addClass(classes, 'field__item', 'author-names') }}>{{ item.content }}</span></div>
-          {% else %}
-            <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
-          {% endif %}
+         <div class="author-byline"><span class="author-intro">By </span><span{{ attributes.addClass(classes, 'field__item', 'author-names') }}>{{ item.content }}</span></div>
+       {% elseif field_name == "name" %}
+         <div{{ attributes.addClass(classes, 'field__item') }}><h2>{{ item.content }}</h2></div>
+       {% else %}
+         <div{{ attributes.addClass(classes, 'field__item') }}>{{ item.content }}</div>
+       {% endif %}
     {% endfor %}
   {% endif %}
 {% else %}
