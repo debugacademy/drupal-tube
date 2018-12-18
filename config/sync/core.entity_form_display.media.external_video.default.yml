@@ -11,6 +11,8 @@ dependencies:
     - field.field.media.external_video.field_recording_date
     - field.field.media.external_video.field_speaker
     - field.field.media.external_video.field_sponsor
+    - field.field.media.external_video.field_version
+    - field.field.media.external_video.field_video_category
     - media.type.external_video
   module:
     - datetime
@@ -85,6 +87,18 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_version:
+    weight: 106
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_video_category:
+    weight: 107
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
     region: content
   name:
     type: string_textfield
