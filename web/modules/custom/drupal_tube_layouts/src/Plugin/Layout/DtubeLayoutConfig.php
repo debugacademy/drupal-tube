@@ -18,7 +18,6 @@ class DtubeLayoutConfig extends LayoutDefault implements PluginFormInterface {
    */
   public function defaultConfiguration() {
     return [
-      'class' => '',
     ];
   }
 
@@ -27,8 +26,15 @@ class DtubeLayoutConfig extends LayoutDefault implements PluginFormInterface {
    */
   public function build(array $regions) {
     $build = parent::build($regions);
-    if (!empty($this->configuration['class'])) {
-      $build['#attributes']['class'][] = $this->configuration['class'];
+    if (!empty($this->configuration['bgcolor'])) {
+      $build['#attributes']['class'][] = $this->configuration['bgcolor'];
+    }
+    if (!empty($this->configuration['spacing'])) {
+      foreach ($this->configuration['spacing'] as $spacing_class) {
+        if (!empty($spacing_class)) {
+          $build['#attributes']['class'][] = $spacing_class;
+        }
+      }
     }
     return $build;
   }
@@ -38,26 +44,29 @@ class DtubeLayoutConfig extends LayoutDefault implements PluginFormInterface {
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $bg_values = [
-      'layout-bg-grey' => t('Grey'),
+      'bg-primary' => t('Primary (White)'),
+      'bg-secondary' => t('Secondary (Biege)'),
+      'bg-featured' => t('Featured (Gray)'),
     ];
     $form['bgcolor'] = [
       '#type' => 'select',
-      '#title' => 'Background overlay color',
+      '#title' => 'Section Background color',
       '#options' => $bg_values,
       '#default_value' => $this->configuration['bgcolor'],
     ];
-    // $form['media'] = [
-    //   '#title' => $this->t('Background image'),
-    //   '#type' => 'entity_autocomplete',
-    //   '#target_type' => 'media',
-    //   '#selection_handler' => 'default',
-    //   '#selection_settings' => [
-    //     'target_bundles' => ['image'],
-    //   ],
-    // ];
-    // if (!empty($this->configuration['media'])) {
-    //   $form['media']['#default_value'] = \Drupal::entityTypeManager()->getStorage('media')->load($this->configuration['media']);
-    // }
+    $padding_options = [
+      'space-top' => t('Space above content'),
+      'space-bottom' => t('Space below content'),
+      'space-between' => t('Space between content'),
+      'space-beside' => t('Space beside section'),
+    ];
+    $form['spacing'] = [
+      '#type' => 'checkboxes',
+      '#title' => 'Section Padding',
+      '#options' => $padding_options,
+      '#default_value' => $this->configuration['spacing'],
+    ];
+
     return $form;
   }
 
@@ -73,7 +82,13 @@ class DtubeLayoutConfig extends LayoutDefault implements PluginFormInterface {
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     $this->configuration['bgcolor'] = $form_state->getValue('bgcolor');
-    // $this->configuration['media'] = $form_state->getValue('media');
+    $spacing = $form_state->getValue('spacing');
+    foreach ($spacing as $key => $value) {
+      if (empty($spacing[$key])) {
+        unset($spacing[$key]);
+      }
+    }
+    $this->configuration['spacing'] = $spacing;
   }
 
 }

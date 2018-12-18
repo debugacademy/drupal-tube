@@ -22,3 +22,20 @@ function drupal_tube_layouts_help($route_name, RouteMatchInterface $route_match)
     default:
   }
 }
+
+/**
+ * Implements hook_preprocess_layout().
+ */
+function drupal_tube_layouts_preprocess_layout(&$variables) {
+  if (isset($variables['settings'])) {
+/*
+    if (is_subclass_of($variables['layout']->getClass(), '\Drupal\drupal_tube_layouts\LayoutPreprocessInterface')) {
+      $class = $variables['layout']->getClass();
+      $class::preprocess($variables);
+    }
+    */
+    if (!empty($variables['settings']['bgcolor'])) {
+      $variables['attributes']['class'][] = $variables['settings']['bgcolor'];
+    }
+  }
+}

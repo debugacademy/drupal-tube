@@ -1,6 +1,35 @@
-.layout_styling {
-    outline: 2px dashed #2f91da;
-    background-color: #eff6fc;
-    padding: 1.5em 0;
-    text-align: center;
+.layout-dt.bg-featured{
+	background-color: #e0e0e0;
+}
+.layout-dt.bg-secondary{
+	background-color: #f6f6f2;
+}
+.layout-dt.bg-primary{
+
+}
+.layout-dt.space-top{
+  padding-top: 53px;
+}
+.layout-dt.space-bottom{
+  padding-bottom: 53px;
+}
+.layout-dt.space-between .layout__region--first {
+  padding-right: 26px;
+}
+.layout-dt.space-between .layout__region--second {
+  padding-left: 26px;
+}
+.layout--threecol.space-between .layout__region--second {
+  padding-right: 26px;
+}
+.layout--threecol.space-between .layout__region--third {
+  padding-left: 26px;
+}
+.layout-dt.space-beside {
+  padding-left: 53px;
+  padding-right: 53px;
+}
+.layout-dt.layout-childreset .layout__region > * {
+	padding: 0;
+	margin: 0;
 }

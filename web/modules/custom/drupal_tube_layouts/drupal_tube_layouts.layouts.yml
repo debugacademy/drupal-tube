@@ -1,21 +1,22 @@
-one_column_bgcolor:
+one_column_dt:
   label: "100% with Background Color Picker"
   category: "Drupal.tube Layouts"
-  template: layouts/one-column-bgcolor
+  template: layouts/one-column-dt
   library: drupal_tube_layouts/lb-sections
   default_region: content
+  class: '\Drupal\drupal_tube_layouts\Plugin\Layout\DtubeLayoutConfig'
   icon_map:
   - [content]
   regions:
     content:
       label: Content
-  
-two_column_bgcolor:
+two_column_dt:
   label: "50/50 with Background Color Picker"
   category: "Drupal.tube Layouts"
   library: drupal_tube_layouts/lb-sections
-  template: layouts/two-column-bgcolor
+  template: layouts/two-column-dt
   default_region: first
+  class: '\Drupal\drupal_tube_layouts\Plugin\Layout\DtubeLayoutConfig'
   icon_map:
   - [first, second]
   regions:
@@ -23,4 +24,19 @@ two_column_bgcolor:
       label: First
     second:
       label: Second
-  
+three_column_dt:
+  label: "33/34/33 with Background Color Picker"
+  category: "Drupal.tube Layouts"
+  library: drupal_tube_layouts/lb-sections
+  template: layouts/three-column-dt
+  default_region: first
+  class: '\Drupal\drupal_tube_layouts\Plugin\Layout\DtubeLayoutConfig'
+  icon_map:
+  - [first, second, third]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+    third:
+      label: Third
