@@ -1,0 +1,26 @@
+one_column_bgcolor:
+  label: "100% with Background Color Picker"
+  category: "Drupal.tube Layouts"
+  template: layouts/one-column-bgcolor
+  library: drupal_tube_layouts/lb-sections
+  default_region: content
+  icon_map:
+  - [content]
+  regions:
+    content:
+      label: Content
+  
+two_column_bgcolor:
+  label: "50/50 with Background Color Picker"
+  category: "Drupal.tube Layouts"
+  library: drupal_tube_layouts/lb-sections
+  template: layouts/two-column-bgcolor
+  default_region: first
+  icon_map:
+  - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+  
