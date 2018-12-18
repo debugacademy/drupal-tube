@@ -1,0 +1,5 @@
+lb-sections:
+  version: VERSION
+  css:
+    theme:
+      layouts/layouts.css: {}
