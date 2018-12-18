@@ -1,0 +1,126 @@
+uuid: 4dddd2d4-23a3-43d7-9e7c-b5c080071314
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.list
+    - field.field.media.external_video.field_conference
+    - field.field.media.external_video.field_description
+    - field.field.media.external_video.field_featured_video
+    - field.field.media.external_video.field_media_video_embed_field
+    - field.field.media.external_video.field_recording_date
+    - field.field.media.external_video.field_speaker
+    - field.field.media.external_video.field_sponsor
+    - field.field.media.external_video.field_version
+    - field.field.media.external_video.field_video_category
+    - image.style.recent_view
+    - media.type.external_video
+  module:
+    - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_twocol
+        layout_settings: {  }
+        components:
+          4af862b0-49dd-41af-b217-897658b19916:
+            uuid: 4af862b0-49dd-41af-b217-897658b19916
+            region: first
+            configuration:
+              id: 'field_block:media:external_video:thumbnail'
+              label: Thumbnail
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: image
+                settings:
+                  image_style: thumbnail
+                  image_link: content
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 0
+          10b0c86b-722b-4435-abec-c462df7e5c74:
+            uuid: 10b0c86b-722b-4435-abec-c462df7e5c74
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:media:external_video:name'
+              formatter:
+                type: string
+                label: hidden
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          73b7b2fc-7053-40ce-9f3a-5e73f289fc58:
+            uuid: 73b7b2fc-7053-40ce-9f3a-5e73f289fc58
+            region: second
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:media:external_video:field_conference'
+              formatter:
+                type: entity_reference_label
+                label: above
+                settings:
+                  link: true
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components: {  }
+id: media.external_video.list
+targetEntityType: media
+bundle: external_video
+mode: list
+content:
+  field_conference:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+  name:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  thumbnail:
+    type: image
+    weight: 0
+    label: hidden
+    settings:
+      image_style: recent_view
+      image_link: ''
+    region: content
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_description: true
+  field_featured_video: true
+  field_media_video_embed_field: true
+  field_recording_date: true
+  field_speaker: true
+  field_sponsor: true
+  field_version: true
+  field_video_category: true
+  uid: true

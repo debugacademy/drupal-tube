@@ -12,120 +12,68 @@ dependencies:
     - field.field.media.external_video.field_sponsor
     - field.field.media.external_video.field_version
     - field.field.media.external_video.field_video_category
-    - image.style.recent_view
     - media.type.external_video
   module:
-    - datetime
-    - image
-    - user
+    - layout_builder
     - video_embed_field
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: false
+    sections: {  }
 id: media.external_video.default
 targetEntityType: media
 bundle: external_video
 mode: default
 content:
-  created:
-    label: hidden
-    type: timestamp
-    weight: 1
-    region: content
-    settings:
-      date_format: medium
-      custom_date_format: ''
-      timezone: ''
-    third_party_settings: {  }
-  field_conference:
-    weight: 11
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_description:
-    weight: 7
+    weight: 1
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
-  field_featured_video:
-    weight: 9
-    label: hidden
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_media_video_embed_field:
-    weight: 3
-    label: hidden
+    type: video_embed_field_video
+    weight: 4
+    region: content
+    label: above
     settings:
       responsive: true
       width: 854
       height: 480
       autoplay: true
     third_party_settings: {  }
-    type: video_embed_field_video
-    region: content
-  field_recording_date:
-    weight: 9
-    label: hidden
-    settings:
-      format_type: medium
-      timezone_override: ''
-    third_party_settings: {  }
-    type: datetime_default
-    region: content
   field_speaker:
-    weight: 8
+    weight: 2
     label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
     region: content
-  field_sponsor:
-    weight: 10
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
-  field_version:
-    weight: 12
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   field_video_category:
-    weight: 13
+    weight: 3
     label: hidden
     settings:
       link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
-  thumbnail:
-    type: image
-    weight: 2
-    label: hidden
-    settings:
-      image_style: recent_view
-      image_link: ''
-    region: content
-    third_party_settings: {  }
-  uid:
-    label: hidden
-    type: author
+  name:
+    type: string
     weight: 0
     region: content
-    settings: {  }
+    label: above
+    settings:
+      link_to_entity: false
     third_party_settings: {  }
 hidden:
-  name: true
+  created: true
+  field_conference: true
+  field_featured_video: true
+  field_recording_date: true
+  field_sponsor: true
+  field_version: true
+  thumbnail: true
+  uid: true
