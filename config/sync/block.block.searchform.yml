@@ -1,6 +1,6 @@
 uuid: 3c776b3d-fb1a-4fbd-b321-af3825c4704c
 langcode: en
-status: true
+status: false
 dependencies:
   module:
     - search
@@ -8,8 +8,8 @@ dependencies:
     - tube_theme
 id: searchform
 theme: tube_theme
-region: top_header_secondary
-weight: -7
+region: top_header_right
+weight: -5
 provider: null
 plugin: search_form_block
 settings:

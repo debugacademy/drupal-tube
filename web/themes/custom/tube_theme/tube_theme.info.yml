@@ -11,19 +11,16 @@ libraries-override:
   bootstrap_barrio/global-styling: false
 #  bootstrap_barrio/file: false
 regions:
-  top_header_primary: 'Top Header Primary'
-  top_header_secondary: 'Top Header Secondary'
-  top_header_search: "Top Header Search"
-  header: Header
-  site_navigation: 'Site Nav'
-  subheading: 'Subheading'
-  page_top: 'Page top'
-  page_bottom: 'Page bottom'
+  top_header_left: 'Top Header Left'
+  top_header_center: 'Top Header Center'
+  top_header_right: 'Top Header Right'
+  site_navigation_left: 'Site Nav Left'
+  site_navigation_right: 'Site Nav Right'
+  below_header: 'Below header'
   highlighted: Highlighted
-  featured_top: 'Featured top'
   breadcrumb: Breadcrumb
-  content: Content
   sidebar_first: 'Sidebar first'
+  content: Content
   sidebar_second: 'Sidebar second'
   featured_bottom_first: 'Featured bottom first'
   featured_bottom_second: 'Featured bottom second'

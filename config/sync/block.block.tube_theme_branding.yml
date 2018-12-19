@@ -10,7 +10,7 @@ _core:
   default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
 id: tube_theme_branding
 theme: tube_theme
-region: top_header_primary
+region: top_header_left
 weight: -6
 provider: null
 plugin: system_branding_block

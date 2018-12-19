@@ -12,8 +12,8 @@ _core:
   default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
 id: tube_theme_main_menu
 theme: tube_theme
-region: header
-weight: -6
+region: site_navigation_left
+weight: -5
 provider: null
 plugin: 'system_menu_block:main'
 settings:

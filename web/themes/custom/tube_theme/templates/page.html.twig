@@ -33,25 +33,22 @@
  *   comment/reply/12345).
  *
  * Regions:
- * - page.top_header_primary: Items for the primary top header
- * - page.top_header_search: Items for the top header search region.
- * - page.top_header_secondary: Items for the secondary menu region in the top header.
- * - page.header: Items for the header region.
- * - page.site_navigation: Items for the site navigation region.
- * - page.subheading: Items for the subheading region.
+ * - page.top_header_left: Items for the primary top header
+ * - page.top_header_right: Items for the top header search region.
+ * - page.top_header_center: Items for the secondary menu region in the top header.
+ * - page.site_navigation_left: Items for the site navigation region.
+ * - page.site_navigation_right: Items for the site navigation region.
+ * - page.below_header: Items for the subheading region.
  * - page.highlighted: Items for the highlighted region.
- * - page.featured_top: Items for the featured top region.
  * - page.content: The main content of the current page.
  * - page.sidebar_first: Items for the first sidebar.
  * - page.sidebar_second: Items for the second sidebar.
  * - page.featured_bottom_first: Items for the first featured bottom region.
  * - page.featured_bottom_second: Items for the second featured bottom region.
  * - page.featured_bottom_third: Items for the third featured bottom region.
- * - page.footer_first: Items for the first footer column.
- * - page.footer_second: Items for the second footer column.
- * - page.footer_third: Items for the third footer column.
- * - page.footer_fourth: Items for the fourth footer column.
- * - page.footer_fifth: Items for the fifth footer column.
+ * - page.footer_left: Items for the first footer column.
+ * - page.footer_center: Items for the second footer column.
+ * - page.footer_right: Items for the third footer column.
  * - page.breadcrumb: Items for the breadcrumb region.
  *
  * Theme variables:
@@ -71,39 +68,36 @@
   <div id="page">
     <header id="header" class="header" role="banner" aria-label="{{ 'Site header'|t}}">
       {% block head %}
-        {% if page.top_header_primary or page.top_header_secondary or page.top_header_search %}
-          <nav{{ navbar_top_attributes }}>
-          {% if container_navbar %}
-          <div class="container">
-          {% endif %}
-              {{ page.top_header_primary }}
-              {{ page.top_header_secondary }}
-              {{ page.site_branding }}
-              {% if page.top_header_search %} <!--search -->
-                <div class="form-inline navbar-form float-right">
-                  {{ page.top_header_search }}
+
+        {% if page.top_header_left or page.top_header_right or page.top_header_center %}
+          <nav class="navbar-dark bg-secondary">
+            <div class="{{ container }}">
+              <div class="row">
+                <div class="col-sm-12 col-md-4">
+                  {{ page.top_header_left }}
                 </div>
-              {% endif %}
-          {% if container_navbar %}
-          </div>
-          {% endif %}
+                <div class="col-sm-12 col-md-4">
+                  {{ page.top_header_center }}
+                </div>
+                <div class="col-sm-12 col-md-4">
+                  {{ page.top_header_right }}
+                </div>
+              </div>
+            </div>
           </nav>
         {% endif %}
         <nav{{ navbar_attributes }}>
           {% if container_navbar %}
-          <div class="container">
+          <div class="{{ container }}">
           {% endif %}
-            {{ page.header }}
-            {% if page.site_navigation %}
+            {% if page.site_navigation_left or page.site_navigation_right %}
               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse" id="CollapsingNavbar">
-                {{ page.site_navigation }}
-                {% if page.header_form %}
-                  <div class="form-inline navbar-form float-right">
-                    {{ page.header_form }}
-                  </div>
-                {% endif %}
-	          </div>
+              <div class="collapse navbar-collapse col-sm-12 col-md-8" id="CollapsingNavbar">
+                {{ page.site_navigation_left }}
+              </div>
+              <div class="col-sm-12 col-md-4">
+                {{ page.site_navigation_right }}
+              </div>
             {% endif %}
             {% if sidebar_collapse %}
               <button class="navbar-toggler navbar-toggler-left" type="button" data-toggle="collapse" data-target="#CollapsingLeft" aria-controls="CollapsingLeft" aria-expanded="false" aria-label="Toggle navigation"></button>
@@ -112,9 +106,11 @@
           </div>
           {% endif %}
         </nav>
-        {% if page.subheading %}
-          <div class="subheading">
-            {{ page.subheading }}
+        {% if page.below_header %}
+          <div class="subheading {{ container }}">
+            <div class="row">
+              {{ page.below_header }}
+            </div>
           </div>
         {% endif %}
       {% endblock %}
@@ -167,22 +163,36 @@
     {% if page.featured_bottom_first or page.featured_bottom_second or page.featured_bottom_third %}
       <div class="featured-bottom">
         <aside class="{{ container }} clearfix" role="complementary">
-          {{ page.featured_bottom_first }}
-          {{ page.featured_bottom_second }}
-          {{ page.featured_bottom_third }}
+          <div class="row">
+            <div class="col-4">
+              {{ page.featured_bottom_first }}
+            </div>
+            <div class="col-4">
+              {{ page.featured_bottom_second }}
+            </div>
+            <div class="col-4">
+              {{ page.featured_bottom_third }}
+            </div>
+          </div>
         </aside>
       </div>
     {% endif %}
-    <footer class="site-footer">
-      {% block footer %}
-        <div class="{{ container }}">
-          {% if page.footer_left or page.footer_center or page.footer_right %}
+    {% if page.footer_left or page.footer_center or page.footer_right %}
+      <footer class="{{ container }} site-footer">
+        {% block footer %}
+          <div class="row">
+            <div class="col-4">
               {{ page.footer_left }}
+            </div>
+            <div class="col-4">
               {{ page.footer_center }}
+            </div>
+            <div class="col-4">
               {{ page.footer_right }}
-          {% endif %}
+            </div>
         </div>
-      {% endblock %}
-    </footer>
+        {% endblock %}
+      </footer>
+    {% endif %}
   </div>
 </div>
