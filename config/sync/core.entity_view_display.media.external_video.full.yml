@@ -14,19 +14,25 @@ dependencies:
     - field.field.media.external_video.field_version
     - field.field.media.external_video.field_video_category
     - media.type.external_video
+    - views.view.recently_added_videos
   module:
+    - drupal_tube_layouts
     - layout_builder
     - layout_discovery
     - user
     - video_embed_field
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: true
     sections:
       -
-        layout_id: layout_onecol
-        layout_settings: {  }
+        layout_id: one_column_dt
+        layout_settings:
+          bgcolor: lb-bg-featured
+          spacing:
+            space-beside: space-beside
         components:
           563df74d-4ab4-42db-9e8e-c0e0144f29ef:
             uuid: 563df74d-4ab4-42db-9e8e-c0e0144f29ef
@@ -47,6 +53,15 @@ third_party_settings:
                 type: video_embed_field_video
             additional: {  }
             weight: 0
+      -
+        layout_id: one_column_dt
+        layout_settings:
+          bgcolor: lb-bg-secondary
+          spacing:
+            space-top: space-top
+            space-bottom: space-bottom
+            space-beside: space-beside
+        components:
           ed502585-ea68-4b42-9918-24e4a32ebeca:
             uuid: ed502585-ea68-4b42-9918-24e4a32ebeca
             region: content
@@ -62,7 +77,7 @@ third_party_settings:
                   link_to_entity: false
                 third_party_settings: {  }
             additional: {  }
-            weight: 1
+            weight: 0
           c4b26dc0-09f8-4d28-a699-972028c3d76a:
             uuid: c4b26dc0-09f8-4d28-a699-972028c3d76a
             region: content
@@ -77,40 +92,25 @@ third_party_settings:
                 third_party_settings: {  }
                 type: basic_string
             additional: {  }
-            weight: 2
-          53419acd-77d0-4b03-bdbb-ae5501577a3d:
-            uuid: 53419acd-77d0-4b03-bdbb-ae5501577a3d
+            weight: 1
+          399108ee-5c64-4d7b-a614-6e0e84fc3db4:
+            uuid: 399108ee-5c64-4d7b-a614-6e0e84fc3db4
             region: content
             configuration:
-              id: 'field_block:media:external_video:uid'
-              label: 'By: '
+              id: 'field_block:media:external_video:field_speaker'
+              label: Speaker
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: hidden
-                type: author
-                settings: {  }
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 3
-          a8fa2f76-855b-4a0c-96a5-2587fc6f174b:
-            uuid: a8fa2f76-855b-4a0c-96a5-2587fc6f174b
-            region: content
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:media:external_video:field_speaker'
-              formatter:
-                label: hidden
+                label: inline
+                type: string
                 settings:
                   link_to_entity: false
                 third_party_settings: {  }
-                type: string
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
-            weight: 5
+            weight: 2
           dca3f1be-5bd9-48a0-8893-53365d9c5ac7:
             uuid: dca3f1be-5bd9-48a0-8893-53365d9c5ac7
             region: content
@@ -128,7 +128,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 6
+            weight: 3
           d219fe10-48e3-40a1-8725-c5b902193625:
             uuid: d219fe10-48e3-40a1-8725-c5b902193625
             region: content
@@ -146,7 +146,32 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 7
+            weight: 4
+      -
+        layout_id: one_column_dt
+        layout_settings:
+          bgcolor: lb-bg-primary
+          spacing:
+            space-top: space-top
+            space-bottom: space-bottom
+        components:
+          b268bf47-d418-4781-8697-04a614f1a05f:
+            uuid: b268bf47-d418-4781-8697-04a614f1a05f
+            region: content
+            configuration:
+              id: 'views_block:recently_added_videos-block_1'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components: {  }
       -
         layout_id: layout_twocol
         layout_settings: {  }
