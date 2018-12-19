@@ -329,17 +329,17 @@ hr.webform-horizontal-rule--solid {
 }
 .region-top-header-primary {
     margin-left: 45px;
-    @media(max-width: 400px) {
+    @media screen and (max-width: 400px) {
       .region-top-header-primary {
-        margin-left: 20px;
+        margin-left: 0px;
       }
     }
     img {
       margin-right: 24px;
       margin-top: 8px;
-      @media(max-width: 400px) {
+      @media screen and (max-width: 400px) {
         img {
-          margin-left: 12px;
+          margin-left: 0px;
           margin-top: 4px;
         }
       }
@@ -358,6 +358,7 @@ hr.webform-horizontal-rule--solid {
         }
       }
     }
+
 // Navbar
 #block-tube-theme-main-menu {
   ul {
@@ -398,6 +399,18 @@ button#edit-submit {
     }
   }
 
+// Footer
+
+.main-content {
+  overflow: auto;
+  padding-bottom: 80px; // height of footer
+}
+.site-footer {
+  position: relative;
+  height: 80px;
+  margin-top: -80px;
+  clear: both;
+}
 
 
 

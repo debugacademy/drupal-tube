@@ -7975,15 +7975,15 @@ hr.webform-horizontal-rule--solid {
 
 .region-top-header-primary {
   margin-left: 45px; }
-  @media (max-width: 400px) {
+  @media screen and (max-width: 400px) {
     .region-top-header-primary .region-top-header-primary {
-      margin-left: 20px; } }
+      margin-left: 0px; } }
   .region-top-header-primary img {
     margin-right: 24px;
     margin-top: 8px; }
-    @media (max-width: 400px) {
+    @media screen and (max-width: 400px) {
       .region-top-header-primary img img {
-        margin-left: 12px;
+        margin-left: 0px;
         margin-top: 4px; } }
   .region-top-header-primary a {
     font-family: "Ubuntu", sans-serif;
@@ -8023,6 +8023,16 @@ button#edit-submit {
 .search-header.form-control {
   padding: 0.375rem 2.75rem;
   border-radius: 0.15rem; }
+
+.main-content {
+  overflow: auto;
+  padding-bottom: 80px; }
+
+.site-footer {
+  position: relative;
+  height: 80px;
+  margin-top: -80px;
+  clear: both; }
 
 .block-callout {
   position: relative;
@@ -8121,6 +8131,12 @@ h2.featured-title {
 -------------------------------------------------*/
 body {
   background: #F6F6F2; }
+
+html, body {
+  height: 100%; }
+
+.container {
+  min-height: 100%; }
 
 /* COLORS 
 --------------------------------------------------*/
