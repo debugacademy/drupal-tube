@@ -1,0 +1,9 @@
+uuid: 50811926-d474-4462-9e34-b55a577997f1
+langcode: en
+status: true
+dependencies: {  }
+id: conference_organizer
+label: 'Conference Organizer'
+weight: 5
+is_admin: null
+permissions: {  }

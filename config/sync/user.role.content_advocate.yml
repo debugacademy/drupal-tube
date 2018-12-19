@@ -1,0 +1,9 @@
+uuid: f0ff03c4-33ba-444b-92bf-6e9aca6ca528
+langcode: en
+status: true
+dependencies: {  }
+id: content_advocate
+label: 'Content Advocate'
+weight: 3
+is_admin: null
+permissions: {  }

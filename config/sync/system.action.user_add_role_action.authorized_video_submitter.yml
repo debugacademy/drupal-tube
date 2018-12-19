@@ -1,0 +1,14 @@
+uuid: f2c2f7e4-0bc1-47f1-ba2f-75acbf59f5f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.authorized_video_submitter
+  module:
+    - user
+id: user_add_role_action.authorized_video_submitter
+label: 'Add the Authorized Video Submitter role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: authorized_video_submitter

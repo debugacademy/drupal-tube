@@ -1,0 +1,14 @@
+uuid: 990bf603-9ad5-433a-a3a7-170a1e1a6968
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.authorized_video_submitter
+  module:
+    - user
+id: user_remove_role_action.authorized_video_submitter
+label: 'Remove the Authorized Video Submitter role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: authorized_video_submitter

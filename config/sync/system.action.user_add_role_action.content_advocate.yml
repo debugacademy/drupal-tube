@@ -1,0 +1,14 @@
+uuid: 0d8150c8-dc56-4af7-8d42-f9719112a372
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.content_advocate
+  module:
+    - user
+id: user_add_role_action.content_advocate
+label: 'Add the Content Advocate role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: content_advocate

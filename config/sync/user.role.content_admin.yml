@@ -1,0 +1,9 @@
+uuid: 4f728523-fd31-4165-8003-4746db305e97
+langcode: en
+status: true
+dependencies: {  }
+id: content_admin
+label: 'Content Administrator'
+weight: 7
+is_admin: null
+permissions: {  }

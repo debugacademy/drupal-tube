@@ -1,0 +1,9 @@
+uuid: f462938c-26dd-4bb1-8c3d-6574d133a814
+langcode: en
+status: true
+dependencies: {  }
+id: authorized_video_submitter
+label: 'Authorized Video Submitter'
+weight: 4
+is_admin: null
+permissions: {  }
