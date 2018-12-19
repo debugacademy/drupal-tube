@@ -3,8 +3,10 @@
  * Styles for Bootstrap Barrio page.
  */
 
+.block-field-blockmediaexternal-videofield-media-video-embed-field {
+    background-color: $featured-background;
+}
 .video-landing {
-	background-color: $featured-background;
 	font-family: $font-ubuntu;
 	margin-bottom: 30px;
 	
