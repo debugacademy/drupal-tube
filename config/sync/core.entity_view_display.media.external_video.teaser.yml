@@ -54,6 +54,7 @@ content:
       image_link: content
     third_party_settings: {  }
 hidden:
+  content_moderation_control: true
   created: true
   field_conference: true
   field_description: true

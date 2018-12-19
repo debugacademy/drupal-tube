@@ -16,3 +16,8 @@ permissions:
   - 'use editorial transition create_new_draft'
   - 'use editorial transition publish'
   - 'use editorial transition submit_for_approval'
+  - 'use video_workflow transition create_new_draft'
+  - 'use video_workflow transition publish'
+  - 'use video_workflow transition submit_for_approval'
+  - 'view any unpublished content'
+  - 'view latest version'

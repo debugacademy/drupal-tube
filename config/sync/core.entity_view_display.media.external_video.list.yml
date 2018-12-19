@@ -88,6 +88,12 @@ targetEntityType: media
 bundle: external_video
 mode: list
 content:
+  content_moderation_control:
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+    region: first
   field_conference:
     type: entity_reference_label
     weight: 2

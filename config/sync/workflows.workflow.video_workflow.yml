@@ -2,6 +2,8 @@ uuid: 78ab3a03-2b2d-43fc-9f90-b9babb1b65e1
 langcode: en
 status: true
 dependencies:
+  config:
+    - media.type.external_video
   module:
     - content_moderation
 id: video_workflow
@@ -46,4 +48,6 @@ type_settings:
         - draft
       to: awaiting_approval
       weight: -1
-  entity_types: {  }
+  entity_types:
+    media:
+      - external_video
