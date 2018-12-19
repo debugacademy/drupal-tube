@@ -8496,6 +8496,14 @@ h2.featured-title {
       .video-landing .block-field-blockmediaexternal-videofield-video-category .field--name-field-video-category .field__item a {
         color: #ffffff;
         text-decoration: none; }
+  .video-landing .block-field-blockmediaexternal-videofield-conference .field--name-field-conference a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 10px;
+    background: #0c538c;
+    padding: 5px 15px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
   @media (max-width: 899px) {
     .video-landing .field--name-name {
       font-size: 2.33rem; }
