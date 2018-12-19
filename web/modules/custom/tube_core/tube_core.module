@@ -19,7 +19,7 @@ function tube_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form
 
 function tube_core_form_media_external_video_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
   $spam_catcher_message = t('WARNING: Immediately change "Save as" to anything other than "Temporary" or else your submission will automatically be deleted. This helps reduce spam.');
-  drupal_set_message($spam_catcher_message, 'warning');
+  drupal_set_message($spam_catcher_message, 'error');
 }
 
 function tube_core_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
