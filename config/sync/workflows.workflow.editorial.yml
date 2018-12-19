@@ -1,0 +1,78 @@
+uuid: 13c85f75-35a1-40dd-8e03-b5732e16dc8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.conference
+  module:
+    - content_moderation
+_core:
+  default_config_hash: T_JxNjYlfoRBi7Bj1zs5Xv9xv1btuBkKp5C1tNrjMhI
+id: editorial
+label: Conferences
+type: content_moderation
+type_settings:
+  states:
+    archived:
+      label: Archived
+      weight: 1
+      published: false
+      default_revision: true
+    awaiting_approval:
+      published: false
+      default_revision: false
+      label: 'Submitted (Awaiting approval)'
+      weight: -1
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+  transitions:
+    archive:
+      label: Archive
+      from:
+        - published
+      to: archived
+      weight: 0
+    archived_draft:
+      label: Unpublish
+      from:
+        - archived
+      to: draft
+      weight: 1
+    archived_published:
+      label: Restore
+      from:
+        - archived
+      to: published
+      weight: 2
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -3
+      from:
+        - awaiting_approval
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: -1
+      from:
+        - awaiting_approval
+        - published
+    submit_for_approval:
+      label: 'Submit for approval'
+      from:
+        - draft
+      to: awaiting_approval
+      weight: -2
+  entity_types:
+    node:
+      - conference

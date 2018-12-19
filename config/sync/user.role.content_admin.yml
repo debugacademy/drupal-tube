@@ -6,4 +6,20 @@ id: content_admin
 label: 'Content Administrator'
 weight: 7
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create conference content'
+  - 'create curated_playlist content'
+  - 'create external_video media'
+  - 'create image media'
+  - 'mark content featured'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition submit_for_approval'
+  - 'use video_workflow transition create_new_draft'
+  - 'use video_workflow transition publish'
+  - 'use video_workflow transition submit_for_approval'
+  - 'view any unpublished content'
+  - 'view latest version'

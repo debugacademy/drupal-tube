@@ -6,4 +6,13 @@ id: conference_organizer
 label: 'Conference Organizer'
 weight: 5
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create conference content'
+  - 'create curated_playlist content'
+  - 'create image media'
+  - 'use editorial transition archive'
+  - 'use editorial transition archived_draft'
+  - 'use editorial transition archived_published'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition publish'
+  - 'use editorial transition submit_for_approval'

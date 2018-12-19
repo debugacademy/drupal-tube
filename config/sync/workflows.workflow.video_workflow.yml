@@ -1,0 +1,49 @@
+uuid: 78ab3a03-2b2d-43fc-9f90-b9babb1b65e1
+langcode: en
+status: true
+dependencies:
+  module:
+    - content_moderation
+id: video_workflow
+label: 'Video workflow'
+type: content_moderation
+type_settings:
+  states:
+    awaiting_approval:
+      published: false
+      default_revision: false
+      label: 'Submitted (Awaiting approval)'
+      weight: -1
+    draft:
+      label: Draft
+      published: false
+      default_revision: false
+      weight: -2
+    published:
+      label: Published
+      published: true
+      default_revision: true
+      weight: 0
+  transitions:
+    create_new_draft:
+      label: 'Create New Draft'
+      to: draft
+      weight: -2
+      from:
+        - awaiting_approval
+        - draft
+        - published
+    publish:
+      label: Publish
+      to: published
+      weight: 0
+      from:
+        - awaiting_approval
+        - published
+    submit_for_approval:
+      label: 'Submit for approval'
+      from:
+        - draft
+      to: awaiting_approval
+      weight: -1
+  entity_types: {  }

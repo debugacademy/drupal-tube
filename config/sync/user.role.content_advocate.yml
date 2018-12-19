@@ -6,4 +6,11 @@ id: content_advocate
 label: 'Content Advocate'
 weight: 3
 is_admin: null
-permissions: {  }
+permissions:
+  - 'create conference content'
+  - 'create curated_playlist content'
+  - 'create external_video media'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition submit_for_approval'
+  - 'use video_workflow transition create_new_draft'
+  - 'use video_workflow transition submit_for_approval'
