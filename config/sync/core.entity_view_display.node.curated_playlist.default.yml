@@ -7,13 +7,12 @@ dependencies:
     - field.field.node.curated_playlist.field_curated_by
     - field.field.node.curated_playlist.field_curated_videos
     - node.type.curated_playlist
-  module:
-    - layout_builder
-    - layout_discovery
     - field.field.node.curated_playlist.field_youtube_playlist_id
     - image.style.medium
     - node.type.curated_playlist
   module:
+    - layout_builder
+    - layout_discovery
     - link
     - media
     - text
