@@ -13,6 +13,9 @@ class DtubeLayoutConfig extends LayoutDefault implements PluginFormInterface {
   public function build(array $regions) {
     $build = parent::build($regions);
     $build['#attributes']['class'][] = $this->configuration['bgcolor'];
+    if (!empty($this->configuration['highlight'])) {
+      $build['#attributes']['class'][] = 'wrapper-highlight';
+    }
     if (!empty($this->configuration['spacing'])) {
       foreach ($this->configuration['spacing'] as $padding_prop) {
         $build['#attributes']['class'][] = $padding_prop;

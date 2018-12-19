@@ -17,7 +17,7 @@
   {% if content %}
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content', 'col') }}>
       {% if settings.highlight  is same as( 'highlight' ) %}
-        <div class="highlighted">
+        <div class="highlighted col col-md-9 col-lg-8">
       {% endif %}
       {{ content.content }}
       {% if settings.highlight  is same as( 'highlight' ) %}
