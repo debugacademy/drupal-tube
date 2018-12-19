@@ -29,4 +29,20 @@ function tube_theme_form_system_theme_settings_alter(&$form, FormStateInterface 
       'bg-white' => t('White'),
       'bg-transparent' => t('Transparent'),
   );
+  $form['fonts']['icons']['bootstrap_barrio_icons']['#options']['fontawesome_5'] = 'Font Awesome 5';
 }
+  function tube_theme_preprocess_page(&$variables) {
+       $icons = theme_get_setting('bootstrap_barrio_icons');
+       if ($icons) {
+       $variables['#attached']['library'][] = ( $icons == 'fontawesome_5' ? 'tube_theme' : 'bootstrap_barrio' ) . '/' . $icons;
+    }
+  }
+  function tube_theme_form_search_block_form_alter(&$form, &$form_state) {
+    $form['keys']['#attributes']['placeholder'][] = t('Search');
+     $form['actions']['submit']['#value'] = html_entity_decode('&#xf002;');
+    }
+
+
+
+
+
