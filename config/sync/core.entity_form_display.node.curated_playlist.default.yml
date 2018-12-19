@@ -6,10 +6,8 @@ dependencies:
     - field.field.node.curated_playlist.body
     - field.field.node.curated_playlist.field_curated_by
     - field.field.node.curated_playlist.field_curated_videos
-    - field.field.node.curated_playlist.field_youtube_playlist_id
     - node.type.curated_playlist
   module:
-    - link
     - path
     - text
 id: node.curated_playlist.default
@@ -48,14 +46,6 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
-    region: content
-  field_youtube_playlist_id:
-    weight: 26
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   path:
     type: path
