@@ -8461,8 +8461,10 @@ h2.featured-title {
  * @file
  * Styles for Bootstrap Barrio page.
  */
+.block-field-blockmediaexternal-videofield-media-video-embed-field {
+  background-color: #E0E0E0; }
+
 .video-landing {
-  background-color: #E0E0E0;
   font-family: "Ubuntu", sans-serif;
   margin-bottom: 30px; }
   .video-landing .content {
