@@ -7975,26 +7975,37 @@ hr.webform-horizontal-rule--solid {
 
 .region-top-header-primary {
   margin-left: 45px; }
-  @media screen and (max-width: 400px) {
-    .region-top-header-primary .region-top-header-primary {
+  @media (max-width: 609px) {
+    .region-top-header-primary {
+      margin-left: 5px; } }
+  @media (max-width: 462px) {
+    .region-top-header-primary {
       margin-left: 0px; } }
   .region-top-header-primary img {
     margin-right: 24px;
     margin-top: 8px; }
-    @media screen and (max-width: 400px) {
-      .region-top-header-primary img img {
-        margin-left: 0px;
-        margin-top: 4px; } }
+    @media (max-width: 636px) {
+      .region-top-header-primary img {
+        margin-right: 6px;
+        margin-top: 0px; } }
+    @media (max-width: 462px) {
+      .region-top-header-primary img {
+        margin-right: 0px;
+        margin-bottom: 10px; } }
   .region-top-header-primary a {
     font-family: "Ubuntu", sans-serif;
     font-weight: 500;
     font-size: 48px;
     color: #F6F6F2;
     margin-bottom: 8px; }
-    @media (max-width: 400px) {
-      .region-top-header-primary a a {
-        font-size: 38px;
-        margin-bottom: 4px; } }
+    @media (max-width: 636px) {
+      .region-top-header-primary a {
+        font-size: 30px;
+        margin-top: 14px; } }
+    @media (max-width: 462px) {
+      .region-top-header-primary a {
+        font-size: 30px;
+        margin-bottom: 0px; } }
 
 #block-tube-theme-main-menu ul {
   padding-left: 55px; }
@@ -8008,7 +8019,14 @@ hr.webform-horizontal-rule--solid {
   color: #F6F6F2; }
 
 #block-searchform {
-  margin-right: 80px; }
+  margin-right: 40px;
+  margin-top: 10px; }
+  @media (max-width: 775px) {
+    #block-searchform {
+      margin-right: 10px; } }
+  @media (max-width: 655px) {
+    #block-searchform {
+      margin-right: 0px; } }
   #block-searchform.btn-primary {
     border-radius: 0.15rem; }
 
@@ -8023,6 +8041,15 @@ button#edit-submit {
 .search-header.form-control {
   padding: 0.375rem 2.75rem;
   border-radius: 0.15rem; }
+  @media (max-width: 775px) {
+    .search-header.form-control {
+      padding: 0.375rem 0.25rem; } }
+  @media (max-width: 555px) {
+    .search-header.form-control {
+      padding: 0.375rem 0.05rem; } }
+  @media (max-width: 475px) {
+    .search-header.form-control {
+      padding: 0.375rem 0.01rem; } }
 
 .main-content {
   overflow: auto;
