@@ -6,10 +6,12 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.conference.body
     - field.field.node.conference.field_address
-    - field.field.node.conference.field_banner
     - field.field.node.conference.field_contact_email
     - field.field.node.conference.field_date
+    - field.field.node.conference.field_event_name
+    - field.field.node.conference.field_event_type
     - field.field.node.conference.field_featured
+    - field.field.node.conference.field_hero_image
     - field.field.node.conference.field_logo
     - field.field.node.conference.field_slogan
     - field.field.node.conference.field_website
@@ -58,8 +60,10 @@ content:
     third_party_settings: {  }
 hidden:
   field_address: true
-  field_banner: true
   field_contact_email: true
+  field_event_name: true
+  field_event_type: true
   field_featured: true
+  field_hero_image: true
   field_slogan: true
   field_website: true
