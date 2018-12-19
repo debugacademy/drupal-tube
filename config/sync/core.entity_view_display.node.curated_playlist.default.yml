@@ -68,6 +68,53 @@ third_party_settings:
                 third_party_settings: {  }
             additional: {  }
             weight: 0
+          d70a79a0-35f9-4b62-9877-92de16e2a905:
+            uuid: d70a79a0-35f9-4b62-9877-92de16e2a905
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:curated_playlist:field_curated_by'
+              formatter:
+                label: inline
+                settings: {  }
+                third_party_settings: {  }
+                type: basic_string
+            additional: {  }
+            weight: 0
+          27e646e8-cc08-4f98-a883-738db89723ae:
+            uuid: 27e646e8-cc08-4f98-a883-738db89723ae
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:curated_playlist:body'
+              formatter:
+                label: hidden
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 1
+          088990c5-d3a9-4e3b-a495-bc9d1b7e8018:
+            uuid: 088990c5-d3a9-4e3b-a495-bc9d1b7e8018
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:curated_playlist:field_curated_videos'
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: list
+                  link: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
       -
         layout_id: layout_onecol
         layout_settings: {  }
