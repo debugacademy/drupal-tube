@@ -129,6 +129,24 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 6
+          d219fe10-48e3-40a1-8725-c5b902193625:
+            uuid: d219fe10-48e3-40a1-8725-c5b902193625
+            region: content
+            configuration:
+              id: 'field_block:media:external_video:field_conference'
+              label: Conference
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 7
       -
         layout_id: layout_twocol
         layout_settings: {  }
