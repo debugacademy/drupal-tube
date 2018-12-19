@@ -7,7 +7,13 @@
     'row',
   ]
 %}
-<div{{ attributes.addClass(classes) }}>
+{% if background_image_url is not empty %}
+  {% set styles = ' style=background-image:url(\'' ~ background_image_url ~ '\')' %}
+{% else %}
+  {% set styles= '' %}
+{% endif %}
+
+<div{{ attributes.addClass(classes) }}{{ styles }}>
   {% if content %}
     <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content', 'col') }}>
       {% if settings.highlight  is same as( 'highlight' ) %}

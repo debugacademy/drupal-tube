@@ -193,6 +193,23 @@ h3, h4, h5, h6 {
       }
 }
 
+// Conference page
+.node--type-conference {
+  ol.breadcrumb {
+   margin: 0;
+  }
+  .node__content {
+    margin-top: 0;
+  }
+  div#block-tube-theme-page-title h1.title, div#block-tube-theme-page-title .field--type-string.field--name-title {
+    display: none;
+  }
+  .wrapper-highlight.layout--onecol.layout-dt {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
 // Contact form stying
 
 .contact-form {
