@@ -47,6 +47,14 @@ class DtubeLayoutConfig extends LayoutDefault implements PluginFormInterface {
       '#default_value' => $this->configuration['spacing'],
     ];
     
+    $form['highlight'] = [
+      '#type' => 'checkbox',
+      '#title' => "Highlight section's content?",
+      '#return_value' => 'highlight',
+      '#default_value' => $this->configuration['highlight'],
+    ];
+
+    
     return $form;
   }
 
@@ -56,6 +64,7 @@ class DtubeLayoutConfig extends LayoutDefault implements PluginFormInterface {
 
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     $this->configuration['bgcolor'] = $form_state->getValue('bgcolor');
+    $this->configuration['highlight'] = $form_state->getValue('highlight');
     
     $spacing_values = $form_state->getValue('spacing');
     foreach ($spacing_values as $index => $value) {

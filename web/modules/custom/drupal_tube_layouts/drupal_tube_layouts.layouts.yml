@@ -39,17 +39,3 @@ three_column_dt:
       label: Second
     third:
       label: Third
-
-one_column_five_rows_dt:
-  label: "Conference Hero Banner, 100% wide"
-  category: "Drupal.tube Layouts"
-  template: layouts/one-column-five-rows-dt
-  class: '\Drupal\drupal_tube_layouts\Plugin\Layout\DtubeLayoutHero'
-  default_region: content
-  icon_map:
-  - [content]
-  regions:
-    content:
-      label: Content
-
-      
