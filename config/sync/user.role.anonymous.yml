@@ -15,6 +15,8 @@ permissions:
   - 'create external_video media'
   - 'search content'
   - 'use text format restricted_html'
+  - 'use video_workflow transition create_draft_do_not_auto_delete_'
   - 'use video_workflow transition create_new_draft'
   - 'use video_workflow transition submit_for_approval'
+  - 'use video_workflow transition verified_submission'
   - 'view media'

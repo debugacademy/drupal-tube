@@ -76,3 +76,4 @@ type_settings:
   entity_types:
     node:
       - conference
+  default_moderation_state: draft

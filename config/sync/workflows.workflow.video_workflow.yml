@@ -15,22 +15,33 @@ type_settings:
       published: false
       default_revision: false
       label: 'Submitted (Awaiting approval)'
-      weight: -1
+      weight: 0
     draft:
       label: Draft
       published: false
       default_revision: false
-      weight: -2
+      weight: -1
     published:
       label: Published
       published: true
       default_revision: true
-      weight: 0
+      weight: 1
+    validate:
+      published: false
+      default_revision: false
+      label: Temporary
+      weight: -2
   transitions:
+    create_draft_do_not_auto_delete_:
+      label: 'Create draft (do not auto delete)'
+      from:
+        - validate
+      to: draft
+      weight: -2
     create_new_draft:
       label: 'Create New Draft'
       to: draft
-      weight: -2
+      weight: -1
       from:
         - awaiting_approval
         - draft
@@ -38,16 +49,29 @@ type_settings:
     publish:
       label: Publish
       to: published
-      weight: 0
+      weight: 1
       from:
         - awaiting_approval
+        - draft
         - published
     submit_for_approval:
       label: 'Submit for approval'
       from:
+        - awaiting_approval
         - draft
+        - published
       to: awaiting_approval
-      weight: -1
+      weight: 0
+    verified_submission:
+      label: 'Actually create?'
+      from:
+        - awaiting_approval
+        - draft
+        - published
+        - validate
+      to: validate
+      weight: 2
   entity_types:
     media:
       - external_video
+  default_moderation_state: validate
