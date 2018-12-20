@@ -4,11 +4,12 @@
     'layout-childreset',
     'layout--onecol',
     'layout-dt',
+    'row',
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
   {% if content %}
-    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content') }}>
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content', 'col') }}>
       {{ content.content }}
     </div>
   {% endif %}

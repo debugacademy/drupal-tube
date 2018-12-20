@@ -65,6 +65,10 @@ display:
           offset: 0
       style:
         type: default
+        options:
+          row_class: featured-video-block
+          default_row_class: true
+          uses_fields: false
       row:
         type: 'entity:media'
         options:

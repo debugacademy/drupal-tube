@@ -1,8 +1,9 @@
-uuid: 10209567-9433-49b6-b3f6-8983b0001217
+uuid: 3e99b5d2-61fb-40a8-8806-1afa91750b84
 langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.teaser
     - field.field.media.external_video.field_conference
     - field.field.media.external_video.field_description
     - field.field.media.external_video.field_featured_video
@@ -21,28 +22,21 @@ third_party_settings:
     allow_custom: false
     enabled: false
     sections: {  }
-id: media.external_video.default
+id: media.external_video.teaser
 targetEntityType: media
 bundle: external_video
-mode: default
+mode: teaser
 content:
-  field_description:
-    weight: 1
-    label: hidden
-    settings: {  }
-    third_party_settings: {  }
-    type: basic_string
-    region: content
   field_media_video_embed_field:
     type: video_embed_field_video
-    weight: 4
+    weight: 0
     region: content
-    label: above
+    label: hidden
     settings:
       responsive: true
       width: 854
       height: 480
-      autoplay: true
+      autoplay: false
     third_party_settings: {  }
   field_speaker:
     weight: 2
@@ -52,28 +46,22 @@ content:
     third_party_settings: {  }
     type: string
     region: content
-  field_video_category:
-    weight: 3
-    label: hidden
-    settings:
-      link: true
-    third_party_settings: {  }
-    type: entity_reference_label
-    region: content
   name:
     type: string
-    weight: 0
+    weight: 1
     region: content
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
 hidden:
   created: true
   field_conference: true
+  field_description: true
   field_featured_video: true
   field_recording_date: true
   field_sponsor: true
   field_version: true
+  field_video_category: true
   thumbnail: true
   uid: true
