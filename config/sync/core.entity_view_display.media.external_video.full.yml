@@ -110,23 +110,47 @@ third_party_settings:
                 third_party_settings: {  }
                 type: string
             additional: {  }
-            weight: 4
+            weight: 5
           dca3f1be-5bd9-48a0-8893-53365d9c5ac7:
             uuid: dca3f1be-5bd9-48a0-8893-53365d9c5ac7
             region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:media:external_video:field_video_category'
+              label: 'Video Category'
+              provider: layout_builder
+              label_display: '0'
               formatter:
                 label: hidden
+                type: entity_reference_label
                 settings:
                   link: true
                 third_party_settings: {  }
-                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
-            weight: 5
+            weight: 6
+          d219fe10-48e3-40a1-8725-c5b902193625:
+            uuid: d219fe10-48e3-40a1-8725-c5b902193625
+            region: content
+            configuration:
+              id: 'field_block:media:external_video:field_conference'
+              label: Conference
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 7
+      -
+        layout_id: layout_twocol
+        layout_settings: {  }
+        components: {  }
 id: media.external_video.full
 targetEntityType: media
 bundle: external_video

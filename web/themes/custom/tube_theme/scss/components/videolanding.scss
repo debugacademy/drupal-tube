@@ -3,8 +3,10 @@
  * Styles for Bootstrap Barrio page.
  */
 
+.block-field-blockmediaexternal-videofield-media-video-embed-field {
+    background-color: $featured-background;
+}
 .video-landing {
-	background-color: $featured-background;
 	font-family: $font-ubuntu;
 	margin-bottom: 30px;
 	
@@ -39,6 +41,40 @@
 		a {
 			text-decoration: none;
 		}
+	}
+	
+	.block-field-blockmediaexternal-videofield-video-category {
+	    .field--name-field-video-category {
+	        display: flex;
+	        
+	        .field__item {
+	            margin-right: 10px;
+                background: #1f79c1;
+                padding: 2px 5px;
+                border-radius: 2px;
+                box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+
+                a {
+                    color: #ffffff;
+                    text-decoration: none;
+                }
+	        }
+	    }
+	}
+	
+	.block-field-blockmediaexternal-videofield-conference {
+	    
+	    .field--name-field-conference {
+            a {
+                color: #ffffff;
+                text-decoration: none;
+                margin-right: 10px;
+                background: #0c538c;
+                padding: 5px 15px;
+                border-radius: 2px;
+                box-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            }
+	    }
 	}
 
 	@media (max-width: 899px) {
