@@ -8538,7 +8538,7 @@ h3, h4, h5, h6 {
 
 .layout-childreset .layout__region > * {
   padding: 0;
-  margin: 0; }
+  margin: 0 auto; }
 
 .layout--threecol-33-34-33.space-between .layout__region--second {
   padding-right: 26px; }
