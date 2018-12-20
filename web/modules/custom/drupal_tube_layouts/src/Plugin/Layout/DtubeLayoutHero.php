@@ -47,6 +47,12 @@ class DtubeLayoutHero extends LayoutDefault implements PluginFormInterface {
       '#default_value' => $this->configuration['spacing'],
     ];
     
+    $form['conference_hero'] = [
+      "#type" => 'file',
+      '#title' => t('Conference Hero Image'),
+      '#description' => t('Submit Conference Hero Image'),
+    ];
+    
     return $form;
   }
 
