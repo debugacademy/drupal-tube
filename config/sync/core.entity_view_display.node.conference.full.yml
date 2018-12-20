@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.base_field_override.node.conference.title
     - core.entity_view_mode.node.full
     - field.field.node.conference.body
     - field.field.node.conference.field_address
@@ -22,7 +23,6 @@ dependencies:
     - drupal_tube_layouts
     - image
     - layout_builder
-    - layout_discovery
     - link
     - text
     - user
@@ -35,32 +35,53 @@ third_party_settings:
         layout_id: one_column_five_rows_dt
         layout_settings: {  }
         components:
-          accddad1-7b55-4a08-aee6-8befa17bd82d:
-            uuid: accddad1-7b55-4a08-aee6-8befa17bd82d
-            region: first
+          1785ac67-9107-4858-a8c5-49776a614b59:
+            uuid: 1785ac67-9107-4858-a8c5-49776a614b59
+            region: content
             configuration:
+              id: 'field_block:node:conference:field_logo'
+              label: Logo
+              provider: layout_builder
               label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:conference:field_event_name'
               formatter:
                 label: hidden
+                type: image
                 settings:
-                  link: true
+                  image_style: medium
+                  image_link: ''
                 third_party_settings: {  }
-                type: entity_reference_label
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
-            weight: 2
-          e0cd3b19-4d0f-4913-acee-96f4d6677867:
-            uuid: e0cd3b19-4d0f-4913-acee-96f4d6677867
-            region: first
+            weight: 0
+          300073b0-0239-4ea0-942d-9488b6b73850:
+            uuid: 300073b0-0239-4ea0-942d-9488b6b73850
+            region: content
+            configuration:
+              id: 'field_block:node:conference:title'
+              label: 'Conference Name'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
+          83db942b-fc1f-4021-9f93-c0d6753a7d60:
+            uuid: 83db942b-fc1f-4021-9f93-c0d6753a7d60
+            region: content
             configuration:
               id: 'field_block:node:conference:field_date'
               label: 'Start Date'
               provider: layout_builder
               label_display: '0'
               formatter:
-                label: inline
+                label: hidden
                 type: datetime_default
                 settings:
                   timezone_override: ''
@@ -69,25 +90,27 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 3
-          9c6d7efe-f6ed-484f-9385-4675a5b8650f:
-            uuid: 9c6d7efe-f6ed-484f-9385-4675a5b8650f
-            region: first
+            weight: 2
+          e34b15a3-ea42-4b89-9d54-baf32f48770e:
+            uuid: e34b15a3-ea42-4b89-9d54-baf32f48770e
+            region: content
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:conference:field_address'
+              label: Address
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                label: above
+                label: hidden
+                type: address_default
                 settings: {  }
                 third_party_settings: {  }
-                type: address_default
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
-            weight: 4
-          53058877-2b3e-48e9-9d3b-87da3e18cca0:
-            uuid: 53058877-2b3e-48e9-9d3b-87da3e18cca0
-            region: first
+            weight: 3
+          f239dc84-f123-4334-b167-9fa1c6f5c12d:
+            uuid: f239dc84-f123-4334-b167-9fa1c6f5c12d
+            region: content
             configuration:
               id: 'field_block:node:conference:field_website'
               label: Website
@@ -106,30 +129,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 5
-          8487f226-f6a7-45af-8f49-0f2ce4f79890:
-            uuid: 8487f226-f6a7-45af-8f49-0f2ce4f79890
-            region: first
-            configuration:
-              id: 'field_block:node:conference:field_logo'
-              label: Logo
-              provider: layout_builder
-              label_display: '0'
-              formatter:
-                label: hidden
-                type: image
-                settings:
-                  image_style: thumbnail
-                  image_link: ''
-                third_party_settings: {  }
-              context_mapping:
-                entity: layout_builder.entity
-            additional: {  }
-            weight: 1
-      -
-        layout_id: layout_onecol
-        layout_settings: {  }
-        components: {  }
+            weight: 4
 id: node.conference.full
 targetEntityType: node
 bundle: conference
