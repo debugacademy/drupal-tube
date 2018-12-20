@@ -1,0 +1,17 @@
+{%
+  set classes = [
+    'layout',
+    'layout-childreset',
+    'layout--onecol',
+    'layout-dt',
+    'row',
+    'hero-banner',
+  ]
+%}
+<div{{ attributes.addClass(classes) }}>
+  {% if content %}
+    <div {{ region_attributes.content.addClass('layout__region', 'layout__region--content', 'col') }}>
+      {{ content.content }}
+    </div>
+  {% endif %}
+</div>
