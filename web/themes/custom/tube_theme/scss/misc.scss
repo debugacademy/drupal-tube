@@ -1,5 +1,14 @@
-// Recently Added Videos View
+// multiple recent video teasers
+.view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row {
+    margin-right: 0;
+    width: 338px;
+    padding: 0 9px;
+    h2 {
+      font-size: 1.2em;
+    }
+}
 
+// Recently Added (featured?) Videos View
 .recent {
   background-color: $bg-color;
 }
@@ -81,10 +90,9 @@ h3, h4, h5, h6 {
 
 // Featured Video Section
 
-.node-featured-teaser {
+.layout__region--first .node-featured-teaser, .layout__region--second .node-featured-teaser, .layout__region--third .node-featured-teaser{
    position: relative;
-}
-.featured-title {
+  .featured-title {
     position: absolute;
     top: 0;
     left: 301px;
@@ -136,6 +144,7 @@ h3, h4, h5, h6 {
     text-transform: uppercase;
     color: $light-gray;
   }
+}
 }
 
 // Contact Form

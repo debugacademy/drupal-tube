@@ -1,4 +1,5 @@
-.node-featured-teaser {
+.layout__region--first, .layout__region--second, .layout__region--third {
+    .node-featured-teaser {
 	p {
 		color: #000000;
 		font-size: 1.25em;
@@ -30,9 +31,10 @@
 			margin: 0;
 		}
 	}
-}
+    }
 
-h2.featured-title {
+    h2.featured-title {
 	font-size: 2.25em;
 	color: $black;
+    }
 }
