@@ -26,6 +26,7 @@
         "drupal/console": "^1.0.2",
         "drupal/core": "^8.6.0",
         "drupal/fontawesome": "^2.9",
+        "drupal/pathauto": "^1.0",
         "drupal/recaptcha": "^2.3",
         "drupal/video_embed_field": "^2.0",
         "drupal/webform": "^5.0",
