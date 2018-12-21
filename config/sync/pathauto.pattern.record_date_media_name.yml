@@ -1,0 +1,23 @@
+uuid: 8025263f-d88e-4b0e-850a-bcba84d0e38b
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - media
+id: record_date_media_name
+label: 'Type / Record date / media name'
+type: 'canonical_entities:media'
+pattern: '[media:bundle]/[media:field_recording_date:date:html_date]/[media:name]'
+selection_criteria:
+  b7461391-3931-485d-9040-9f4c3ff4af0f:
+    id: 'entity_bundle:media'
+    bundles:
+      external_video: external_video
+    negate: false
+    context_mapping:
+      media: media
+    uuid: b7461391-3931-485d-9040-9f4c3ff4af0f
+selection_logic: and
+weight: -5
+relationships: {  }
