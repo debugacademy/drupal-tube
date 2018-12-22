@@ -1,0 +1,15 @@
+uuid: f8ece199-303a-4539-bf3b-a0fc81a20e88
+langcode: en
+status: true
+dependencies: {  }
+name: video_teaser_320_x_164
+label: 'Video teaser (320 x 164)'
+effects:
+  d38250cd-ad29-4005-a211-9071684a5687:
+    uuid: d38250cd-ad29-4005-a211-9071684a5687
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 320
+      height: 164
+      anchor: center-center

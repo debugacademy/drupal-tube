@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.media.featured
     - core.entity_view_mode.media.teaser
     - field.storage.media.field_conference
     - field.storage.media.field_description
@@ -73,7 +74,7 @@ display:
         type: 'entity:media'
         options:
           relationship: none
-          view_mode: teaser
+          view_mode: featured
       fields:
         thumbnail__target_id:
           id: thumbnail__target_id
@@ -534,7 +535,20 @@ display:
           plugin_id: field
       defaults:
         fields: false
+        style: false
+        row: false
       display_description: ''
+      style:
+        type: default
+        options:
+          row_class: featured-video-block
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:media'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:

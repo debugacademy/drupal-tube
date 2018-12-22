@@ -1,9 +1,9 @@
-uuid: 3e99b5d2-61fb-40a8-8806-1afa91750b84
+uuid: 311a6347-19b6-420e-9e31-6b78bf63a57a
 langcode: en
 status: true
 dependencies:
   config:
-    - core.entity_view_mode.media.teaser
+    - core.entity_view_mode.media.featured
     - field.field.media.external_video.field_conference
     - field.field.media.external_video.field_description
     - field.field.media.external_video.field_featured_video
@@ -13,21 +13,31 @@ dependencies:
     - field.field.media.external_video.field_sponsor
     - field.field.media.external_video.field_version
     - field.field.media.external_video.field_video_category
-    - image.style.video_teaser_320_x_164
     - media.type.external_video
   module:
-    - image
     - layout_builder
+    - video_embed_field
 third_party_settings:
   layout_builder:
     allow_custom: false
     enabled: false
     sections: {  }
-id: media.external_video.teaser
+id: media.external_video.featured
 targetEntityType: media
 bundle: external_video
-mode: teaser
+mode: featured
 content:
+  field_media_video_embed_field:
+    type: video_embed_field_video
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      responsive: true
+      width: 854
+      height: 480
+      autoplay: false
+    third_party_settings: {  }
   field_speaker:
     weight: 2
     label: hidden
@@ -44,23 +54,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-  thumbnail:
-    type: image
-    weight: 0
-    region: content
-    label: hidden
-    settings:
-      image_style: video_teaser_320_x_164
-      image_link: content
-    third_party_settings: {  }
 hidden:
   created: true
   field_conference: true
   field_description: true
   field_featured_video: true
-  field_media_video_embed_field: true
   field_recording_date: true
   field_sponsor: true
   field_version: true
   field_video_category: true
+  thumbnail: true
   uid: true
