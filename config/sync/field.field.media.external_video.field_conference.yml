@@ -11,7 +11,7 @@ field_name: field_conference
 entity_type: media
 bundle: external_video
 label: Conference
-description: ''
+description: 'The specific conference this was recorded at. Include the full conference name, <strong>including year</strong>. e.g. DrupalCon Seattle 2019'
 required: false
 translatable: false
 default_value: {  }
@@ -24,6 +24,6 @@ settings:
     sort:
       field: field_date
       direction: DESC
-    auto_create: false
+    auto_create: true
     auto_create_bundle: ''
 field_type: entity_reference

@@ -10,7 +10,7 @@ id: media.external_video.field_video_category
 field_name: field_video_category
 entity_type: media
 bundle: external_video
-label: 'Video Category'
+label: 'Video Categories'
 description: ''
 required: false
 translatable: false

@@ -9,7 +9,7 @@ dependencies:
 id: searchform
 theme: tube_theme
 region: top_header_secondary
-weight: -6
+weight: -7
 provider: null
 plugin: search_form_block
 settings:

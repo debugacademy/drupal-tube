@@ -93,7 +93,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-    region: first
   field_conference:
     type: entity_reference_label
     weight: 2
