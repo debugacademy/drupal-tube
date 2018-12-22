@@ -1,0 +1,22 @@
+uuid: 5b887a2a-b37c-4299-8ebd-e08a3094ee5b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_type_start_date_page_title
+label: 'Content Type / Start Date / Page Title'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:field_date:date:html_month]/[node:title]'
+selection_criteria:
+  058f9661-8882-466b-a731-a6765f5731f6:
+    id: node_type
+    bundles:
+      conference: conference
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 058f9661-8882-466b-a731-a6765f5731f6
+selection_logic: and
+weight: -5
+relationships: {  }

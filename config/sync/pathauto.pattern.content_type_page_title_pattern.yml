@@ -1,0 +1,25 @@
+uuid: e64ba332-a828-4a4c-b775-15b7c69e086b
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: content_type_page_title_pattern
+label: 'Content Type / Page Title Pattern'
+type: 'canonical_entities:node'
+pattern: '[node:content-type]/[node:title]'
+selection_criteria:
+  6978ea79-f0b0-407f-8bf7-9e86784c2968:
+    id: node_type
+    bundles:
+      article: article
+      curated_playlist: curated_playlist
+      page: page
+      sponsor: sponsor
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 6978ea79-f0b0-407f-8bf7-9e86784c2968
+selection_logic: and
+weight: -5
+relationships: {  }
