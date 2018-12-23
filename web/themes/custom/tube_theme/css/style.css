@@ -8569,6 +8569,50 @@ h3, h4, h5, h6 {
 .layout--threecol-33-34-33.space-between .layout__region--third {
   padding-left: 26px; }
 
+.node--type-curated-playlist .block-field-blocknodecurated-playlistfield-curated-videos .field--name-field-curated-videos > .field__items > .field__item {
+  border-top: 1px solid black;
+  padding-top: 10px; }
+  @media screen and (max-width: 1040px) {
+    .node--type-curated-playlist .block-field-blocknodecurated-playlistfield-curated-videos .field--name-field-curated-videos > .field__items > .field__item .layout--twocol {
+      justify-content: center; } }
+.node--type-curated-playlist .field--name-field-curated-by {
+  font-size: 2em;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  margin-bottom: 15px; }
+.node--type-curated-playlist .block-field-blocknodecurated-playlistbody .field__label {
+  font-size: 1.2em;
+  font-weight: bold; }
+.node--type-curated-playlist .block-field-blocknodecurated-playlistfield-curated-videos .field__label {
+  display: none; }
+@media screen and (max-width: 520px) {
+  .node--type-curated-playlist .block-field-blockmediaexternal-videothumbnail img {
+    width: 100%;
+    height: auto; } }
+.node--type-curated-playlist .block-field-blockmediaexternal-videoname h2 {
+  margin-bottom: 0; }
+.node--type-curated-playlist .block-field-blockmediaexternal-videofield-speaker .field__items {
+  font-size: 1.4em;
+  font-style: italic;
+  margin-bottom: 10px; }
+.node--type-curated-playlist .block-field-blockmediaexternal-videofield-conference .field__item a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-right: 10px;
+  background: #0c538c;
+  padding: 5px 15px;
+  border-radius: 2px;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); }
+.node--type-curated-playlist .block-field-blockmediaexternal-videofield-video-category .field--name-field-video-category {
+  display: flex; }
+  .node--type-curated-playlist .block-field-blockmediaexternal-videofield-video-category .field--name-field-video-category .field__item a {
+    margin-right: 10px;
+    background: #1f79c1;
+    padding: 2px 5px;
+    border-radius: 2px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    text-decoration: none; }
+
 /* GENERAL STYLES
 -------------------------------------------------*/
 body {
