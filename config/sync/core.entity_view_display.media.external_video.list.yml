@@ -40,7 +40,7 @@ third_party_settings:
                 label: hidden
                 type: image
                 settings:
-                  image_style: thumbnail
+                  image_style: large
                   image_link: content
                 third_party_settings: {  }
               context_mapping:
