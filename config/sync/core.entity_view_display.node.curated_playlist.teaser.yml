@@ -5,6 +5,9 @@ dependencies:
   config:
     - core.entity_view_mode.node.teaser
     - field.field.node.curated_playlist.body
+    - field.field.node.curated_playlist.field_curated_by
+    - field.field.node.curated_playlist.field_curated_videos
+    - field.field.node.curated_playlist.field_youtube_playlist_id
     - node.type.curated_playlist
   module:
     - text
@@ -24,8 +27,10 @@ content:
     region: content
   links:
     weight: 100
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
 hidden:
   field_curated_by: true
+  field_curated_videos: true
+  field_youtube_playlist_id: true

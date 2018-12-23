@@ -44,15 +44,17 @@ third_party_settings:
             uuid: 54329313-8001-455a-af60-9538c22726be
             region: top
             configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
               id: 'field_block:node:curated_playlist:body'
+              label: Introduction
+              provider: layout_builder
+              label_display: '0'
               formatter:
-                label: hidden
+                label: above
                 type: text_default
                 settings: {  }
                 third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
             additional: {  }
             weight: 1
           83b51e18-7384-4ef2-a23c-1273880678b7:
