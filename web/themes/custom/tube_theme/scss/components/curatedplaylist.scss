@@ -1,4 +1,18 @@
 .node--type-curated-playlist {
+    
+    .block-field-blocknodecurated-playlistfield-curated-videos {
+        .field--name-field-curated-videos > .field__items > .field__item {
+            border-top: 1px solid black;
+            padding-top: 10px;
+            
+            .layout--twocol {
+                @media screen and (max-width: 1040px) {
+                    justify-content: center;
+                } 
+            }
+        }
+    }
+    
     .field--name-field-curated-by {
     font-size: 2em;
     border-bottom: 2px solid rgba(0,0,0,0.5);
@@ -14,6 +28,14 @@
         display:none;
     }
     
+    .block-field-blockmediaexternal-videothumbnail {
+        img {
+            @media screen and (max-width: 520px) {
+                width:100%;
+                height: auto;
+            }
+        }
+    }
     .block-field-blockmediaexternal-videoname {
         h2 {
             margin-bottom: 0;
