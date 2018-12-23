@@ -8573,8 +8573,8 @@ h3, h4, h5, h6 {
   border-top: 1px solid black;
   padding-top: 10px; }
   @media screen and (max-width: 1040px) {
-    .node--type-curated-playlist .block-field-blocknodecurated-playlistfield-curated-videos .field--name-field-curated-videos > .field__items > .field__item .layout--twocol {
-      justify-content: center; } }
+    .node--type-curated-playlist .block-field-blocknodecurated-playlistfield-curated-videos .field--name-field-curated-videos > .field__items > .field__item .layout--twocol .layout__region {
+      flex: 100%; } }
 .node--type-curated-playlist .field--name-field-curated-by {
   font-size: 2em;
   border-bottom: 2px solid rgba(0, 0, 0, 0.5);
@@ -8594,6 +8594,8 @@ h3, h4, h5, h6 {
   font-size: 1.4em;
   font-style: italic;
   margin-bottom: 10px; }
+.node--type-curated-playlist .block-field-blockmediaexternal-videofield-description .field__item {
+  margin-bottom: 15px; }
 .node--type-curated-playlist .block-field-blockmediaexternal-videofield-conference .field__item a {
   color: #ffffff;
   text-decoration: none;
