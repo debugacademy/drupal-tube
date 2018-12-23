@@ -6,10 +6,12 @@
             padding-top: 10px;
             
             .layout--twocol {
-                @media screen and (max-width: 1040px) {
-                    justify-content: center;
-                } 
-            }
+                .layout__region {
+                    @media screen and (max-width:1040px) {
+                        flex: 100%;
+                    }
+                }
+            } 
         }
     }
     
@@ -47,6 +49,12 @@
             font-size: 1.4em;
             font-style: italic;
             margin-bottom: 10px;
+        }
+    }
+    
+    .block-field-blockmediaexternal-videofield-description {
+        .field__item {
+            margin-bottom: 15px;
         }
     }
     
