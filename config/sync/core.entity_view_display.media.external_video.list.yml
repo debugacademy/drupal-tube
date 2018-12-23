@@ -78,7 +78,7 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             additional: {  }
-            weight: 2
+            weight: 3
           2fdba9b2-4505-47f8-96a9-9c165e01c9c5:
             uuid: 2fdba9b2-4505-47f8-96a9-9c165e01c9c5
             region: second
@@ -96,7 +96,7 @@ third_party_settings:
               context_mapping:
                 entity: layout_builder.entity
             additional: {  }
-            weight: 3
+            weight: 4
           251b2374-3d46-4999-ba47-2b95a8ea8664:
             uuid: 251b2374-3d46-4999-ba47-2b95a8ea8664
             region: second
@@ -115,6 +115,23 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 1
+          3fee8c97-44d4-45aa-a8c4-e27fbb9fecf2:
+            uuid: 3fee8c97-44d4-45aa-a8c4-e27fbb9fecf2
+            region: second
+            configuration:
+              id: 'field_block:media:external_video:field_description'
+              label: Description
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
       -
         layout_id: layout_onecol
         layout_settings: {  }
