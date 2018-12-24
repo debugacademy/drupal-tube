@@ -395,23 +395,17 @@ h3, h4, h5, h6 {
     }
     
     #block-tube-theme-main-menu {
-        ul {
-        }
+
         li {
             font-family: $font-opensans;
             font-size: 1.5em;
-            transition: all .3s ease-in-out;
-            &:hover {
-                background: #0678BE;
-                border-radius: 3px;
-            }
-            
-            @media screen and (max-width: 991px) {
-                padding-left: 5px;
-            }
         }
         a {
             color: $text-and-icon-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
         }
     }
 }
