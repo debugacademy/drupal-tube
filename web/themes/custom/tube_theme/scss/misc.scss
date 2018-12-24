@@ -341,3 +341,13 @@ h3, h4, h5, h6 {
     }
   }
 }
+
+//Headers 
+.bg-secondary {
+    background: $bg-secondary ! important;
+    height: 80px;
+  }
+.bg-primary {
+  background: $dark-blue ! important;
+  height: 80px;
+}
