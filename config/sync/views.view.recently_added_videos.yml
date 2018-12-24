@@ -1125,6 +1125,113 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.media.field_speaker'
+  block_4:
+    display_plugin: block
+    id: block_4
+    display_title: 'More from this topic'
+    position: 5
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      relationships:
+        field_video_category:
+          id: field_video_category
+          table: media__field_video_category
+          field: field_video_category
+          relationship: none
+          group_type: group
+          admin_label: 'field_video_category: Taxonomy term'
+          required: true
+          plugin_id: standard
+      defaults:
+        relationships: false
+        filters: false
+        filter_groups: false
+        query: false
+        group_by: false
+      filters:
+        status:
+          value: '1'
+          table: media_field_data
+          field: status
+          plugin_id: boolean
+          entity_type: media
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+          group: 1
+        bundle:
+          id: bundle
+          table: media_field_data
+          field: bundle
+          value:
+            external_video: external_video
+          entity_type: media
+          entity_field: bundle
+          plugin_id: bundle
+          group: 1
+        vid:
+          id: vid
+          table: taxonomy_term_field_data
+          field: vid
+          relationship: field_video_category
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            category: category
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: vid
+          plugin_id: bundle
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      query:
+        type: views_query
+        options:
+          disable_sql_rewrite: false
+          distinct: false
+          replica: false
+          query_comment: ''
+          query_tags: {  }
+      group_by: true
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - user.permissions
+      tags:
+        - 'config:field.storage.media.field_speaker'
   page_1:
     display_plugin: page
     id: page_1

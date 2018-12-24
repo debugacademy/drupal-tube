@@ -155,19 +155,6 @@ third_party_settings:
             space-top: space-top
             space-bottom: space-bottom
         components:
-          b268bf47-d418-4781-8697-04a614f1a05f:
-            uuid: b268bf47-d418-4781-8697-04a614f1a05f
-            region: content
-            configuration:
-              id: 'views_block:recently_added_videos-block_1'
-              label: ''
-              provider: views
-              label_display: visible
-              views_label: ''
-              items_per_page: none
-              context_mapping: {  }
-            additional: {  }
-            weight: 1
           d5bf0b0c-1bd6-4ab7-9eb9-5fe03c0d0e24:
             uuid: d5bf0b0c-1bd6-4ab7-9eb9-5fe03c0d0e24
             region: content
@@ -181,6 +168,19 @@ third_party_settings:
               context_mapping: {  }
             additional: {  }
             weight: 0
+          6f813150-7832-4e03-91de-d348d79b1825:
+            uuid: 6f813150-7832-4e03-91de-d348d79b1825
+            region: content
+            configuration:
+              id: 'views_block:recently_added_videos-block_4'
+              label: 'More from this topic'
+              provider: views
+              label_display: visible
+              views_label: 'More from this topic'
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 1
       -
         layout_id: layout_onecol
         layout_settings: {  }
