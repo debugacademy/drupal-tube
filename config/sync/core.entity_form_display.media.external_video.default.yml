@@ -13,6 +13,7 @@ dependencies:
     - field.field.media.external_video.field_version
     - field.field.media.external_video.field_video_category
     - media.type.external_video
+    - workflows.workflow.video_workflow
   module:
     - content_moderation
     - datetime
