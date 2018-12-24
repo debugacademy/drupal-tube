@@ -8107,7 +8107,7 @@ nav.tabs {
 
 .view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row, .view-display-id-block_3, .view-display-id-block_4 {
   margin-right: 0;
-  width: 338px;
+  width: 320px;
   padding: 0 9px; }
   .view-id-recently_added_videos.view-display-id-block_1 .views-row h2, .view-id-recently_added_videos.view-display-id-page_1 .views-row h2, .view-display-id-block_3 h2, .view-display-id-block_4 h2 {
     font-size: 20px; }
@@ -8118,7 +8118,7 @@ nav.tabs {
 .recent-video-view.view-display-id-block_2, .view-display-id-block_3, .view-display-id-block_4 {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-top: 25px; }
   .recent-video-view.view-display-id-block_2 .block__title, .view-display-id-block_3 .block__title, .view-display-id-block_4 .block__title {
@@ -8150,7 +8150,7 @@ nav.tabs {
     padding-left: 0; }
   .recent-video-view.view-display-id-block_2 div.featured-video-block, .view-display-id-block_3 div.featured-video-block, .view-display-id-block_4 div.featured-video-block {
     margin-right: 0;
-    width: 338px;
+    width: 320px;
     padding: 0 9px; }
 
 h1 {
