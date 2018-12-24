@@ -62,7 +62,7 @@ display:
       pager:
         type: some
         options:
-          items_per_page: 8
+          items_per_page: 5
           offset: 0
       style:
         type: default
@@ -984,6 +984,33 @@ display:
       tags:
         - 'config:field.storage.media.field_conference'
         - 'config:field.storage.media.field_description'
+        - 'config:field.storage.media.field_speaker'
+  block_3:
+    display_plugin: block
+    id: block_3
+    display_title: 'Video Landing Page -- Conference'
+    position: 4
+    display_options:
+      display_extenders: {  }
+      display_description: ''
+      arguments:
+        field_conference_target_id:
+          id: field_conference_target_id
+          table: media__field_conference
+          field: field_conference_target_id
+          plugin_id: numeric
+      defaults:
+        arguments: false
+        title: false
+      title: 'More from this conference'
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - user.permissions
+      tags:
         - 'config:field.storage.media.field_speaker'
   page_1:
     display_plugin: page
