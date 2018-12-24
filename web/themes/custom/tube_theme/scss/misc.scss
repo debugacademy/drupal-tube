@@ -1,10 +1,10 @@
-// multiple recent video teasers
-.view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row {
+// multiple recent video teasers -- when adding video views teaser blocks, add the block name here AND to the "Recent Added Videos view" SASS right below
+.view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row, .view-display-id-block_3, .view-display-id-block_4 {
     margin-right: 0;
-    width: 338px;
+    width: 320px;
     padding: 0 9px;
     h2 {
-      font-size: 1.2em;
+      font-size: 20px;
     }
 }
 
@@ -12,11 +12,13 @@
 .recent {
   background-color: $bg-color;
 }
-.recent-video-view.view-display-id-block_2 {
+.recent-video-view.view-display-id-block_2, .view-display-id-block_3, .view-display-id-block_4 {
   display: flex;
   width: 100%;
-  justify-content: space-around;
-  height: 394px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+   //Highlighted out because it was creating odd spacing between teaser views blocks.  
+  //height: 394px;  
   margin-top: 25px;
   .block__title {
       @include font-size(36px, 41px);
@@ -42,14 +44,16 @@
     color: $light-gray;
   }
   .row {
-    flex-wrap: nowrap;
+    // flex-wrap: nowrap;
   }
   .container-fluid {
     padding-right: 0;
     padding-left: 0;
   }
-  .views-row {
-    margin-right: 20px;
+  div.featured-video-block {
+    margin-right: 0;
+    width: 320px;
+    padding: 0 9px;
   }
 }
 
@@ -340,4 +344,72 @@ h3, h4, h5, h6 {
       }
     }
   }
+}
+
+//Headers 
+.bg-secondary {
+    background: $bg-secondary ! important;
+  }
+.bg-primary {
+  background: $dark-blue ! important;
+}
+
+#header {
+    .region-top-header-left {
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 3em;
+            font-weight: 600;
+            
+            img {
+                margin-right: 10px;
+                margin-top: 8px;
+            }
+        }
+    }
+    
+  #block-searchform {
+
+    margin-top: 20px;
+      &.btn-primary {
+        border-radius: 0.15rem;
+      }
+    }
+
+    .search-header {
+      input::-webkit-input-placeholder {
+        font-family: $font-opensans;
+        color: $lighter-gray !important;
+        font-size: 14px;
+      }
+      &.form-control {
+            padding: 0.375rem 2.75rem;
+            border-radius: 0.15rem;
+            @media (max-width: 775px) {
+              padding: 0.375rem 0.25rem;
+            }
+            @media (max-width: 555px) {
+              padding: 0.375rem 0.05rem;
+            }
+            @media (max-width: 475px) {
+              padding: 0.375rem 0.01rem;
+            }
+        }
+    }
+    
+    #block-tube-theme-main-menu {
+
+        li {
+            font-family: $font-opensans;
+            font-size: 1.5em;
+        }
+        a {
+            color: $text-and-icon-color;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
 }

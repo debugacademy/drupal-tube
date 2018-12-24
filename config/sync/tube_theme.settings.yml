@@ -27,7 +27,7 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: ''
+  path: themes/custom/tube_theme/tubelogo.png
 favicon:
   use_default: 1
 bootstrap_barrio_region_clean_top_header: 0
