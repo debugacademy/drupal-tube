@@ -1,7 +1,7 @@
 // multiple recent video teasers -- when adding video views teaser blocks, add the block name here AND to the "Recent Added Videos view" SASS right below
 .view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row, .view-display-id-block_3, .view-display-id-block_4 {
     margin-right: 0;
-    width: 338px;
+    width: 320px;
     padding: 0 9px;
     h2 {
       font-size: 20px;
@@ -15,7 +15,7 @@
 .recent-video-view.view-display-id-block_2, .view-display-id-block_3, .view-display-id-block_4 {
   display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
    //Highlighted out because it was creating odd spacing between teaser views blocks.  
   //height: 394px;  
@@ -52,7 +52,7 @@
   }
   div.featured-video-block {
     margin-right: 0;
-    width: 338px;
+    width: 320px;
     padding: 0 9px;
   }
 }
