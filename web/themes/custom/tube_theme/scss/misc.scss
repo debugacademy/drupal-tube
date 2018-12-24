@@ -1,5 +1,5 @@
-// multiple recent video teasers
-.view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row {
+// multiple recent video teasers -- when adding video views teaser blocks, add the block name here AND to the "Recent Added Videos view" SASS right below
+.view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row, .view-display-id-block_3 {
     margin-right: 0;
     width: 338px;
     padding: 0 9px;
@@ -12,11 +12,12 @@
 .recent {
   background-color: $bg-color;
 }
-.recent-video-view.view-display-id-block_2 {
+.recent-video-view.view-display-id-block_2, .view-display-id-block_3 {
   display: flex;
   width: 100%;
   justify-content: space-around;
-  height: 394px;
+   //Highlighted out because it was creating odd spacing between teaser views blocks.  
+  //height: 394px;  
   margin-top: 25px;
   .block__title {
       @include font-size(36px, 41px);
