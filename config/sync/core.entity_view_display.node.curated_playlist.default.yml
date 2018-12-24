@@ -6,15 +6,12 @@ dependencies:
     - field.field.node.curated_playlist.body
     - field.field.node.curated_playlist.field_curated_by
     - field.field.node.curated_playlist.field_curated_videos
-    - node.type.curated_playlist
     - field.field.node.curated_playlist.field_youtube_playlist_id
-    - image.style.medium
     - node.type.curated_playlist
   module:
     - layout_builder
     - layout_discovery
     - link
-    - media
     - text
     - user
 third_party_settings:
@@ -26,6 +23,40 @@ third_party_settings:
         layout_id: layout_twocol
         layout_settings: {  }
         components:
+          584c4f54-940f-46c1-9252-024847199e66:
+            uuid: 584c4f54-940f-46c1-9252-024847199e66
+            region: bottom
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:curated_playlist:field_curated_videos'
+              formatter:
+                type: entity_reference_entity_view
+                label: above
+                settings:
+                  view_mode: list
+                  link: false
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          54329313-8001-455a-af60-9538c22726be:
+            uuid: 54329313-8001-455a-af60-9538c22726be
+            region: top
+            configuration:
+              id: 'field_block:node:curated_playlist:body'
+              label: Introduction
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: text_default
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
           83b51e18-7384-4ef2-a23c-1273880678b7:
             uuid: 83b51e18-7384-4ef2-a23c-1273880678b7
             region: top
@@ -39,38 +70,6 @@ third_party_settings:
                 settings: {  }
                 third_party_settings: {  }
                 type: basic_string
-            additional: {  }
-            weight: 0
-          54329313-8001-455a-af60-9538c22726be:
-            uuid: 54329313-8001-455a-af60-9538c22726be
-            region: first
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:curated_playlist:body'
-              formatter:
-                label: hidden
-                type: text_default
-                settings: {  }
-                third_party_settings: {  }
-            additional: {  }
-            weight: 0
-          584c4f54-940f-46c1-9252-024847199e66:
-            uuid: 584c4f54-940f-46c1-9252-024847199e66
-            region: second
-            configuration:
-              label_display: '0'
-              context_mapping:
-                entity: layout_builder.entity
-              id: 'field_block:node:curated_playlist:field_curated_videos'
-              formatter:
-                type: entity_reference_entity_view
-                label: above
-                settings:
-                  view_mode: list
-                  link: false
-                third_party_settings: {  }
             additional: {  }
             weight: 0
       -

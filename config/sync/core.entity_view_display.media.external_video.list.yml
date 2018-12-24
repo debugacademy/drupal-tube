@@ -40,7 +40,7 @@ third_party_settings:
                 label: hidden
                 type: image
                 settings:
-                  image_style: thumbnail
+                  image_style: large
                   image_link: content
                 third_party_settings: {  }
               context_mapping:
@@ -78,7 +78,60 @@ third_party_settings:
                   link: true
                 third_party_settings: {  }
             additional: {  }
+            weight: 3
+          2fdba9b2-4505-47f8-96a9-9c165e01c9c5:
+            uuid: 2fdba9b2-4505-47f8-96a9-9c165e01c9c5
+            region: second
+            configuration:
+              id: 'field_block:media:external_video:field_video_category'
+              label: 'Video Categories'
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: hidden
+                type: entity_reference_label
+                settings:
+                  link: true
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 4
+          251b2374-3d46-4999-ba47-2b95a8ea8664:
+            uuid: 251b2374-3d46-4999-ba47-2b95a8ea8664
+            region: second
+            configuration:
+              id: 'field_block:media:external_video:field_speaker'
+              label: Speaker
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: inline
+                type: string
+                settings:
+                  link_to_entity: false
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
             weight: 1
+          3fee8c97-44d4-45aa-a8c4-e27fbb9fecf2:
+            uuid: 3fee8c97-44d4-45aa-a8c4-e27fbb9fecf2
+            region: second
+            configuration:
+              id: 'field_block:media:external_video:field_description'
+              label: Description
+              provider: layout_builder
+              label_display: '0'
+              formatter:
+                label: above
+                type: basic_string
+                settings: {  }
+                third_party_settings: {  }
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 2
       -
         layout_id: layout_onecol
         layout_settings: {  }
