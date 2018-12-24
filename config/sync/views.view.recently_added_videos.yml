@@ -67,7 +67,7 @@ display:
         type: default
         options:
           row_class: featured-video-block
-          default_row_class: true
+          default_row_class: false
           uses_fields: false
       row:
         type: 'entity:media'
@@ -1033,6 +1033,8 @@ display:
         relationships: false
         filters: false
         filter_groups: false
+        style: false
+        row: false
       title: 'More from this conference'
       relationships: {  }
       filters:
@@ -1103,6 +1105,17 @@ display:
         operator: AND
         groups:
           1: AND
+      style:
+        type: default
+        options:
+          row_class: featured-video-block
+          default_row_class: true
+          uses_fields: false
+      row:
+        type: 'entity:media'
+        options:
+          relationship: none
+          view_mode: teaser
     cache_metadata:
       max-age: -1
       contexts:
