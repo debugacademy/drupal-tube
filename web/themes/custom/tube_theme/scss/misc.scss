@@ -351,3 +351,54 @@ h3, h4, h5, h6 {
   background: $dark-blue ! important;
   height: 80px;
 }
+
+#header {
+    .region-top-header-left {
+        a {
+            display: flex;
+            align-items: center;
+            font-size: 3em;
+            font-weight: 600;
+            
+            img {
+                margin-right: 10px;
+                margin-top: 8px;
+            }
+        }
+    }
+    
+  #block-searchform {
+    margin-right: 40px;
+    margin-top: 15px;
+      @media (max-width: 775px) {
+        margin-right: 10px;
+      }
+      @media (max-width: 655px) {
+        margin-right: 0px;
+      }
+      &.btn-primary {
+        border-radius: 0.15rem;
+      }
+    }
+
+    .search-header {
+      input::-webkit-input-placeholder {
+        font-family: $font-opensans;
+        color: $lighter-gray !important;
+        font-size: 14px;
+      }
+      &.form-control {
+            padding: 0.375rem 2.75rem;
+            border-radius: 0.15rem;
+            @media (max-width: 775px) {
+              padding: 0.375rem 0.25rem;
+            }
+            @media (max-width: 555px) {
+              padding: 0.375rem 0.05rem;
+            }
+            @media (max-width: 475px) {
+              padding: 0.375rem 0.01rem;
+            }
+        }
+    }
+}
