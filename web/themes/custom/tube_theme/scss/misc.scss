@@ -345,11 +345,9 @@ h3, h4, h5, h6 {
 //Headers 
 .bg-secondary {
     background: $bg-secondary ! important;
-    height: 80px;
   }
 .bg-primary {
   background: $dark-blue ! important;
-  height: 80px;
 }
 
 #header {
@@ -368,14 +366,8 @@ h3, h4, h5, h6 {
     }
     
   #block-searchform {
-    margin-right: 40px;
+
     margin-top: 20px;
-      @media (max-width: 775px) {
-        margin-right: 10px;
-      }
-      @media (max-width: 655px) {
-        margin-right: 0px;
-      }
       &.btn-primary {
         border-radius: 0.15rem;
       }
@@ -399,6 +391,27 @@ h3, h4, h5, h6 {
             @media (max-width: 475px) {
               padding: 0.375rem 0.01rem;
             }
+        }
+    }
+    
+    #block-tube-theme-main-menu {
+        ul {
+        }
+        li {
+            font-family: $font-opensans;
+            font-size: 1.5em;
+            transition: all .3s ease-in-out;
+            &:hover {
+                background: #0678BE;
+                border-radius: 3px;
+            }
+            
+            @media screen and (max-width: 991px) {
+                padding-left: 5px;
+            }
+        }
+        a {
+            color: $text-and-icon-color;
         }
     }
 }
