@@ -8104,6 +8104,9 @@ nav.tabs {
     .btn-outline-dark a:not(:disabled):not(.disabled):active:focus, .btn-outline-dark a:not(:disabled):not(.disabled).active:focus, .show > .btn-outline-dark a.dropdown-toggle:focus {
       box-shadow: 0 0 0 0.2rem rgba(52, 58, 64, 0.5); }
 
+.hidden {
+  visibility: hidden; }
+
 .view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row, .view-display-id-block_3, .view-display-id-block_4 {
   margin-right: 0;
   width: 320px;
@@ -8426,6 +8429,13 @@ h3, h4, h5, h6 {
   color: transparent;
   margin-left: 40;
   text-align: center; }
+  .block-callout .cover-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100; }
   .block-callout.callout-Green {
     background-color: #28a745; }
   .block-callout.callout-Orange {
