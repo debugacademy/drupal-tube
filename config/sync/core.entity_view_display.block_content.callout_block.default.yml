@@ -27,21 +27,21 @@ content:
     third_party_settings: {  }
     region: content
   field_background_color:
-    type: list_key
-    weight: 2
+    type: list_default
+    weight: 3
     region: content
-    label: hidden
+    label: above
     settings: {  }
     third_party_settings: {  }
   field_background_shape:
     weight: 4
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_font_awesome_icons:
-    weight: 3
+    weight: 2
     label: hidden
     settings:
       layers: false

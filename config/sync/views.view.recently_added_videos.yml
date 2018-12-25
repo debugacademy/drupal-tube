@@ -1618,6 +1618,7 @@ display:
           expose:
             label: 'Typical Conference Size'
           plugin_id: standard
+      exposed_block: false
     cache_metadata:
       max-age: -1
       contexts:
