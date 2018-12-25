@@ -54,6 +54,7 @@ type_settings:
         - awaiting_approval
         - draft
         - published
+        - validate
     submit_for_approval:
       label: 'Submit for approval'
       from:
