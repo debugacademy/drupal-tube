@@ -12,7 +12,6 @@ Description: Bootstrap 4 with Sass
  */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700");
-@import url("https://use.fontawesome.com/releases/v5.0.1/css/all.css");
 @import url("https://use.fontawesome.com/releases/v5.0.6/js/all.js");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Ubuntu:400,500");
 :root {
@@ -2825,8 +2824,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-sm .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
+        padding-right: 0.9rem;
+        padding-left: 0.9rem; }
     .navbar-expand-sm > .container,
     .navbar-expand-sm > .container-fluid {
       flex-wrap: nowrap; }
@@ -2855,8 +2854,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-md .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
+        padding-right: 0.9rem;
+        padding-left: 0.9rem; }
     .navbar-expand-md > .container,
     .navbar-expand-md > .container-fluid {
       flex-wrap: nowrap; }
@@ -2885,8 +2884,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-lg .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
+        padding-right: 0.9rem;
+        padding-left: 0.9rem; }
     .navbar-expand-lg > .container,
     .navbar-expand-lg > .container-fluid {
       flex-wrap: nowrap; }
@@ -2915,8 +2914,8 @@ tbody.collapse.show {
         right: 0;
         left: auto; }
       .navbar-expand-xl .navbar-nav .nav-link {
-        padding-right: 0.5rem;
-        padding-left: 0.5rem; }
+        padding-right: 0.9rem;
+        padding-left: 0.9rem; }
     .navbar-expand-xl > .container,
     .navbar-expand-xl > .container-fluid {
       flex-wrap: nowrap; }
@@ -2943,8 +2942,8 @@ tbody.collapse.show {
       right: 0;
       left: auto; }
     .navbar-expand .navbar-nav .nav-link {
-      padding-right: 0.5rem;
-      padding-left: 0.5rem; }
+      padding-right: 0.9rem;
+      padding-left: 0.9rem; }
   .navbar-expand > .container,
   .navbar-expand > .container-fluid {
     flex-wrap: nowrap; }
@@ -8150,7 +8149,6 @@ nav.tabs {
     padding-left: 0; }
   .recent-video-view.view-display-id-block_2 div.featured-video-block, .view-display-id-block_3 div.featured-video-block, .view-display-id-block_4 div.featured-video-block {
     margin-right: 0;
-    width: 320px;
     padding: 0 9px; }
 
 h1 {
