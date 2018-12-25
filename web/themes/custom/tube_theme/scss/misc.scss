@@ -3,19 +3,14 @@
 }
 
 // multiple recent video teasers -- when adding video views teaser blocks, add the block name here AND to the "Recent Added Videos view" SASS right below
-.view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row, .view-display-id-block_3, .view-display-id-block_4 {
-    margin-right: 0;
-    width: 320px;
-    padding: 0 9px;
+.view-id-recently_added_videos.view-display-id-page_1 .featured-video-block, .view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row, .view-display-id-block_3, .view-display-id-block_4 {
+  @extend .col;
     h2 {
       font-size: 20px;
     }
 }
 
 // Recently Added (featured?) Videos View
-.recent {
-  background-color: $bg-color;
-}
 .recent-video-view.view-display-id-block_2, .view-display-id-block_3, .view-display-id-block_4 {
   display: flex;
   width: 100%;
@@ -155,8 +150,20 @@ h3, h4, h5, h6 {
 }
 
 // Contact Form
-
+.path-webform {
+  h1.title {
+    text-align: center;
+    margin: 0 auto;
+  }
+  #block-tube-theme-content .content {
+    @extend .row;
+  }
+}
 .contact-form {
+  @extend .offset-md-1;
+  @extend .col-md-10;
+  @extend .offset-lg-2;
+  @extend .col-lg-8;
   .section {
     background-color: white;
     position: relative;
@@ -178,12 +185,6 @@ h3, h4, h5, h6 {
     width: 16%;
     height: 1px;
     margin: 10px auto;
-  }
-  margin-left: 12%;
-  @media(min-width: 905px) {
-    .contact-form {
-      margin-left: 5%;
-    }
   }
   p {
     margin-bottom: 0;
