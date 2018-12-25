@@ -37,10 +37,14 @@
     'block-callout',
     'callout-' ~ content.field_background_color.0['#markup'],
     'callout-shape-'~ content.field_background_shape.0['#markup'],
+    'relative',
   ]
 %}
 
 <div{{ attributes.addClass(classes) }}>
+  {% if content.field_link.0 %}
+    <a href="{{ content.field_link.0['#url'] }}" class="cover-link"><span class="hidden">{{ content.field_link.0['#title'] }}</span></a>
+  {% endif %}
   {{ title_prefix }}
   {% if label %}
     <h2{{ title_attributes }}>{{ label }}</h2>
