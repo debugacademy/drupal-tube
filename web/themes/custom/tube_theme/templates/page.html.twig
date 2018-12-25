@@ -92,10 +92,10 @@
           {% endif %}
             {% if page.site_navigation_left or page.site_navigation_right %}
               <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#CollapsingNavbar" aria-controls="CollapsingNavbar" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-              <div class="collapse navbar-collapse col-sm-12 col-md-8" id="CollapsingNavbar">
+              <div class="collapse navbar-collapse col" id="CollapsingNavbar">
                 {{ page.site_navigation_left }}
               </div>
-              <div class="col-sm-12 col-md-4">
+              <div class="col">
                 {{ page.site_navigation_right }}
               </div>
             {% endif %}
