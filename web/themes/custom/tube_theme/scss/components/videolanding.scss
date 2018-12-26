@@ -11,15 +11,12 @@
 	margin-bottom: 30px;
 	
 	.content {
-		width: 80%;
+		width: 100%;
 		margin: 0 auto;
+		@include media-breakpoint-up(md) {
+			width: 80%;
+		}
 	}
-/*
-	.field--name-name h2 {
-		padding-top: 20px;
-		font-size: $font-size-h2;
-	}
-*/
 	.field--name-field-description {
 		font-size: $font-size-base;
 		line-height: 1.4rem;

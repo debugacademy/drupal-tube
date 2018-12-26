@@ -26,8 +26,20 @@
     padding-left: 26px;
   }
   &.space-beside {
-    padding-left: 53px;
-    padding-right: 53px;
+    padding-left: 6px;
+    padding-right: 6px;
+    @include media-breakpoint-up(md) {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    @include media-breakpoint-up(lg) {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include media-breakpoint-up(xl) {
+      padding-left: 53px;
+      padding-right: 53px;
+    }
   }
   &.wrapper-highlight {
     text-align: center;
