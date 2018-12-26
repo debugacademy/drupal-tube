@@ -8422,13 +8422,25 @@ h3, h4, h5, h6 {
   #header #block-tube-theme-main-menu a:hover {
     text-decoration: underline; }
 
+.callout-outer {
+  min-width: 320px;
+  max-width: 480px;
+  width: 100%;
+  margin: 0 auto; }
+
+.callout-sizer {
+  width: 100%;
+  padding-bottom: 99%;
+  position: relative; }
+
 .block-callout {
-  position: relative;
-  height: 430px;
-  width: 430px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   border-radius: 50%;
   color: transparent;
-  margin-left: 40;
   text-align: center; }
   .block-callout .cover-link {
     position: absolute;
@@ -8448,15 +8460,19 @@ h3, h4, h5, h6 {
   .block-callout h2 {
     color: #FFFFFF;
     text-align: center;
-    padding-top: 81px;
-    font-size: 36px;
     font-family: 'Ubuntu', sans-serif;
+    line-height: 41px;
     font-weight: 500;
-    line-height: 41px; }
+    padding-top: 20px;
+    font-size: 20px; }
+    @media (min-width: 1200px) {
+      .block-callout h2 {
+        padding-top: 81px;
+        font-size: 36px; } }
   .block-callout p {
     color: #F6F6F2;
     text-align: left;
-    padding: 15px 55px 0 55px;
+    padding: 15px 63px 0 63px;
     font-size: 24px;
     font-weight: 400;
     line-height: 33px; }
@@ -8465,21 +8481,20 @@ h3, h4, h5, h6 {
     text-decoration: none; }
     .block-callout .field__item a {
       color: #F6F6F2;
-      padding-left: 98px;
-      padding-right: 99px;
-      padding-bottom: 0;
       font-size: 18px;
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
-      line-height: 25px; }
+      position: absolute;
+      bottom: 30px;
+      right: 39%; }
     .block-callout .field__item .field--name-field-background-color, .block-callout .field__item .field--name-field-background-shape {
       display: none; }
     .block-callout .field__item .fontawesome-icon {
       color: #F6F6F2;
-      padding-left: 197px;
-      padding-right: 203px;
-      padding-top: 0;
-      font-size: 48px; }
+      font-size: 48px;
+      position: absolute;
+      bottom: 7px;
+      right: 30%; }
 
 .layout__region--first .node-featured-teaser p, .layout__region--second .node-featured-teaser p, .layout__region--third .node-featured-teaser p {
   color: #000000;
