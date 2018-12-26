@@ -1,12 +1,20 @@
+.callout-outer {
+    min-width: 320px;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+}
+.callout-sizer {
+    width: 100%;
+    padding-bottom: 99%;
+    position: relative;
+}
 .block-callout {
-	position: relative;
-	height: 430px;
-	width: 430px;	
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
 	border-radius: 50%;
 	color: transparent;
-        margin-left: 40;
         text-align: center;
-
         .cover-link {
           position: absolute;
           top: 0;
@@ -34,17 +42,21 @@
     h2 {
 		color: #FFFFFF;
 		text-align: center;
-		padding-top: 81px;
-		font-size: 36px;
 		font-family: 'Ubuntu', sans-serif;
-		font-weight: 500;
 		line-height: 41px;
+		font-weight: 500;
+		padding-top: 20px;
+		font-size: 20px;
+                @include media-breakpoint-up(xl) {
+			padding-top: 81px;
+			font-size: 36px;
+                }
 	}
 
     p {
 		color: $text-and-icon-color;
 		text-align: left;
-		padding: 15px 55px 0 55px;
+		padding: 15px 63px 0 63px;
 		font-size: 24px;
 		font-weight: 400;
 		line-height: 33px;
@@ -55,23 +67,22 @@
 		text-decoration: none;
 		a {
 			color: $text-and-icon-color;
-			padding-left: 98px;
-			padding-right: 99px;
-			padding-bottom: 0;
 			font-size: 18px;
 			font-family: 'Open Sans', sans-serif;
 			font-weight: 700;
-			line-height: 25px;
+			position: absolute;
+			bottom: 30px;
+			right: 39%;
 		}
 		.field--name-field-background-color, .field--name-field-background-shape {
 			display: none;
 		}
 		.fontawesome-icon{
 			color: $text-and-icon-color;
-			padding-left: 197px;
-			padding-right: 203px;
-			padding-top: 0;
 			font-size: 48px;
+			position: absolute;
+			bottom: 7px;
+			right: 30%;
 		}
 	}
 }
