@@ -92,13 +92,9 @@ h3, h4, h5, h6 {
 
 // Featured Video Section
 
-.layout__region--first .node-featured-teaser, .layout__region--second .node-featured-teaser, .layout__region--third .node-featured-teaser{
-   position: relative;
-  .featured-title {
-    position: absolute;
-    top: 0;
-    left: 301px;
-  a {
+.featured-title-small {
+  text-align: center;    
+  h2 {
     font-family: $font-opensans;
     font-size: 14px;
     text-transform: uppercase;
@@ -109,6 +105,23 @@ h3, h4, h5, h6 {
     }
   }
 }
+
+// Not sure this block is still necessary
+.layout__region--first .node-featured-teaser, .layout__region--second .node-featured-teaser, .layout__region--third .node-featured-teaser{
+   position: relative;
+  .featured-title {
+    text-align: center;    
+    h2 {
+      font-family: $font-opensans;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $light-gray;
+      font-weight: 600;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
 .featured-video-title {
    margin-left: 53px;
   a {
