@@ -8176,19 +8176,28 @@ h6 {
 h3, h4, h5, h6 {
   font-family: "Open Sans", sans-serif; }
 
+.featured-title-small {
+  text-align: center; }
+  .featured-title-small h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #666666;
+    font-weight: 600; }
+    .featured-title-small h2:hover {
+      text-decoration: none; }
+
 .layout__region--first .node-featured-teaser, .layout__region--second .node-featured-teaser, .layout__region--third .node-featured-teaser {
   position: relative; }
   .layout__region--first .node-featured-teaser .featured-title, .layout__region--second .node-featured-teaser .featured-title, .layout__region--third .node-featured-teaser .featured-title {
-    position: absolute;
-    top: 0;
-    left: 301px; }
-    .layout__region--first .node-featured-teaser .featured-title a, .layout__region--second .node-featured-teaser .featured-title a, .layout__region--third .node-featured-teaser .featured-title a {
+    text-align: center; }
+    .layout__region--first .node-featured-teaser .featured-title h2, .layout__region--second .node-featured-teaser .featured-title h2, .layout__region--third .node-featured-teaser .featured-title h2 {
       font-family: "Open Sans", sans-serif;
       font-size: 14px;
       text-transform: uppercase;
       color: #666666;
       font-weight: 600; }
-      .layout__region--first .node-featured-teaser .featured-title a:hover, .layout__region--second .node-featured-teaser .featured-title a:hover, .layout__region--third .node-featured-teaser .featured-title a:hover {
+      .layout__region--first .node-featured-teaser .featured-title h2:hover, .layout__region--second .node-featured-teaser .featured-title h2:hover, .layout__region--third .node-featured-teaser .featured-title h2:hover {
         text-decoration: none; }
   .layout__region--first .node-featured-teaser .featured-video-title, .layout__region--second .node-featured-teaser .featured-video-title, .layout__region--third .node-featured-teaser .featured-video-title {
     margin-left: 53px; }
