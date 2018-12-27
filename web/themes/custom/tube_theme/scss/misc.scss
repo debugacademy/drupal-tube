@@ -4,10 +4,14 @@
 
 // multiple recent video teasers -- when adding video views teaser blocks, add the block name here AND to the "Recent Added Videos view" SASS right below
 .view-id-recently_added_videos.view-display-id-page_1 .featured-video-block, .view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row, .view-display-id-block_3, .view-display-id-block_4 {
+						
   @extend .col;
     h2 {
       font-size: 20px;
     }
+}
+.view-id-video_search.view-display-id-page_1 h2 {
+  font-size: 20px;
 }
 
 // Recently Added (featured?) Videos View
