@@ -1,0 +1,29 @@
+uuid: 4401b875-b5b6-400b-9044-f6389e69fce7
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.video_search
+  module:
+    - system
+    - views
+  theme:
+    - tube_theme
+id: exposedformvideo_searchpage_1
+theme: tube_theme
+region: content
+weight: -2
+provider: null
+plugin: 'views_exposed_filter_block:video_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:video_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: '/all-videos*'
+    negate: false
+    context_mapping: {  }

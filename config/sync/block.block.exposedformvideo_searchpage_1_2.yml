@@ -1,0 +1,23 @@
+uuid: 2ae723c1-ef2f-453e-8a02-d6741fd2a950
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.video_search
+  module:
+    - views
+  theme:
+    - tube_theme
+id: exposedformvideo_searchpage_1_2
+theme: tube_theme
+region: top_header_right
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:video_search-page_1'
+settings:
+  id: 'views_exposed_filter_block:video_search-page_1'
+  label: ''
+  provider: views
+  label_display: '0'
+  views_label: ''
+visibility: {  }

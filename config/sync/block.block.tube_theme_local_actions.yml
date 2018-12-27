@@ -9,7 +9,7 @@ _core:
 id: tube_theme_local_actions
 theme: tube_theme
 region: content
-weight: -4
+weight: -3
 provider: null
 plugin: local_actions_block
 settings:

@@ -1,0 +1,126 @@
+uuid: 5864fb45-353d-4cee-b4a3-0a8c7413ba33
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_conference
+    - field.storage.node.body
+    - field.storage.node.field_event_type
+    - field.storage.media.field_recording_date
+    - field.storage.media.field_speaker
+    - search_api.server.db_server
+  module:
+    - node
+    - search_api
+    - media
+id: videos_index
+name: 'Videos Index'
+description: ''
+read_only: false
+field_settings:
+  aggregated_field:
+    label: 'Aggregated field'
+    property_path: aggregated_field
+    type: text
+    configuration:
+      type: union
+      fields:
+        - 'entity:media/field_conference'
+        - 'entity:media/field_description'
+        - 'entity:media/field_recording_date'
+        - 'entity:media/field_speaker'
+        - 'entity:media/field_sponsor'
+        - 'entity:media/field_version'
+        - 'entity:media/field_video_category'
+        - 'entity:media/name'
+  body:
+    label: 'Conference » Content » Body'
+    datasource_id: 'entity:media'
+    property_path: 'field_conference:entity:body'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_conference
+        - field.storage.node.body
+      module:
+        - node
+  field_event_type:
+    label: 'Conference » Content » Event Type'
+    datasource_id: 'entity:media'
+    property_path: 'field_conference:entity:field_event_type'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_conference
+        - field.storage.node.field_event_type
+      module:
+        - node
+  field_recording_date:
+    label: 'Recording Date'
+    datasource_id: 'entity:media'
+    property_path: field_recording_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.media.field_recording_date
+  field_speaker:
+    label: Speaker
+    datasource_id: 'entity:media'
+    property_path: field_speaker
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_speaker
+  title:
+    label: 'Conference » Content » Title'
+    datasource_id: 'entity:media'
+    property_path: 'field_conference:entity:title'
+    type: text
+    dependencies:
+      config:
+        - field.storage.media.field_conference
+      module:
+        - node
+        - node
+datasource_settings:
+  'entity:media':
+    bundles:
+      default: false
+      selected:
+        - external_video
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  entity_status: {  }
+  ignorecase:
+    all_fields: true
+    fields:
+      - aggregated_field
+      - body
+      - field_event_type
+      - field_speaker
+      - title
+    weights:
+      preprocess_index: -20
+      preprocess_query: -20
+  rendered_item: {  }
+  stemmer:
+    all_fields: false
+    fields:
+      - aggregated_field
+    exceptions:
+      mexican: mexic
+      texan: texa
+    weights:
+      preprocess_index: 0
+      preprocess_query: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: false
+  cron_limit: 50
+server: db_server
