@@ -8425,6 +8425,23 @@ h3, h4, h5, h6 {
   #header #block-tube-theme-main-menu a:hover {
     text-decoration: underline; }
 
+.block-views-blockfeatured-articles-block-2 .views-row h2.featured-title {
+  text-align: left;
+  font-size: 1.5em;
+  font-weight: 400; }
+.block-views-blockfeatured-articles-block-2 .views-row p {
+  line-height: 25px; }
+.block-views-blockfeatured-articles-block-2 .views-row img {
+  width: 100%; }
+.block-views-blockfeatured-articles-block-2 .views-row div.subtext {
+  color: black;
+  font-weight: 500; }
+  .block-views-blockfeatured-articles-block-2 .views-row div.subtext span.featured-author {
+    font-size: 1.5em; }
+  .block-views-blockfeatured-articles-block-2 .views-row div.subtext a {
+    color: black;
+    font-size: 1em; }
+
 .callout-outer {
   min-width: 320px;
   max-width: 480px;
