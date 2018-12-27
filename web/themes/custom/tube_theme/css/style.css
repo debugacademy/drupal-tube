@@ -8110,6 +8110,9 @@ nav.tabs {
 .view-id-recently_added_videos.view-display-id-page_1 .featured-video-block h2, .view-id-recently_added_videos.view-display-id-block_1 .views-row h2, .view-id-recently_added_videos.view-display-id-page_1 .views-row h2, .view-display-id-block_3 h2, .view-display-id-block_4 h2 {
   font-size: 20px; }
 
+.view-id-video_search.view-display-id-page_1 h2 {
+  font-size: 20px; }
+
 .recent-video-view.view-display-id-block_2, .view-display-id-block_3, .view-display-id-block_4 {
   display: flex;
   width: 100%;
