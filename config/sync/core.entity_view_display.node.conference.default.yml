@@ -16,6 +16,7 @@ dependencies:
     - field.field.node.conference.field_slogan
     - field.field.node.conference.field_website
     - node.type.conference
+    - views.view.featured_articles
   module:
     - address
     - datetime
@@ -26,6 +27,7 @@ dependencies:
     - link
     - text
     - user
+    - views
 third_party_settings:
   layout_builder:
     allow_custom: false
@@ -281,6 +283,27 @@ third_party_settings:
                 type: link
             additional: {  }
             weight: 1
+      -
+        layout_id: two_column_dt
+        layout_settings:
+          bgcolor: lb-bg-primary
+          highlight: 0
+          spacing:
+            space-beside: space-beside
+        components:
+          a09b21da-1230-4cef-b6da-b6e3e876c181:
+            uuid: a09b21da-1230-4cef-b6da-b6e3e876c181
+            region: second
+            configuration:
+              id: 'views_block:featured_articles-block_2'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
 id: node.conference.default
 targetEntityType: node
 bundle: conference
