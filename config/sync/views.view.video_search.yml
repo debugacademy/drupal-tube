@@ -232,6 +232,7 @@ display:
         type: normal
         title: 'All Videos'
         menu_name: main
+        weight: -48
       exposed_block: true
     cache_metadata:
       max-age: -1

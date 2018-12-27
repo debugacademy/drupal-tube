@@ -2,6 +2,10 @@
   visibility:hidden;
 }
 
+.region-top-header-right {
+    color: white;
+}
+
 // multiple recent video teasers -- when adding video views teaser blocks, add the block name here AND to the "Recent Added Videos view" SASS right below
 .view-id-recently_added_videos.view-display-id-page_1 .featured-video-block, .view-id-recently_added_videos.view-display-id-block_1 .views-row, .view-id-recently_added_videos.view-display-id-page_1 .views-row, .view-display-id-block_3, .view-display-id-block_4 {
 						

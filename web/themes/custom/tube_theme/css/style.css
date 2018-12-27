@@ -8107,6 +8107,9 @@ nav.tabs {
 .hidden {
   visibility: hidden; }
 
+.region-top-header-right {
+  color: white; }
+
 .view-id-recently_added_videos.view-display-id-page_1 .featured-video-block h2, .view-id-recently_added_videos.view-display-id-block_1 .views-row h2, .view-id-recently_added_videos.view-display-id-page_1 .views-row h2, .view-display-id-block_3 h2, .view-display-id-block_4 h2 {
   font-size: 20px; }
 

@@ -317,8 +317,8 @@ display:
       use_more: true
       use_more_always: true
       use_more_text: more
-      link_url: ''
-      link_display: page_1
+      link_url: /all-videos
+      link_display: custom_url
       filter_groups:
         operator: AND
         groups:
@@ -1575,6 +1575,7 @@ display:
             label: 'Typical Conference Size'
           plugin_id: standard
       exposed_block: false
+      enabled: false
     cache_metadata:
       max-age: -1
       contexts:
