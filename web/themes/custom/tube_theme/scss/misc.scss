@@ -438,3 +438,40 @@ h3, h4, h5, h6 {
         }
     }
 }
+
+//Featured Article Block on Conference Landing Page
+
+.block-views-blockfeatured-articles-block-2 {
+    .views-row {
+        h2.featured-title {
+            text-align: left;
+            font-size: 1.5em;
+            font-weight: 400;
+        }  
+        p {
+            line-height: 25px;
+        }
+        
+        img {
+            width: 100%;
+        }
+        
+        div.subtext {
+            color: black;
+            font-weight: 500;
+            
+            span.featured-author {
+                font-size: 1.5em;
+            }
+            
+            a {
+                color: black;
+                font-size: 1em;
+                
+            }
+        }
+    }
+
+}
+
+
