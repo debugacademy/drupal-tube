@@ -2,19 +2,15 @@
 
 use Drupal\media\Entity\Media;
 
-
 function tube_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 	if (!empty($form['field_featured'])) {
-
 		$user = \Drupal::currentUser();
 		$user_can_access_featured_field = $user->hasPermission('mark content featured');
 
 		if (!$user_can_access_featured_field) {
 			$form['field_featured']['#access'] = FALSE;
 		}
-
 	}
-
 }
 
 function tube_core_form_media_external_video_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
@@ -22,7 +18,7 @@ function tube_core_form_media_external_video_add_form_alter(&$form, \Drupal\Core
   drupal_set_message($spam_catcher_message, 'error');
 }
 
-function _tube_core_import_media_item($playlistItem) {
+function _tube_core_import_media_item($playlistItem, $playlist_entity, &$context) {
   $uploadDate = $playlistItem['snippet']['publishedAt'];
   if (!empty($playlistItem['recordingDetails']['recordingDate'])) {
     $recordingDate = $playlistItem['recordingDetails']['recordingDate'];
@@ -47,10 +43,30 @@ function _tube_core_import_media_item($playlistItem) {
   $media->save();
   $media->set('moderation_state', 'published');
   $media->save();
+  $context['results']['videos'][] = $media;
+  $context['results']['playlist_entity'] = $playlist_entity;
   return $media;
 }
 
-function tube_core_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+function _tube_core_finished_batch($success, $results, $operations) {
+  if ($success) {
+    // Merges existing curated list with a playlist, then clears playlist id so videos don't get reimported.
+    $results['playlist_entity']->field_curated_videos = array_merge($results['playlist_entity']->field_curated_videos->getValue(), $results['videos']);
+    $results['playlist_entity']->field_youtube_playlist_id->setValue('');
+    $results['playlist_entity']->save();
+  }
+  else {
+    // darn
+  }
+}
+
+function tube_core_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  _tube_core_import_entity_playlist($entity);
+}
+function tube_core_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  _tube_core_import_entity_playlist($entity);
+}
+function _tube_core_import_entity_playlist(Drupal\Core\Entity\EntityInterface $entity) {
   if($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'curated_playlist') {
   	if (!$entity->get('field_youtube_playlist_id')->isEmpty())
   	{
@@ -63,27 +79,22 @@ function tube_core_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
 		$client->setDeveloperKey($api_key);
 		$youtube = new Google_Service_YouTube($client);
 
-		$new_media_entities[] = null;
-		//$nextPageToken = '';
-		//do
-		//{
-		    $playlistItemsResponse = $youtube->playlistItems->listPlaylistItems('snippet', array(
-		    'playlistId' => $playlist_id,
-		    'maxResults' => 50));
-		    foreach ($playlistItemsResponse['items'] as $playlistItem) 
-		    {
-             $media = _tube_core_import_media_item($playlistItem);
-			    $new_media_entities[] = $media;
-		    }
-	  //$nextPageToken = $playlistItemsResponse['nextPageToken'];
-	//} while ($nextPageToken <> '');
+      $playlistItemsResponse = $youtube->playlistItems->listPlaylistItems('snippet', array(
+        'playlistId' => $playlist_id,
+		  'maxResults' => 50));
 
-	//merges existing curated list with a playlist, then clears playlist id so videos don't get reimported
-	$entity->field_curated_videos = array_merge($entity->field_curated_videos->getValue(),$new_media_entities);
-	$entity->field_youtube_playlist_id->setValue('');
-	}
+      $batch = [
+        'init_message' => t('Executing a batch...'),
+        'operations' => [],
+        'finished' => '_tube_core_finished_batch',
+      ];
+
+		foreach ($playlistItemsResponse['items'] as $playlistItem) {
+		  $batch['operations'][] = ['_tube_core_import_media_item', [$playlistItem, $entity]];
+		}
+    	batch_set($batch);
+    }
   }
-
 }
 
 
