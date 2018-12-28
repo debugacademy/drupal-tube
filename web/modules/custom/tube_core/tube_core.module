@@ -2,19 +2,15 @@
 
 use Drupal\media\Entity\Media;
 
-
 function tube_core_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
 	if (!empty($form['field_featured'])) {
-
 		$user = \Drupal::currentUser();
 		$user_can_access_featured_field = $user->hasPermission('mark content featured');
 
 		if (!$user_can_access_featured_field) {
 			$form['field_featured']['#access'] = FALSE;
 		}
-
 	}
-
 }
 
 function tube_core_form_media_external_video_add_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
@@ -22,7 +18,55 @@ function tube_core_form_media_external_video_add_form_alter(&$form, \Drupal\Core
   drupal_set_message($spam_catcher_message, 'error');
 }
 
-function tube_core_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+function _tube_core_import_media_item($playlistItem, $playlist_entity, &$context) {
+  $uploadDate = $playlistItem['snippet']['publishedAt'];
+  if (!empty($playlistItem['recordingDetails']['recordingDate'])) {
+    $recordingDate = $playlistItem['recordingDetails']['recordingDate'];
+  }
+  else {
+    // Fallback, upload date is better than nothing.
+    $recordingDate = $uploadDate;
+  }
+  $media = Media::create([
+    'bundle'      => 'external_video',
+    'field_source_channel_id' => $playlistItem['snippet']['channelId'],
+    'field_source_channel_name' => $playlistItem['snippet']['channelId'],
+    'uid'         => \Drupal::currentUser()->id(),
+    'langcode'    => \Drupal::languageManager()->getDefaultLanguage()->getId(),
+    'status'      => 1,
+    'name'        => $playlistItem['snippet']['title'],
+    'field_description' => $playlistItem['snippet']['description'],
+    'field_recording_date' => substr($recordingDate,0,10),
+    'field_media_video_embed_field' => ['value' => 'http://www.youtube.com/watch?v='.$playlistItem['snippet']['resourceId']['videoId']],
+    'moderation_state' => ['state' => 'draft'],
+  ]);
+  $media->save();
+  $media->set('moderation_state', 'published');
+  $media->save();
+  $context['results']['videos'][] = $media;
+  $context['results']['playlist_entity'] = $playlist_entity;
+  return $media;
+}
+
+function _tube_core_finished_batch($success, $results, $operations) {
+  if ($success) {
+    // Merges existing curated list with a playlist, then clears playlist id so videos don't get reimported.
+    $results['playlist_entity']->field_curated_videos = array_merge($results['playlist_entity']->field_curated_videos->getValue(), $results['videos']);
+    $results['playlist_entity']->field_youtube_playlist_id->setValue('');
+    $results['playlist_entity']->save();
+  }
+  else {
+    // darn
+  }
+}
+
+function tube_core_entity_insert(Drupal\Core\Entity\EntityInterface $entity) {
+  _tube_core_import_entity_playlist($entity);
+}
+function tube_core_entity_update(Drupal\Core\Entity\EntityInterface $entity) {
+  _tube_core_import_entity_playlist($entity);
+}
+function _tube_core_import_entity_playlist(Drupal\Core\Entity\EntityInterface $entity) {
   if($entity->getEntityTypeId() == 'node' && $entity->bundle() == 'curated_playlist') {
   	if (!$entity->get('field_youtube_playlist_id')->isEmpty())
   	{
@@ -35,37 +79,22 @@ function tube_core_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
 		$client->setDeveloperKey($api_key);
 		$youtube = new Google_Service_YouTube($client);
 
-		$new_media_entities[] = null;
-		//$nextPageToken = '';
-		//do
-		//{
-		    $playlistItemsResponse = $youtube->playlistItems->listPlaylistItems('snippet', array(
-		    'playlistId' => $playlist_id,
-		    'maxResults' => 50));
-		    foreach ($playlistItemsResponse['items'] as $playlistItem) 
-		    {
-		 		$media = Media::create([
-			       'bundle'      => 'external_video',
-			       'uid'         => \Drupal::currentUser()->id(),
-			       'langcode'    => \Drupal::languageManager()->getDefaultLanguage()->getId(),
-			       'status'      => 1,
-			       'name'        => $playlistItem['snippet']['title'],
-			       'field_description' => $playlistItem['snippet']['description'],
-			       'field_recording_date' => $playlistItem['recordingDetails']['recordingDate'],
-			       'field_media_video_embed_field' => ['value' => 'http://www.youtube.com/watch?v='.$playlistItem['snippet']['resourceId']['videoId']],
-			    ]);
-			    $media->save();
-		        $new_media_entities[] = $media;
-		    }
-	  //$nextPageToken = $playlistItemsResponse['nextPageToken'];
-	//} while ($nextPageToken <> '');
+      $playlistItemsResponse = $youtube->playlistItems->listPlaylistItems('snippet', array(
+        'playlistId' => $playlist_id,
+		  'maxResults' => 50));
 
-	//merges existing curated list with a playlist, then clears playlist id so videos don't get reimported
-	$entity->field_curated_videos = array_merge($entity->field_curated_videos->getValue(),$new_media_entities);
-	$entity->field_youtube_playlist_id->setValue('');
-	}
+      $batch = [
+        'init_message' => t('Executing a batch...'),
+        'operations' => [],
+        'finished' => '_tube_core_finished_batch',
+      ];
+
+		foreach ($playlistItemsResponse['items'] as $playlistItem) {
+		  $batch['operations'][] = ['_tube_core_import_media_item', [$playlistItem, $entity]];
+		}
+    	batch_set($batch);
+    }
   }
-
 }
 
 
