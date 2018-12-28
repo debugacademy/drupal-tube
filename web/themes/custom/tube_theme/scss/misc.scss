@@ -474,4 +474,36 @@ h3, h4, h5, h6 {
 
 }
 
+// Conference Videos from Conference Landing Page
 
+.recent-video-view {
+  .field--name-name {
+    a {
+      @include open-sans-font(700);
+      font-size: 16px;
+      color: $black;
+      text-align: left;
+      text-transform: none;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.block-views {
+  h2 {
+    @include font-size(36px, 41px);
+    @include heading-font(500);
+    color: $black;
+    text-align: left;
+    margin-left: 48px;
+  }
+}
+.conf-view-row {
+  display: flex;
+  flex-wrap: wrap;
+  &.confer-view-video {
+    flex: 1 0 21%;
+    margin: 5px;
+  }
+}
