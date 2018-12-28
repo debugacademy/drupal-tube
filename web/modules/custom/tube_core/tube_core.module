@@ -44,18 +44,31 @@ function tube_core_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
 		    'maxResults' => 50));
 		    foreach ($playlistItemsResponse['items'] as $playlistItem) 
 		    {
+		      $uploadDate = $playlistItem['snippet']['publishedAt'];
+		      if (!empty($playlistItem['recordingDetails']['recordingDate'])) {
+		        $recordingDate = $playlistItem['recordingDetails']['recordingDate'];
+		      }
+		      else {
+		        // Fallback, upload date is better than nothing.
+		        $recordingDate = $uploadDate;
+		      }
 		 		$media = Media::create([
 			       'bundle'      => 'external_video',
-			       'uid'         => \Drupal::currentUser()->id(),
+		 		  'field_source_channel_id' => $playlistItem['snippet']['channelId'],
+		 		  'field_source_channel_name' => $playlistItem['snippet']['channelId'],
+		 		  'uid'         => \Drupal::currentUser()->id(),
 			       'langcode'    => \Drupal::languageManager()->getDefaultLanguage()->getId(),
 			       'status'      => 1,
 			       'name'        => $playlistItem['snippet']['title'],
 			       'field_description' => $playlistItem['snippet']['description'],
-			       'field_recording_date' => $playlistItem['recordingDetails']['recordingDate'],
+		 		  'field_recording_date' => substr($recordingDate,0,10),
 			       'field_media_video_embed_field' => ['value' => 'http://www.youtube.com/watch?v='.$playlistItem['snippet']['resourceId']['videoId']],
+		 		  'moderation_state' => ['state' => 'draft'],
 			    ]);
 			    $media->save();
-		        $new_media_entities[] = $media;
+			    $media->set('moderation_state', 'published');
+			    $media->save();
+			    $new_media_entities[] = $media;
 		    }
 	  //$nextPageToken = $playlistItemsResponse['nextPageToken'];
 	//} while ($nextPageToken <> '');
