@@ -10,8 +10,47 @@ dependencies:
     - field.field.node.curated_playlist.field_youtube_playlist_id
     - node.type.curated_playlist
   module:
+    - layout_builder
+    - layout_discovery
     - text
     - user
+third_party_settings:
+  layout_builder:
+    allow_custom: false
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          62e83e76-5d78-49dc-946f-c3e002f17a2d:
+            uuid: 62e83e76-5d78-49dc-946f-c3e002f17a2d
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:curated_playlist:body'
+              formatter:
+                label: hidden
+                type: text_summary_or_trimmed
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+          d03de43f-d56c-40a8-8346-c585e12a95a3:
+            uuid: d03de43f-d56c-40a8-8346-c585e12a95a3
+            region: content
+            configuration:
+              id: 'extra_field_block:node:curated_playlist:links'
+              label: Links
+              provider: layout_builder
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+            additional: {  }
+            weight: 1
 id: node.curated_playlist.teaser
 targetEntityType: node
 bundle: curated_playlist
