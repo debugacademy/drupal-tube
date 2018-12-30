@@ -28,5 +28,6 @@ permissions:
   - 'skip comment approval'
   - 'update media'
   - 'use text format basic_html'
+  - 'use text format mailchimp_campaign'
   - 'view media'
   - 'view own unpublished content'
