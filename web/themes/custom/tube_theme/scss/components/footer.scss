@@ -3,9 +3,13 @@
 footer.site-footer {
     background: #064771 !important;
     color: #ffffff;
-    @media scree and (max-width: 1000px) {
-        display: flex;
-        flex-direction: column;
+    .row {
+        @media screen and (max-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
     }
   .container {
     display: flex;
@@ -25,14 +29,14 @@ footer.site-footer {
       }
     }
   }
-  
-  .region-footer-left {
-      
-      
-      
-      
-  }
-    .region-footer-center {
+      div.col-6 {
+            @media screen and (max-width: 1000px) {
+                order: -1;
+                max-width: 75%;
+            }
+            @media Screen and (max-width: 500px) {
+                max-width: 95%;
+            }
         #block-mailchimpsubscriptionformdrupaltvnewsletter {
             h2 {
                 text-align: center;
@@ -50,7 +54,35 @@ footer.site-footer {
             }
         }
     }
+    
+    div.col-3 {
+        @media screen and (max-width: 1000px) {
+            max-width: 50%;
+        }
+        @media Screen and (max-width: 600px) {
+            max-width: 95%;
+        }
+    }
 }
+//Block DAInfo -- logo and blurb in Footer
+    #block-dainfo {
+        .content {
+            padding: 10px 30px;
+            text-align: justify;
+            .field--type-image {
+                text-align: center;
+                img {
+                    border-radius: 50%;
+                }
+            }
+            //Empty space and social media icons display for no reason--removing them
+            .contact-social-title {
+                display: none;
+            }
+        }
+    }
+      
+      
 //Dries Trademark Section in the Footer
 #trademarkClause {
     text-align: center;
