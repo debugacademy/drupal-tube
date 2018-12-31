@@ -12,7 +12,7 @@ id: drupal_tv_newsletter_continued
 title: 'Drupal.tv Newsletter Continued'
 description: ''
 category: ''
-elements: "first_name:\n  '#type': textfield\n  '#title': 'First Name'\nlast_name:\n  '#type': textfield\n  '#title': 'Last Name'\naddress:\n  '#type': address\n  '#title': Address\n  '#field_overrides':\n    givenName: hidden\n    additionalName: hidden\n    familyName: hidden\n    organization: hidden\n    sortingCode: hidden"
+elements: "personal_information_optional_:\n  '#type': webform_wizard_page\n  '#title': 'Personal Information (Optional)'\n  first_name:\n    '#type': textfield\n    '#title': 'First Name'\n  last_name:\n    '#type': textfield\n    '#title': 'Last Name'\n  address:\n    '#type': address\n    '#title': Address\n    '#field_overrides':\n      givenName: hidden\n      additionalName: hidden\n      familyName: hidden\n      organization: hidden\n      addressLine1: optional\n      addressLine2: optional\n      postalCode: optional\n      sortingCode: hidden\n      dependentLocality: optional\n      locality: optional\n      administrativeArea: optional\ncontent_preferences:\n  '#type': webform_wizard_page\n  '#title': 'Content Preferences'\n  topics_that_you_want_to_hear_about:\n    '#type': checkboxes\n    '#title': 'Topics that you want to hear about'\n    '#options':\n      'Site Building': 'Site Building'\n      Theming: Theming\n      'Custom Module Development': 'Custom Module Development'\n      'Drupal Community': 'Drupal Community'\n      DevOps: DevOps\n      DrupalCon: DrupalCon\n      DrupalCamps: DrupalCamps"
 css: ''
 javascript: ''
 settings:
