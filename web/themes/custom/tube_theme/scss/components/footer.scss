@@ -1,6 +1,12 @@
 //Styling for page.html.twig class page.footer_main 
 
-.site-footer {
+footer.site-footer {
+    background: #064771 !important;
+    color: #ffffff;
+    @media scree and (max-width: 1000px) {
+        display: flex;
+        flex-direction: column;
+    }
   .container {
     display: flex;
     justify-content: space-around;
@@ -17,6 +23,45 @@
           }
         }
       }
-    } 
-  }  
-}  
+    }
+  }
+  
+  .region-footer-left {
+      
+      
+      
+      
+  }
+    .region-footer-center {
+        #block-mailchimpsubscriptionformdrupaltvnewsletter {
+            h2 {
+                text-align: center;
+            }
+            
+            form {
+                div.js-form-item.js-form-type-checkbox.checkbox.form-check.js-form-item-mailchimp-lists-gdpr-consent.form-item-mailchimp-lists-gdpr-consent{
+                    margin-top: 10px;
+                    
+                    label.form-check-label {
+                        display: flex;
+                        align-items: center;
+                    }    
+                }
+            }
+        }
+    }
+}
+//Dries Trademark Section in the Footer
+#trademarkClause {
+    text-align: center;
+    border-top: 1px solid #0965a1;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    color: #ffffff;
+    
+    a {
+        color: #ffffff;
+        font-weight: 700;
+    }
+}   
