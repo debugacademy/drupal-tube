@@ -1,0 +1,25 @@
+uuid: 64c9faf3-615b-4ff1-8e10-8f74efc8963a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:image_and_text_block:84262d9d-77b1-4e19-a53a-64ffc9e24f78'
+  module:
+    - block_content
+  theme:
+    - tube_theme
+id: dainfo
+theme: tube_theme
+region: footer_left
+weight: 0
+provider: null
+plugin: 'block_content:84262d9d-77b1-4e19-a53a-64ffc9e24f78'
+settings:
+  id: 'block_content:84262d9d-77b1-4e19-a53a-64ffc9e24f78'
+  label: 'DA Info'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

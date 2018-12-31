@@ -8445,6 +8445,29 @@ h3, h4, h5, h6 {
     color: black;
     font-size: 1em; }
 
+.view-id-featured_articles.view-display-id-page_1 .view-content div.item-list ul {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap; }
+  .view-id-featured_articles.view-display-id-page_1 .view-content div.item-list ul li {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 500px; }
+    @media screen and (max-width: 1046px) {
+      .view-id-featured_articles.view-display-id-page_1 .view-content div.item-list ul li {
+        max-width: 700px; } }
+    .view-id-featured_articles.view-display-id-page_1 .view-content div.item-list ul li article {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 0px solid transparent; }
+      .view-id-featured_articles.view-display-id-page_1 .view-content div.item-list ul li article .node__content {
+        display: flex;
+        flex-direction: column; }
+        .view-id-featured_articles.view-display-id-page_1 .view-content div.item-list ul li article .node__content img {
+          width: 100%;
+          height: auto; }
+
 .callout-outer {
   min-width: 320px;
   max-width: 480px;
@@ -8546,18 +8569,67 @@ h3, h4, h5, h6 {
   font-size: 2.25em;
   color: #222222; }
 
-.site-footer .container {
-  display: flex;
-  justify-content: space-around; }
-  .site-footer .container .region-footer-right {
-    justify-content: flex-end; }
-    .site-footer .container .region-footer-right .menu--footer .navbar-nav {
-      flex-direction: row;
+footer.site-footer {
+  background: #064771 !important;
+  color: #ffffff; }
+  @media screen and (max-width: 1000px) {
+    footer.site-footer .row, footer.site-footer .path-webform #block-tube-theme-content .content, .path-webform #block-tube-theme-content footer.site-footer .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
+  footer.site-footer .container {
+    display: flex;
+    justify-content: space-around; }
+    footer.site-footer .container .region-footer-right {
       justify-content: flex-end; }
-      .site-footer .container .region-footer-right .menu--footer .navbar-nav .nav-item {
-        margin: 10px;
-        text-transform: uppercase;
-        color: #fff; }
+      footer.site-footer .container .region-footer-right .menu--footer .navbar-nav {
+        flex-direction: row;
+        justify-content: flex-end; }
+        footer.site-footer .container .region-footer-right .menu--footer .navbar-nav .nav-item {
+          margin: 10px;
+          text-transform: uppercase;
+          color: #fff; }
+  @media screen and (max-width: 1000px) {
+    footer.site-footer div.col-6 {
+      order: -1;
+      max-width: 75%; } }
+  @media Screen and (max-width: 500px) {
+    footer.site-footer div.col-6 {
+      max-width: 95%; } }
+  footer.site-footer div.col-6 #block-mailchimpsubscriptionformdrupaltvnewsletter h2 {
+    text-align: center; }
+  footer.site-footer div.col-6 #block-mailchimpsubscriptionformdrupaltvnewsletter form div.js-form-item.js-form-type-checkbox.checkbox.form-check.js-form-item-mailchimp-lists-gdpr-consent.form-item-mailchimp-lists-gdpr-consent {
+    margin-top: 10px; }
+    footer.site-footer div.col-6 #block-mailchimpsubscriptionformdrupaltvnewsletter form div.js-form-item.js-form-type-checkbox.checkbox.form-check.js-form-item-mailchimp-lists-gdpr-consent.form-item-mailchimp-lists-gdpr-consent label.form-check-label {
+      display: flex;
+      align-items: center; }
+  @media screen and (max-width: 1000px) {
+    footer.site-footer div.col-3 {
+      max-width: 50%; } }
+  @media Screen and (max-width: 600px) {
+    footer.site-footer div.col-3 {
+      max-width: 95%; } }
+
+#block-dainfo .content {
+  padding: 10px 30px;
+  text-align: justify; }
+  #block-dainfo .content .field--type-image {
+    text-align: center; }
+    #block-dainfo .content .field--type-image img {
+      border-radius: 50%; }
+  #block-dainfo .content .contact-social-title {
+    display: none; }
+
+#trademarkClause {
+  text-align: center;
+  border-top: 1px solid #0965a1;
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 10px;
+  color: #ffffff; }
+  #trademarkClause a {
+    color: #ffffff;
+    font-weight: 700; }
 
 /**
  * @file

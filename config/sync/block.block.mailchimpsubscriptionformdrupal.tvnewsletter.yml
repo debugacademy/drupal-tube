@@ -1,0 +1,20 @@
+uuid: 82f37e1c-0798-4589-8edf-0c4bda2a15bf
+langcode: en
+status: true
+dependencies:
+  module:
+    - mailchimp_signup
+  theme:
+    - tube_theme
+id: mailchimpsubscriptionformdrupal.tvnewsletter
+theme: tube_theme
+region: footer_center
+weight: -6
+provider: null
+plugin: 'mailchimp_signup_subscribe_block:drupal_tv_newsletter'
+settings:
+  id: 'mailchimp_signup_subscribe_block:drupal_tv_newsletter'
+  label: 'Drupal.tv Newsletter'
+  provider: mailchimp_signup
+  label_display: visible
+visibility: {  }

@@ -1,6 +1,16 @@
 //Styling for page.html.twig class page.footer_main 
 
-.site-footer {
+footer.site-footer {
+    background: #064771 !important;
+    color: #ffffff;
+    .row {
+        @media screen and (max-width: 1000px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+    }
   .container {
     display: flex;
     justify-content: space-around;
@@ -17,6 +27,73 @@
           }
         }
       }
-    } 
-  }  
-}  
+    }
+  }
+      div.col-6 {
+            @media screen and (max-width: 1000px) {
+                order: -1;
+                max-width: 75%;
+            }
+            @media Screen and (max-width: 500px) {
+                max-width: 95%;
+            }
+        #block-mailchimpsubscriptionformdrupaltvnewsletter {
+            h2 {
+                text-align: center;
+            }
+            
+            form {
+                div.js-form-item.js-form-type-checkbox.checkbox.form-check.js-form-item-mailchimp-lists-gdpr-consent.form-item-mailchimp-lists-gdpr-consent{
+                    margin-top: 10px;
+                    
+                    label.form-check-label {
+                        display: flex;
+                        align-items: center;
+                    }    
+                }
+            }
+        }
+    }
+    
+    div.col-3 {
+        @media screen and (max-width: 1000px) {
+            max-width: 50%;
+        }
+        @media Screen and (max-width: 600px) {
+            max-width: 95%;
+        }
+    }
+}
+//Block DAInfo -- logo and blurb in Footer
+    #block-dainfo {
+        .content {
+            padding: 10px 30px;
+            text-align: justify;
+            .field--type-image {
+                text-align: center;
+                img {
+                    border-radius: 50%;
+                }
+            }
+            //Empty space and social media icons display for no reason--removing them
+            .contact-social-title {
+                display: none;
+            }
+        }
+    }
+      
+      
+//Dries Trademark Section in the Footer
+#trademarkClause {
+    text-align: center;
+    border-top: 1px solid #0965a1;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 10px;
+    color: #ffffff;
+    
+    a {
+        color: #ffffff;
+        font-weight: 700;
+    }
+}   
