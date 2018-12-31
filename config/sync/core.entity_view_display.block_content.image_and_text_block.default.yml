@@ -1,0 +1,34 @@
+uuid: da746a90-bffe-4d97-b547-c1bac5fdf7c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.image_and_text_block
+    - field.field.block_content.image_and_text_block.body
+    - field.field.block_content.image_and_text_block.field_imagetextblock
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+id: block_content.image_and_text_block.default
+targetEntityType: block_content
+bundle: image_and_text_block
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_imagetextblock:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: thumbnail
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+hidden: {  }

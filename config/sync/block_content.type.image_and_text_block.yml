@@ -1,0 +1,8 @@
+uuid: f5945424-e8de-4e8d-9403-5eebe3d69b6f
+langcode: en
+status: true
+dependencies: {  }
+id: image_and_text_block
+label: 'Image and Text Block'
+revision: 1
+description: ''
