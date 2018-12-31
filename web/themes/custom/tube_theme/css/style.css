@@ -8569,10 +8569,11 @@ h3, h4, h5, h6 {
 footer.site-footer {
   background: #064771 !important;
   color: #ffffff; }
-  @media scree and (max-width: 1000px) {
-    footer.site-footer {
+  @media screen and (max-width: 1000px) {
+    footer.site-footer .row, footer.site-footer .path-webform #block-tube-theme-content .content, .path-webform #block-tube-theme-content footer.site-footer .content {
       display: flex;
-      flex-direction: column; } }
+      flex-direction: column;
+      align-items: center; } }
   footer.site-footer .container {
     display: flex;
     justify-content: space-around; }
@@ -8585,13 +8586,36 @@ footer.site-footer {
           margin: 10px;
           text-transform: uppercase;
           color: #fff; }
-  footer.site-footer .region-footer-center #block-mailchimpsubscriptionformdrupaltvnewsletter h2 {
+  @media screen and (max-width: 1000px) {
+    footer.site-footer div.col-6 {
+      order: -1;
+      max-width: 75%; } }
+  @media Screen and (max-width: 500px) {
+    footer.site-footer div.col-6 {
+      max-width: 95%; } }
+  footer.site-footer div.col-6 #block-mailchimpsubscriptionformdrupaltvnewsletter h2 {
     text-align: center; }
-  footer.site-footer .region-footer-center #block-mailchimpsubscriptionformdrupaltvnewsletter form div.js-form-item.js-form-type-checkbox.checkbox.form-check.js-form-item-mailchimp-lists-gdpr-consent.form-item-mailchimp-lists-gdpr-consent {
+  footer.site-footer div.col-6 #block-mailchimpsubscriptionformdrupaltvnewsletter form div.js-form-item.js-form-type-checkbox.checkbox.form-check.js-form-item-mailchimp-lists-gdpr-consent.form-item-mailchimp-lists-gdpr-consent {
     margin-top: 10px; }
-    footer.site-footer .region-footer-center #block-mailchimpsubscriptionformdrupaltvnewsletter form div.js-form-item.js-form-type-checkbox.checkbox.form-check.js-form-item-mailchimp-lists-gdpr-consent.form-item-mailchimp-lists-gdpr-consent label.form-check-label {
+    footer.site-footer div.col-6 #block-mailchimpsubscriptionformdrupaltvnewsletter form div.js-form-item.js-form-type-checkbox.checkbox.form-check.js-form-item-mailchimp-lists-gdpr-consent.form-item-mailchimp-lists-gdpr-consent label.form-check-label {
       display: flex;
       align-items: center; }
+  @media screen and (max-width: 1000px) {
+    footer.site-footer div.col-3 {
+      max-width: 50%; } }
+  @media Screen and (max-width: 600px) {
+    footer.site-footer div.col-3 {
+      max-width: 95%; } }
+
+#block-dainfo .content {
+  padding: 10px 30px;
+  text-align: justify; }
+  #block-dainfo .content .field--type-image {
+    text-align: center; }
+    #block-dainfo .content .field--type-image img {
+      border-radius: 50%; }
+  #block-dainfo .content .contact-social-title {
+    display: none; }
 
 #trademarkClause {
   text-align: center;
