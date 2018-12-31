@@ -79,6 +79,9 @@
             },
             "drupal/core": {
                 "Allow alternate default moderation states": "https://www.drupal.org/files/issues/2018-09-21/2856967-54.patch"
+            },
+            "drupal/mailchimp": {
+                "Allows use for GDPR fields": "https://www.drupal.org/files/issues/2018-12-03/mailchimp-8.x-1.x-GDPR-signup-option-2968016-22.patch"    
             }
         },
         "patchLevel": {
