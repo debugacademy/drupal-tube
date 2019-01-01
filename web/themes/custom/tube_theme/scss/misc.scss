@@ -478,32 +478,95 @@ h3, h4, h5, h6 {
 
 .recent-video-view {
   .field--name-name {
-    a {
-      @include open-sans-font(700);
-      font-size: 16px;
-      color: $black;
-      text-align: left;
-      text-transform: none;
-      &:hover {
-        text-decoration: none;
+    h2 {
+      a {
+        @include open-sans-font(600);
+        font-size: 16px;
+        color: $black;
+        text-align: left;
+        text-transform: none;
+        margin-right: 12px;
+        &:hover {
+          text-decoration: none;
+        }
       }
     }
   }
-}
-.block-views {
+  }
+
+.recent {
   h2 {
-    @include font-size(36px, 41px);
-    @include heading-font(500);
-    color: $black;
-    text-align: left;
-    margin-left: 48px;
+    font-size: 36px;
+    font-weight: 500;
   }
 }
-.conf-view-row {
-  display: flex;
-  flex-wrap: wrap;
-  &.confer-view-video {
-    flex: 1 0 21%;
-    margin: 5px;
+@media(max-width: 1281px) {
+  .views-col.col-3 {
+    width: 48.4%;
+  }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none;
+  }
+  .views-col.col-3:nth-of-type(2n+1) {
+    margin-left: 18%;
+    margin-right: 20%;
+    clear: left;
+  }
+}
+@media(max-width: 1010px) {
+  .views-col.col-3 {
+    width: 48.4%;
+  }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none;
+  }
+  .views-col.col-3:nth-of-type(2n+1) {
+    margin-left: 10%;
+    margin-right: 20%;
+    clear: left;
+  }
+}
+@media(max-width: 850px) {
+  .views-col.col-3 {
+    width: 48.4%;
+  }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none;
+  }
+  .views-col.col-3:nth-of-type(2n+1) {
+    margin-left: 10%;
+    margin-right: 20%;
+    clear: left;
+  }
+}
+@media(max-width: 740px) {
+  .views-col.col-3 {
+    width: 100%;
+  }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none;
+  }
+  .views-col.col-3:nth-of-type(n+1) {
+    margin-left: 28.5%;
+    margin-right: 20%;
+    clear: left;
+  }
+}
+@media(max-width: 600px) {
+  .views-col.col-3 {
+    width: 100%;
+  }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none;
+  }
+  .views-col.col-3:nth-of-type(n+1) {
+    margin-left: 10%;
+    margin-right: 20%;
+    clear: left;
   }
 }

@@ -8052,31 +8052,75 @@ h3, h4, h5, h6 {
     color: black;
     font-size: 1em; }
 
-.recent-video-view .field--name-name a {
-  font-weight: 700;
+.recent-video-view .field--name-name h2 a {
+  font-weight: 600;
   font-family: 'Open sans', sans-serif;
   font-size: 16px;
   color: #222222;
   text-align: left;
-  text-transform: none; }
-  .recent-video-view .field--name-name a:hover {
+  text-transform: none;
+  margin-right: 12px; }
+  .recent-video-view .field--name-name h2 a:hover {
     text-decoration: none; }
 
-.block-views h2 {
+.recent h2 {
   font-size: 36px;
-  line-height: 41px;
-  font-weight: 500;
-  font-family: 'Ubuntu', sans-serif;
-  color: #222222;
-  text-align: left;
-  margin-left: 48px; }
+  font-weight: 500; }
 
-.conf-view-row {
-  display: flex;
-  flex-wrap: wrap; }
-  .conf-view-row.confer-view-video {
-    flex: 1 0 21%;
-    margin: 5px; }
+@media (max-width: 1281px) {
+  .views-col.col-3 {
+    width: 48.4%; }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none; }
+  .views-col.col-3:nth-of-type(2n+1) {
+    margin-left: 18%;
+    margin-right: 20%;
+    clear: left; } }
+
+@media (max-width: 1010px) {
+  .views-col.col-3 {
+    width: 48.4%; }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none; }
+  .views-col.col-3:nth-of-type(2n+1) {
+    margin-left: 10%;
+    margin-right: 20%;
+    clear: left; } }
+
+@media (max-width: 850px) {
+  .views-col.col-3 {
+    width: 48.4%; }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none; }
+  .views-col.col-3:nth-of-type(2n+1) {
+    margin-left: 10%;
+    margin-right: 20%;
+    clear: left; } }
+
+@media (max-width: 740px) {
+  .views-col.col-3 {
+    width: 100%; }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none; }
+  .views-col.col-3:nth-of-type(n+1) {
+    margin-left: 28.5%;
+    margin-right: 20%;
+    clear: left; } }
+
+@media (max-width: 600px) {
+  .views-col.col-3 {
+    width: 100%; }
+  .views-col.col-3:nth-of-type(3n+1) {
+    margin-left: 0%;
+    clear: none; }
+  .views-col.col-3:nth-of-type(n+1) {
+    margin-left: 10%;
+    margin-right: 20%;
+    clear: left; } }
 
 .callout-outer {
   min-width: 320px;
