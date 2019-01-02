@@ -476,20 +476,14 @@ h3, h4, h5, h6 {
 
 // Conference Videos from Conference Landing Page
 .conf_video-title {
-    font-family: $font-ubuntu;
-    font-weight: 500;
-    text-transform: uppercase;
-    @include font-size(36px, 42px);
-    margin-left: 15px;
-    margin-bottom: 28px;
-    @media(max-width: 1270px) {
-      .conf_video-title {
-        margin-left: 225px;
-      }
-    }
-  }
-.views-col.col-3.col-6.col-12 {
-  display: inline-block;
+  font-family: $font-ubuntu;
+  font-weight: 500;
+  text-transform: uppercase;
+  @include font-size(36px, 42px);
+  margin-left: 13px;
+  margin-bottom: 28px;
+}
+.views-col.col-3 {
   h2 {
     font-size: 0;
     a {
@@ -502,14 +496,6 @@ h3, h4, h5, h6 {
       line-height: 25px;
       &:hover {
         text-decoration: none;
-      }
-      @media(max-width: 1033px) {
-        h2 {
-          a {
-            text-align: left;
-            margin: 0 auto;
-          }
-        }
       }
     }
   }
@@ -530,6 +516,9 @@ h3, h4, h5, h6 {
     margin-right: 20%;
     clear: left;
   }
+  .conf_video-title {
+    margin-left: 200px;
+  }
 }
 @media(max-width: 1010px) {
   .views-col.col-3 {
@@ -543,6 +532,9 @@ h3, h4, h5, h6 {
     margin-left: 10%;
     margin-right: 20%;
     clear: left;
+  }
+  .conf_video-title {
+    margin-left: 108px;
   }
 }
 @media(max-width: 850px) {
@@ -558,6 +550,9 @@ h3, h4, h5, h6 {
     margin-right: 20%;
     clear: left;
   }
+  .conf_video-title {
+    margin-left: 90px;
+  }
 }
 @media(max-width: 740px) {
   .views-col.col-3 {
@@ -572,6 +567,10 @@ h3, h4, h5, h6 {
     margin-right: 20%;
     clear: left;
   }
+  .conf_video-title {
+    margin-left: 180px;
+    font-size: 30px;
+  }
 }
 @media(max-width: 600px) {
   .views-col.col-3 {
@@ -585,5 +584,9 @@ h3, h4, h5, h6 {
     margin-left: 10%;
     margin-right: 20%;
     clear: left;
+  }
+  .conf_video-title {
+    margin-left: 48px;
+    font-size: 26px;
   }
 }
