@@ -17,6 +17,7 @@ dependencies:
     - image
     - media
     - node
+    - responsive_views_grid
     - taxonomy
     - user
 id: recently_added_videos
@@ -1274,6 +1275,8 @@ display:
         arguments: false
         pager: false
         sorts: false
+        style: false
+        row: false
       relationships:
         field_conference:
           id: field_conference
@@ -1338,6 +1341,24 @@ display:
             label: ''
           granularity: second
           plugin_id: datetime
+      style:
+        type: responsive_grid
+        options:
+          uses_fields: false
+          columns: '4'
+          automatic_width: 1
+          alignment: horizontal
+          col_class_default: 0
+          col_class_custom: 'views-col col-3, col-6, col-12'
+          row_class_default: 1
+          row_class_custom: ''
+      row:
+        type: 'entity:media'
+        options:
+          relationship: none
+          view_mode: teaser
+      allow:
+        items_per_page: true
     cache_metadata:
       max-age: -1
       contexts:
