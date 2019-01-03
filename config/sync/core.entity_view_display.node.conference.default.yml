@@ -17,6 +17,7 @@ dependencies:
     - field.field.node.conference.field_website
     - node.type.conference
     - views.view.featured_articles
+    - views.view.recently_added_videos
   module:
     - address
     - datetime
@@ -284,16 +285,37 @@ third_party_settings:
             additional: {  }
             weight: 1
       -
-        layout_id: two_column_dt
+        layout_id: one_column_dt
+        layout_settings:
+          bgcolor: lb-bg-secondary
+          highlight: 0
+          spacing: {  }
+        components:
+          2374ebbc-6cf6-4a60-9bee-be5cff29888c:
+            uuid: 2374ebbc-6cf6-4a60-9bee-be5cff29888c
+            region: content
+            configuration:
+              id: 'views_block:recently_added_videos-block_5'
+              label: ''
+              provider: views
+              label_display: visible
+              views_label: ''
+              items_per_page: none
+              context_mapping: {  }
+            additional: {  }
+            weight: 0
+      -
+        layout_id: one_column_dt
         layout_settings:
           bgcolor: lb-bg-primary
           highlight: 0
           spacing:
-            space-beside: space-beside
+            space-top: space-top
+            space-bottom: space-bottom
         components:
-          a09b21da-1230-4cef-b6da-b6e3e876c181:
-            uuid: a09b21da-1230-4cef-b6da-b6e3e876c181
-            region: second
+          9f635c19-9aae-4410-8531-a7391e362d09:
+            uuid: 9f635c19-9aae-4410-8531-a7391e362d09
+            region: content
             configuration:
               id: 'views_block:featured_articles-block_2'
               label: ''

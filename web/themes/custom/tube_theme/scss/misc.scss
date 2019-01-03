@@ -474,4 +474,112 @@ h3, h4, h5, h6 {
 
 }
 
-
+// Conference Videos from Conference Landing Page
+.conf_video-title {
+  font-family: $font-ubuntu;
+  font-weight: 500;
+  text-transform: uppercase;
+  @include font-size(36px, 42px);
+  margin-bottom: 28px;
+  @media(max-width: 1281px) {
+    .conf_video-title {
+      margin-left: 213px; //I am not sure why this media query is not picking up. Is this the right way, right?
+    }
+  }
+}
+.field--name-name {
+  width: 310px;
+  display:inline-block;
+  h2 {
+    font-size: 0;
+    a {
+      @include open-sans-font(600);
+      font-size: 16px;
+      width: 100%;
+      color: $black;
+      text-align: left;
+      text-transform: none;
+      line-height: 25px;
+      @media(max-width: 1281px) {
+        a {
+          display: inline-block;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+.view-content {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  .views-row {
+    margin-bottom: 40px;
+    float: left;
+    width: 25%;
+    flex: 1 0 25%;
+  }
+}
+@media(max-width: 1281px) {
+  .view-content {
+    margin-left: 200px;
+    .views-row {
+      max-width: calc(50% - 10px);
+      flex: 1 0 50%;
+    }
+  }
+  .conf_video-title {
+    margin-left: 213px;
+  }
+}
+@media(max-width: 1060px) {
+  .view-content {
+    margin-left: 160px;
+    .views-row {
+      max-width: calc(50% - 10px);
+      flex: 1 0 50%;
+    }
+  }
+  .conf_video-title {
+    margin-left: 170px;
+  }
+}
+@media(max-width: 904px) {
+  .view-content {
+    margin-left: 82px;
+    .views-row {
+      max-width: calc(50% - 10px);
+      flex: 1 0 50%;
+    }
+  }
+  .conf_video-title {
+    margin-left: 93px;
+  }
+}
+@media(max-width: 808px) {
+  .view-content {
+    margin-left: 25px;
+    .views-row {
+      max-width: calc(50% - 0px);
+      flex: 1 0 50%;
+    }
+  }
+  .conf_video-title {
+    margin-left: 48px;
+  }
+}
+@media(max-width: 713px) {
+  .view-content {
+    .views-row {
+      width: 100%;
+      flex: 1 0 100%;
+      margin-right: 20%;
+    }
+  }
+    .conf_video-title {
+      margin-left: 50px;
+      font-size: 26px;
+    }
+  }

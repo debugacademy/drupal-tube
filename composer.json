@@ -29,6 +29,7 @@
         "drupal/fontawesome": "^2.9",
         "drupal/pathauto": "^1.0",
         "drupal/recaptcha": "^2.3",
+        "drupal/responsive_views_grid": "^1.1",
         "drupal/search_api": "^1.11",
         "drupal/search_api_autocomplete": "^1.1",
         "drupal/video_embed_field": "^2.0",
