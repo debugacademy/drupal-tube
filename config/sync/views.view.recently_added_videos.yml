@@ -17,7 +17,6 @@ dependencies:
     - image
     - media
     - node
-    - responsive_views_grid
     - taxonomy
     - user
 id: recently_added_videos
@@ -1342,16 +1341,11 @@ display:
           granularity: second
           plugin_id: datetime
       style:
-        type: responsive_grid
+        type: default
         options:
+          row_class: ''
+          default_row_class: true
           uses_fields: false
-          columns: '4'
-          automatic_width: 1
-          alignment: horizontal
-          col_class_default: 0
-          col_class_custom: 'views-col col-3, col-6, col-12'
-          row_class_default: 1
-          row_class_custom: ''
       row:
         type: 'entity:media'
         options:
