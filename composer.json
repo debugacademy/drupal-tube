@@ -27,6 +27,7 @@
         "drupal/core": "^8.6.0",
         "drupal/facets": "^1.2",
         "drupal/fontawesome": "^2.9",
+        "drupal/geolocation": "^1.11",
         "drupal/pathauto": "^1.0",
         "drupal/recaptcha": "^2.3",
         "drupal/search_api": "^1.11",
