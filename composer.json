@@ -28,6 +28,7 @@
         "drupal/facets": "^1.2",
         "drupal/fontawesome": "^2.9",
         "drupal/geolocation": "^1.11",
+        "drupal/geolocation_address_link": "^1.1",
         "drupal/pathauto": "^1.0",
         "drupal/recaptcha": "^2.3",
         "drupal/search_api": "^1.11",
