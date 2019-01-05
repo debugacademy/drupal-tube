@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "892f1595a75d24e7bec0a9a4f669472d",
+    "content-hash": "d1e1b4b86864ec44e7fb92a2ee8453a7",
     "packages": [
         {
             "name": "alchemy/zippy",
@@ -2850,6 +2850,55 @@
             "homepage": "https://www.drupal.org/project/geolocation",
             "support": {
                 "source": "http://cgit.drupalcode.org/geolocation"
+            }
+        },
+        {
+            "name": "drupal/geolocation_address_link",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupal.org/project/geolocation_address_link",
+                "reference": "8.x-1.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/geolocation_address_link-8.x-1.1.zip",
+                "reference": "8.x-1.1",
+                "shasum": "3854f1a6aae7584b8eb06504fa2fe84ab6db3cc0"
+            },
+            "require": {
+                "drupal/address": "*",
+                "drupal/core": "~8.0",
+                "drupal/geolocation": "*"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "branch-alias": {
+                    "dev-1.x": "1.x-dev"
+                },
+                "drupal": {
+                    "version": "8.x-1.1",
+                    "datestamp": "1513955284",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "KarenS",
+                    "homepage": "https://www.drupal.org/user/45874"
+                }
+            ],
+            "description": "Update Geolocation fields from Address fields.",
+            "homepage": "https://www.drupal.org/project/geolocation_address_link",
+            "support": {
+                "source": "http://cgit.drupalcode.org/geolocation_address_link"
             }
         },
         {
