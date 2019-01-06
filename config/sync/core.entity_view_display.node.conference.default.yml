@@ -6,6 +6,7 @@ dependencies:
     - core.base_field_override.node.conference.title
     - field.field.node.conference.body
     - field.field.node.conference.field_address
+    - field.field.node.conference.field_address_map
     - field.field.node.conference.field_contact_email
     - field.field.node.conference.field_date
     - field.field.node.conference.field_event_name
@@ -21,6 +22,7 @@ dependencies:
     - address
     - datetime
     - drupal_tube_layouts
+    - geolocation
     - image
     - layout_builder
     - layout_discovery
@@ -146,6 +148,21 @@ third_party_settings:
                 entity: layout_builder.entity
             additional: {  }
             weight: 8
+          da2ac43f-6c00-4ab5-97c2-62f2cf1f5180:
+            uuid: da2ac43f-6c00-4ab5-97c2-62f2cf1f5180
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:conference:field_address_map'
+              formatter:
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+                type: geolocation_latlng
+            additional: {  }
+            weight: 9
       -
         layout_id: layout_onecol
         layout_settings: {  }
@@ -322,6 +339,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     type: address_default
+    region: content
+  field_address_map:
+    weight: 12
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: geolocation_latlng
     region: content
   field_contact_email:
     weight: 8

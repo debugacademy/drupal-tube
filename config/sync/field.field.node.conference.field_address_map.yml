@@ -1,0 +1,21 @@
+uuid: e882694c-2299-4bbd-b8c8-24a0f6e3c13e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_address_map
+    - node.type.conference
+  module:
+    - geolocation
+id: node.conference.field_address_map
+field_name: field_address_map
+entity_type: node
+bundle: conference
+label: 'Address Map'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: geolocation
