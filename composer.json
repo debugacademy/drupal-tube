@@ -27,6 +27,8 @@
         "drupal/core": "^8.6.0",
         "drupal/facets": "^1.2",
         "drupal/fontawesome": "^2.9",
+        "drupal/geolocation": "^1.11",
+        "drupal/geolocation_address_link": "^1.1",
         "drupal/pathauto": "^1.0",
         "drupal/recaptcha": "^2.3",
         "drupal/search_api": "^1.11",
@@ -78,6 +80,9 @@
             },
             "drupal/core": {
                 "Allow alternate default moderation states": "https://www.drupal.org/files/issues/2018-09-21/2856967-54.patch"
+            },
+            "drupal/geolocation_address_link": {
+                "Geolocation Address Link issue 2975883": "https://www.drupal.org/files/issues/2018-05-29/array-change-2975883-9.patch"
             }
         },
         "patchLevel": {

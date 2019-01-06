@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.conference.body
     - field.field.node.conference.field_address
+    - field.field.node.conference.field_address_map
     - field.field.node.conference.field_contact_email
     - field.field.node.conference.field_date
     - field.field.node.conference.field_event_name
@@ -16,11 +17,11 @@ dependencies:
     - field.field.node.conference.field_website
     - image.style.thumbnail
     - node.type.conference
-    - workflows.workflow.editorial
   module:
     - address
     - content_moderation
     - datetime
+    - geolocation
     - image
     - link
     - path
@@ -51,6 +52,41 @@ content:
       default_country: null
     third_party_settings: {  }
     type: address_default
+    region: content
+  field_address_map:
+    weight: 133
+    settings:
+      default_longitude: ''
+      default_latitude: ''
+      target_address_field: field_address
+      google_map_settings:
+        height: 217px
+        width: 504px
+        type: ROADMAP
+        zoom: '2'
+        maxZoom: 18
+        minZoom: 0
+        mapTypeControl: 1
+        streetViewControl: 1
+        zoomControl: 1
+        scrollwheel: 1
+        gestureHandling: auto
+        draggable: 1
+        style: ''
+        info_auto_display: 1
+        marker_icon_path: ''
+        disableAutoPan: 1
+        rotateControl: 0
+        fullscreenControl: 0
+        preferScrollingToZooming: 0
+        disableDoubleClickZoom: 0
+      auto_client_location: '0'
+      auto_client_location_marker: '0'
+      populate_address_field: '0'
+      explicite_actions_address_field: '0'
+      allow_override_map_settings: 0
+    third_party_settings: {  }
+    type: geolocation_googlegeocoder
     region: content
   field_contact_email:
     weight: 128
