@@ -474,4 +474,14 @@ h3, h4, h5, h6 {
 
 }
 
+// RSS Feed
+
+.feed-icon {
+    background: url('../images/feed.svg') no-repeat;
+    overflow: hidden;
+    text-indent: -9999px;
+    display: block;
+    width: 1rem;
+    height: 1rem;
+}
 
