@@ -188,6 +188,9 @@
               {{ page.footer_center }}
             </div>
             <div class="col-4">
+                <a href="{{"http://dev-1.academyvm.test/drupal-tube/web/aggregator"}}"{{ attributes.addClass('feed-icon') }}>
+                    {{ 'Subscribe to @title'|t({'@title': title}) }}
+                </a>
               {{ page.footer_right }}
             </div>
         </div>
